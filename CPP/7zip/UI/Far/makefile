@@ -1,4 +1,4 @@
-PROG = 7-ZipFar.dll
+PROG = ZiprFar.dll
 DEF_FILE = Far.def
 CFLAGS = $(CFLAGS)  \
   -DEXTERNAL_CODECS \

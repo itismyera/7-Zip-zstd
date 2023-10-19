@@ -291,7 +291,7 @@ LONG CSettingsPage::OnApply()
         s.Add_LF();
         s += "Are you sure you want set that unsafe value for memory usage?";
         
-        int res = MessageBoxW(*this, s, L"7-Zip", MB_YESNOCANCEL | MB_ICONQUESTION);
+        int res = MessageBoxW(*this, s, L"Zipr", MB_YESNOCANCEL | MB_ICONQUESTION);
         if (res != IDYES)
           needSave = false;
       }

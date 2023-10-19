@@ -11,7 +11,7 @@
 #define ARCHIVE_INTERFACE(i, x) ARCHIVE_INTERFACE_SUB(i, IUnknown, x)
 
 /*
-How the function in 7-Zip returns object for output parameter via pointer
+How the function in Zipr returns object for output parameter via pointer
 
 1) The caller sets the value of variable before function call:
   PROPVARIANT  :  vt = VT_EMPTY
@@ -19,7 +19,7 @@ How the function in 7-Zip returns object for output parameter via pointer
   IUnknown* and derived interfaces  :  NULL
   another scalar types  :  any non-initialized value is allowed
 
-2) The callee in current 7-Zip code now can free input object for output parameter:
+2) The callee in current Zipr code now can free input object for output parameter:
   PROPVARIANT   : the callee calls VariantClear(propvaiant_ptr) for input
                   value stored in variable
   another types : the callee ignores stored value.
@@ -178,12 +178,12 @@ ARCHIVE_INTERFACE(IArchiveOpenCallback, 0x10)
 /*
 IArchiveExtractCallback::
 
-7-Zip doesn't call IArchiveExtractCallback functions
+Zipr doesn't call IArchiveExtractCallback functions
   GetStream()
   PrepareOperation()
   SetOperationResult()
 from different threads simultaneously.
-But 7-Zip can call functions for IProgress or ICompressProgressInfo functions
+But Zipr can call functions for IProgress or ICompressProgressInfo functions
 from another threads simultaneously with calls for IArchiveExtractCallback interface.
 
 IArchiveExtractCallback::GetStream()
@@ -218,7 +218,7 @@ else
 }
 
 SetOperationResult()
-  7-Zip calls SetOperationResult at the end of extracting,
+  Zipr calls SetOperationResult at the end of extracting,
   so the callee can close the file, set attributes, timestamps and security information.
 
   Int32 opRes (NExtract::NOperationResult)
@@ -693,10 +693,10 @@ extern "C"
 /*
   if there is no time in archive, external MTime of archive
   will be used instead of _item.Time from archive.
-  For 7-zip before 22.00 we need to return some supported value.
-  But (kpidTimeType > kDOS) is not allowed in 7-Zip before 22.00.
-  So we return highest precision value supported by old 7-Zip.
-  new 7-Zip 22.00 doesn't use that value in usual cases.
+  For Zipr before 22.00 we need to return some supported value.
+  But (kpidTimeType > kDOS) is not allowed in Zipr before 22.00.
+  So we return highest precision value supported by old Zipr.
+  new Zipr 22.00 doesn't use that value in usual cases.
 */
 
 

@@ -1,5 +1,5 @@
 /* lzma2_enc.c -- LZMA2 Encoder
-Based on LzmaEnc.c and Lzma2Enc.c : Igor Pavlov
+Based on LzmaEnc.c and Lzma2Enc.c : LRH
 Modified for FL2 by Conor McCarthy
 Public domain
 */

@@ -2582,7 +2582,7 @@ HRESULT CHandler::GetStream_Node(unsigned nodeIndex, ISequentialInStream **strea
 
     /* The following code doesn't work correctly for some CentOS images,
        where there are nodes with inline data and (node.NumBlocks != 0).
-       If you know better way to detect inline data, please notify 7-Zip developers. */
+       If you know better way to detect inline data, please notify Zipr developers. */
 
     if (node.NumBlocks == 0 && node.FileSize < kNodeBlockFieldSize)
     {

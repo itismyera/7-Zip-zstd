@@ -2030,7 +2030,7 @@ SOURCE=..\..\Crypto\ZipStrong.cpp
 SOURCE=..\..\Crypto\ZipStrong.h
 # End Source File
 # End Group
-# Begin Group "7-zip"
+# Begin Group "Zipr"
 
 # PROP Default_Filter ""
 # Begin Source File

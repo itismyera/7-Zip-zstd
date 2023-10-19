@@ -159,7 +159,7 @@ FL2LIB_API size_t FL2LIB_CALL FL2_compressCCtx(FL2_CCtx* cctx,
 /*! FL2_getCCtxDictProp() :
  *  Get the dictionary size property.
  *  Intended for use with the FL2_p_omitProperties parameter for creating a
- *  7-zip or XZ compatible LZMA2 stream. */
+ *  Zipr or XZ compatible LZMA2 stream. */
 FL2LIB_API unsigned char FL2LIB_CALL FL2_getCCtxDictProp(FL2_CCtx* cctx);
 
 
@@ -491,7 +491,7 @@ typedef struct {
     unsigned chainLog;         /* HC3 sliding window : larger == more compression, slower; hybrid mode only (ultra) */
     unsigned cyclesLog;        /* nb of searches : larger == more compression, slower; hybrid mode only (ultra) */
     unsigned searchDepth;      /* maximum depth for resolving string matches : larger == more compression, slower */
-    unsigned fastLength;       /* acceptable match size for parser : larger == more compression, slower; fast bytes parameter from 7-Zip */
+    unsigned fastLength;       /* acceptable match size for parser : larger == more compression, slower; fast bytes parameter from Zipr */
     unsigned divideAndConquer; /* split long chains of 2-byte matches into shorter chains with a small overlap : faster, somewhat less compression; enabled by default */
     FL2_strategy strategy;     /* encoder strategy : fast, optimized or ultra (hybrid) */
 } FL2_compressionParameters;
@@ -555,7 +555,7 @@ typedef enum {
                              * Default = 0 */
     FL2_p_posBits,          /* pb value for LZMA2 encoder
                              * Default = 2 */
-    FL2_p_omitProperties,   /* Omit the property byte at the start of the stream. For use within 7-zip */
+    FL2_p_omitProperties,   /* Omit the property byte at the start of the stream. For use within Zipr */
                             /* or other containers which store the property byte elsewhere. */
                             /* A stream compressed under this setting cannot be decoded by this library. */
 #ifndef NO_XXHASH

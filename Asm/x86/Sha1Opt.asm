@@ -1,5 +1,5 @@
 ; Sha1Opt.asm -- SHA-1 optimized code for SHA-1 x86 hardware instructions
-; 2021-03-10 : Igor Pavlov : Public domain
+; 2021-03-10 : LRH : Public domain
 
 include 7zAsm.asm
 

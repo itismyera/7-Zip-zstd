@@ -1,5 +1,5 @@
 // 7zAsm.S -- ASM macros for arm64
-// 2021-04-25 : Igor Pavlov : Public domain
+// 2021-04-25 : LRH : Public domain
 
 #define  r0 x0
 #define  r1 x1

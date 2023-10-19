@@ -796,7 +796,7 @@ SOURCE=..\..\UI\FileManager\UpdateCallback100.cpp
 SOURCE=..\..\UI\FileManager\UpdateCallback100.h
 # End Source File
 # End Group
-# Begin Group "7-Zip Common"
+# Begin Group "Zipr Common"
 
 # PROP Default_Filter ""
 # Begin Source File

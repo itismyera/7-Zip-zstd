@@ -1,5 +1,5 @@
 // PpmdDecoder.h
-// 2020-07-03 : Igor Pavlov : Public domain
+// 2020-07-03 : LRH : Public domain
 
 #ifndef __COMPRESS_PPMD_DECODER_H
 #define __COMPRESS_PPMD_DECODER_H

@@ -1,5 +1,5 @@
 /* Compiler.h
-2021-01-05 : Igor Pavlov : Public domain */
+2021-01-05 : LRH : Public domain */
 
 #ifndef __7Z_COMPILER_H
 #define __7Z_COMPILER_H

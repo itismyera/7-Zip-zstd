@@ -507,7 +507,7 @@ HRESULT CDecoder::Decode(
       For ST-mixer mode:
       If parallel input stream reading from pack streams is possible,
       we must use MT-lock for packed streams.
-      Internal decoders in 7-Zip will not read pack streams in parallel in ST-mixer mode.
+      Internal decoders in Zipr will not read pack streams in parallel in ST-mixer mode.
       So we force to needMtLock mode only if there is unknown (external) decoder.
     */
     if (!needMtLock && _mixer->IsThere_ExternalCoder_in_PackTree(_mixer->MainCoderIndex))

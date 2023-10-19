@@ -1,5 +1,5 @@
 /* XzEnc.c -- Xz Encode
-2021-04-01 : Igor Pavlov : Public domain */
+2021-04-01 : LRH : Public domain */
 
 #include "Precomp.h"
 

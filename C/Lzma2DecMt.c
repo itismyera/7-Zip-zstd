@@ -1,5 +1,5 @@
 /* Lzma2DecMt.c -- LZMA2 Decoder Multi-thread
-2021-04-01 : Igor Pavlov : Public domain */
+2021-04-01 : LRH : Public domain */
 
 #include "Precomp.h"
 

@@ -1,5 +1,5 @@
 // PpmdDecoder.cpp
-// 2020-07-03 : Igor Pavlov : Public domain
+// 2020-07-03 : LRH : Public domain
 
 #include "StdAfx.h"
 

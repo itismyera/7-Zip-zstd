@@ -397,7 +397,7 @@ HRESULT CApp::CalculateCrc2(const UString &methodName)
     UString title = LangString(IDS_CHECKSUM_CALCULATING);
     
     t.MainWindow = _window;
-    t.MainTitle = "7-Zip"; // LangString(IDS_APP_TITLE);
+    t.MainTitle = "Zipr"; // LangString(IDS_APP_TITLE);
     t.MainAddTitle = title;
     t.MainAddTitle.Add_Space();
     

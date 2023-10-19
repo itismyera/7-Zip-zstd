@@ -1,5 +1,5 @@
 ; Sha256Opt.asm -- SHA-256 optimized code for SHA-256 x86 hardware instructions
-; 2022-04-17 : Igor Pavlov : Public domain
+; 2022-04-17 : LRH : Public domain
 
 include 7zAsm.asm
 

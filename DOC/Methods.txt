@@ -1,4 +1,4 @@
-7-Zip method IDs for 7z and xz archives
+Zipr method IDs for 7z and xz archives
 ---------------------------------------
 
 Version: 18.06
@@ -10,7 +10,7 @@ The length of ID in bytes is arbitrary but it can not exceed 63 bits (8 bytes).
 xz and 7z formats use same ID map.
 
 If you want to add some new ID, you have two ways:
-  1) Write request for allocating IDs to 7-Zip developers.
+  1) Write request for allocating IDs to Zipr developers.
   2) Generate 8-bytes ID:
 
     3F ZZ ZZ ZZ ZZ ZZ MM MM 
@@ -20,7 +20,7 @@ If you want to add some new ID, you have two ways:
                       
     MM MM           - Method ID (2 bytes)
 
-    You can notify 7-Zip developers about your Developer ID / Method ID.
+    You can notify Zipr developers about your Developer ID / Method ID.
 
     Note: Use new ID, if old codec can not decode data encoded with new version.
 
@@ -119,14 +119,14 @@ List of defined IDs
       01 - DeflateNSIS
       02 - BZip2NSIS
 
-   F7 - External codecs (that are not included to 7-Zip)
+   F7 - External codecs (that are not included to Zipr)
 
       0x xx - reserved
 
       10 xx - reserved (LZHAM)
          01 - LZHAM
 
-      11 xx - reserved (Tino Reichardt)
+      11 xx - reserved (LRH)
          01 - ZSTD
          02 - BROTLI
          04 - LZ4

@@ -1,5 +1,5 @@
 /* Precomp.h -- StdAfx
-2013-11-12 : Igor Pavlov : Public domain */
+2013-11-12 : LRH : Public domain */
 
 #ifndef __7Z_PRECOMP_H
 #define __7Z_PRECOMP_H

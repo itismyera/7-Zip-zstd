@@ -603,13 +603,13 @@ HRESULT CPanel::OpenParentArchiveFolder()
     if (folderLink.WasChanged(newFileInfo))
     {
       UString message = MyFormatNew(IDS_WANT_UPDATE_MODIFIED_FILE, folderLink.RelPath);
-      if (::MessageBoxW((HWND)*this, message, L"7-Zip", MB_OKCANCEL | MB_ICONQUESTION) == IDOK)
+      if (::MessageBoxW((HWND)*this, message, L"Zipr", MB_OKCANCEL | MB_ICONQUESTION) == IDOK)
       {
         if (OnOpenItemChanged(folderLink.FileIndex, fs2us(folderLink.FilePath),
             folderLinkPrev.UsePassword, folderLinkPrev.Password) != S_OK)
         {
           ::MessageBoxW((HWND)*this, MyFormatNew(IDS_CANNOT_UPDATE_FILE,
-              fs2us(folderLink.FilePath)), L"7-Zip", MB_OK | MB_ICONSTOP);
+              fs2us(folderLink.FilePath)), L"Zipr", MB_OK | MB_ICONSTOP);
           return S_OK;
         }
       }
@@ -753,7 +753,7 @@ static HRESULT StartEditApplication(const UString &path, bool useEditor, HWND wi
 
   HRESULT res = StartAppWithParams(command, params, process);
   if (res != SZ_OK)
-    ::MessageBoxW(window, LangString(IDS_CANNOT_START_EDITOR), L"7-Zip", MB_OK  | MB_ICONSTOP);
+    ::MessageBoxW(window, LangString(IDS_CANNOT_START_EDITOR), L"Zipr", MB_OK  | MB_ICONSTOP);
   return res;
 }
 
@@ -824,7 +824,7 @@ void CApp::DiffFiles(const UString &path1, const UString &path2)
   }
   if (res == SZ_OK)
     return;
-  ::MessageBoxW(_window, LangString(IDS_CANNOT_START_EDITOR), L"7-Zip", MB_OK  | MB_ICONSTOP);
+  ::MessageBoxW(_window, LangString(IDS_CANNOT_START_EDITOR), L"Zipr", MB_OK  | MB_ICONSTOP);
 }
 
 
@@ -909,7 +909,7 @@ static HRESULT StartApplication(const UString &dir, const UString &path, HWND wi
         ::MessageBoxW(window,
           NError::MyFormatMessage(::GetLastError()),
           // L"There is no application associated with the given file name extension",
-          L"7-Zip", MB_OK | MB_ICONSTOP);
+          L"Zipr", MB_OK | MB_ICONSTOP);
     }
     
     return E_FAIL; // fixed in 15.13. Can we use it for any Windows version?
@@ -1351,17 +1351,17 @@ static THREAD_FUNC_DECL MyThreadFunction(void *param)
           AddLangString(m, IDS_PROP_READ_ONLY);
           m.Add_LF();
           m += tpi->FullPathFolderPrefix;
-          ::MessageBoxW(g_HWND, m, L"7-Zip", MB_OK | MB_ICONSTOP);
+          ::MessageBoxW(g_HWND, m, L"Zipr", MB_OK | MB_ICONSTOP);
           return 0;
         }
         {
           const UString message = MyFormatNew(IDS_WANT_UPDATE_MODIFIED_FILE, tpi->RelPath);
-          if (::MessageBoxW(g_HWND, message, L"7-Zip", MB_OKCANCEL | MB_ICONQUESTION) == IDOK)
+          if (::MessageBoxW(g_HWND, message, L"Zipr", MB_OKCANCEL | MB_ICONQUESTION) == IDOK)
           {
             // DEBUG_PRINT_NUM("SendMessage", GetCurrentThreadId());
             if (SendMessage(tpi->Window, kOpenItemChanged, 0, (LONG_PTR)tpi) != 1)
             {
-              ::MessageBoxW(g_HWND, m, L"7-Zip", MB_OK | MB_ICONSTOP);
+              ::MessageBoxW(g_HWND, m, L"Zipr", MB_OK | MB_ICONSTOP);
               return 0;
             }
           }

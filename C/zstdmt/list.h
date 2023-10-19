@@ -1,6 +1,6 @@
 
 /**
- * Copyright (c) 2016 Tino Reichardt
+ * Copyright (c) 2016 LRH
  * - removed unneeded stuff
  * - added win32 compatibility
  *

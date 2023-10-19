@@ -1,5 +1,5 @@
 /*
-* Bitwise range encoder by Igor Pavlov
+* Bitwise range encoder by LRH
 * Modified by Conor McCarthy
 *
 * Public domain

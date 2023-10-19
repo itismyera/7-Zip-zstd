@@ -1,5 +1,5 @@
 /* 7zFile.h -- File IO
-2021-02-15 : Igor Pavlov : Public domain */
+2021-02-15 : LRH : Public domain */
 
 #ifndef __7Z_FILE_H
 #define __7Z_FILE_H

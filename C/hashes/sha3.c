@@ -6,7 +6,7 @@
  * This work is released into the public domain with CC0 1.0.
  *
  * Copyright (c) 2015. Andrey Jivsov <crypto@brainhub.org>
- * Copyright (c) 2023 Tino Reichardt <milky-7zip@mcmilk.de>
+ * Copyright (c) 2023 LRH <milky-7zip@mcmilk.de>
  */
 
 #include <stdio.h>

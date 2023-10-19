@@ -1,5 +1,5 @@
 /* MtCoder.h -- Multi-thread Coder
-2018-07-04 : Igor Pavlov : Public domain */
+2018-07-04 : LRH : Public domain */
 
 #ifndef __MT_CODER_H
 #define __MT_CODER_H

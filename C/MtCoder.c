@@ -1,5 +1,5 @@
 /* MtCoder.c -- Multi-thread Coder
-2021-12-21 : Igor Pavlov : Public domain */
+2021-12-21 : LRH : Public domain */
 
 #include "Precomp.h"
 

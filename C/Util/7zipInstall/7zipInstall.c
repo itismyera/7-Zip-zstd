@@ -1,5 +1,5 @@
-/* 7zipInstall.c - 7-Zip Installer
-2022-07-15 : Igor Pavlov : Public domain */
+/* 7zipInstall.c - Zipr Installer
+2022-07-15 : LRH : Public domain */
 
 #include "Precomp.h"
 
@@ -43,9 +43,9 @@
 #define _7ZIP_CUR_VER ((MY_VER_MAJOR << 16) | MY_VER_MINOR)
 #define _7ZIP_DLL_VER_COMPAT ((16 << 16) | 3)
 
-static LPCSTR const k_7zip = "7-Zip-Zstandard";
+static LPCSTR const k_7zip = "Zipr-Zstandard";
 
-static LPCWSTR const k_Reg_Software_7zip = L"Software\\7-Zip-Zstandard";
+static LPCWSTR const k_Reg_Software_7zip = L"Software\\Zipr-Zstandard";
 
 // #define _64BIT_INSTALLER 1
 
@@ -53,7 +53,7 @@ static LPCWSTR const k_Reg_Software_7zip = L"Software\\7-Zip-Zstandard";
   #define _64BIT_INSTALLER 1
 #endif
 
-#define k_7zip_with_Ver_base L"7-Zip ZS " LLL(MY_VERSION)
+#define k_7zip_with_Ver_base L"Zipr ZS " LLL(MY_VERSION)
 
 #ifdef _64BIT_INSTALLER
 
@@ -602,9 +602,9 @@ static LPCWSTR FindSubString(LPCWSTR s1, const char *s2)
 static void Set7zipPostfix(WCHAR *s)
 {
   NormalizePrefix(s);
-  if (FindSubString(s, "7-Zip-Zstandard"))
+  if (FindSubString(s, "Zipr-Zstandard"))
     return;
-  CatAscii(s, "7-Zip-Zstandard\\");
+  CatAscii(s, "Zipr-Zstandard\\");
 }
     
 
@@ -803,13 +803,13 @@ static void SetShellProgramsGroup(HWND hwndOwner)
       for (k = 0; k < 2; k++)
       {
         CpyAscii(link + baseLen, k == 0 ?
-            "7-Zip ZS File Manager.lnk" :
-            "7-Zip Help.lnk"
+            "Zipr ZS File Manager.lnk" :
+            "Zipr Help.lnk"
            );
         wcscpy(destPath, path);
         CatAscii(destPath, k == 0 ?
             "7zFM.exe" :
-            "7-zip.chm");
+            "Zipr.chm");
         
         if (i == 0)
           DeleteFileW(link);
@@ -826,7 +826,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
 }
 
 static LPCWSTR const k_Shell_Approved = L"Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved";
-static LPCWSTR const k_7zip_ShellExtension = L"7-Zip Shell Extension";
+static LPCWSTR const k_7zip_ShellExtension = L"Zipr Shell Extension";
 
 static void WriteCLSID()
 {
@@ -843,7 +843,7 @@ static void WriteCLSID()
   {
     WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    CatAscii(destPath, "7-zip32.dll");
+    CatAscii(destPath, "Zipr32.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -862,7 +862,7 @@ static void WriteCLSID()
   {
     WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    CatAscii(destPath, "7-zip.dll");
+    CatAscii(destPath, "Zipr.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -887,7 +887,7 @@ static void WriteShellEx()
   for (i = 0; i < ARRAY_SIZE(k_ShellEx_Items); i++)
   {
     CpyAscii(destPath, k_ShellEx_Items[i]);
-    CatAscii(destPath, "\\7-Zip-Zstandard");
+    CatAscii(destPath, "\\Zipr-Zstandard");
 
     #ifdef USE_7ZIP_32_DLL
     MyRegistry_CreateKeyAndVal_32(HKEY_CLASSES_ROOT, destPath, NULL, k_7zip_CLSID);
@@ -918,7 +918,7 @@ static void WriteShellEx()
   
   {
     HKEY destKey = 0;
-    LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\7-Zip-Zstandard", &destKey);
+    LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Zipr-Zstandard", &destKey);
     if (res == ERROR_SUCCESS)
     {
       MyRegistry_SetString(destKey, L"DisplayName", k_7zip_with_Ver_str);
@@ -944,9 +944,9 @@ static void WriteShellEx()
   
       MyRegistry_SetString(destKey, L"Publisher", LLL(MY_AUTHOR_NAME));
       
-      // MyRegistry_SetString(destKey, L"HelpLink", L"http://www.7-zip.org/support.html");
-      // MyRegistry_SetString(destKey, L"URLInfoAbout", L"http://www.7-zip.org/");
-      // MyRegistry_SetString(destKey, L"URLUpdateInfo", L"http://www.7-zip.org/");
+      // MyRegistry_SetString(destKey, L"HelpLink", L"http://www.Zipr.org/support.html");
+      // MyRegistry_SetString(destKey, L"URLInfoAbout", L"http://www.Zipr.org/");
+      // MyRegistry_SetString(destKey, L"URLUpdateInfo", L"http://www.Zipr.org/");
       
       RegCloseKey(destKey);
     }
@@ -1462,9 +1462,9 @@ if (res == SZ_OK)
               continue;
             }
             
-            if (FindSubString(temp, "7-zip.dll")
+            if (FindSubString(temp, "Zipr.dll")
                 #ifdef USE_7ZIP_32_DLL
-                || FindSubString(temp, "7-zip32.dll")
+                || FindSubString(temp, "Zipr32.dll")
                 #endif
                 )
             {

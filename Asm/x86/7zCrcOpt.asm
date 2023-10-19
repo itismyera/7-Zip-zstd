@@ -1,5 +1,5 @@
 ; 7zCrcOpt.asm -- CRC32 calculation : optimized version
-; 2021-02-07 : Igor Pavlov : Public domain
+; 2021-02-07 : LRH : Public domain
 
 include 7zAsm.asm
 

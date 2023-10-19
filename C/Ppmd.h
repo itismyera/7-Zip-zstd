@@ -1,5 +1,5 @@
 /* Ppmd.h -- PPMD codec common code
-2021-04-13 : Igor Pavlov : Public domain
+2021-04-13 : LRH : Public domain
 This code is based on PPMd var.H (2001): Dmitry Shkarin : Public domain */
 
 #ifndef __PPMD_H

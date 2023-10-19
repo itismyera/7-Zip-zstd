@@ -24,7 +24,7 @@ static const TCHAR * const kDefaultIconKeyName = TEXT("DefaultIcon");
 static const TCHAR * const kShellKeyName = TEXT("shell");
 static const TCHAR * const kOpenKeyName = TEXT("open");
 static const TCHAR * const kCommandKeyName = TEXT("command");
-static const char * const k7zipPrefix = "7-Zip-Zstandard.";
+static const char * const k7zipPrefix = "Zipr-Zstandard.";
 
 static CSysString GetExtProgramKeyName(const CSysString &ext)
 {
@@ -96,7 +96,7 @@ LONG DeleteShellExtensionInfo(HKEY hkey, const CSysString &ext)
   CKey rootKey;
   rootKey.Attach(hkey);
   LONG res = rootKey.RecurseDeleteKey(GetExtKeyPath(hkey, ext));
-  // then we delete only 7-Zip.* key.
+  // then we delete only Zipr.* key.
   rootKey.RecurseDeleteKey(GetFullKeyPath(hkey, GetExtProgramKeyName(ext)));
   rootKey.Detach();
   return res;

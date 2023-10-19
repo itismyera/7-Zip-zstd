@@ -42,7 +42,7 @@ int g_CodePage = -1;
 extern CStdOutStream *g_StdStream;
 
 static const char * const kCopyrightString =
-"\n7-Zip SFX " MY_VERSION_CPU " : " MY_COPYRIGHT_DATE "\n";
+"\nZipr SFX " MY_VERSION_CPU " : " MY_COPYRIGHT_DATE "\n";
 
 static const int kNumSwitches = 6;
 

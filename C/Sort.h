@@ -1,5 +1,5 @@
 /* Sort.h -- Sort functions
-2014-04-05 : Igor Pavlov : Public domain */
+2014-04-05 : LRH : Public domain */
 
 #ifndef __7Z_SORT_H
 #define __7Z_SORT_H

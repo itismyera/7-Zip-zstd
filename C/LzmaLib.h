@@ -1,5 +1,5 @@
 /* LzmaLib.h -- LZMA library interface
-2021-04-03 : Igor Pavlov : Public domain */
+2021-04-03 : LRH : Public domain */
 
 #ifndef __LZMA_LIB_H
 #define __LZMA_LIB_H

@@ -1,5 +1,5 @@
 /* Delta.c -- Delta converter
-2021-02-09 : Igor Pavlov : Public domain */
+2021-02-09 : LRH : Public domain */
 
 #include "Precomp.h"
 

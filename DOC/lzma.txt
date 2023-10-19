@@ -305,10 +305,10 @@ C++ LZMA code is just wrapper over ANSI-C code.
 
 C++ Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~
-If you use some C++ code folders in 7-Zip (for example, C++ code for .7z handling),
+If you use some C++ code folders in Zipr (for example, C++ code for .7z handling),
 you must check that you correctly work with "new" operator.
-7-Zip can be compiled with MSVC 6.0 that doesn't throw "exception" from "new" operator.
-So 7-Zip uses "CPP\Common\NewHandler.cpp" that redefines "new" operator:
+Zipr can be compiled with MSVC 6.0 that doesn't throw "exception" from "new" operator.
+So Zipr uses "CPP\Common\NewHandler.cpp" that redefines "new" operator:
 operator new(size_t size)
 {
   void *p = ::malloc(size);
@@ -318,11 +318,11 @@ operator new(size_t size)
 }
 If you use MSCV that throws exception for "new" operator, you can compile without 
 "NewHandler.cpp". So standard exception will be used. Actually some code of 
-7-Zip catches any exception in internal code and converts it to HRESULT code.
-So you don't need to catch CNewException, if you call COM interfaces of 7-Zip.
+Zipr catches any exception in internal code and converts it to HRESULT code.
+So you don't need to catch CNewException, if you call COM interfaces of Zipr.
 
 ---
 
-http://www.7-zip.org
-http://www.7-zip.org/sdk.html
-http://www.7-zip.org/support.html
+http://www.Zipr.org
+http://www.Zipr.org/sdk.html
+http://www.Zipr.org/support.html

@@ -887,7 +887,7 @@ STDMETHODIMP CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
     CMenu menu;
     menu.Attach(hMenu);
     menuDestroyer.Disable();
-    MyAddSubMenu(_commandMap, kMainVerb, menu, indexMenu++, currentCommandID++, (UString)"7-Zip ZS",
+    MyAddSubMenu(_commandMap, kMainVerb, menu, indexMenu++, currentCommandID++, (UString)"Zipr ZS",
         popupMenu, // popupMenu.Detach(),
         bitmap);
   }
@@ -902,7 +902,7 @@ STDMETHODIMP CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
        NContextMenuFlags::kCRC_Cascaded)) != 0);
   
   if (
-      // !_isMenuForFM && // 21.04: we don't hide CRC SHA menu in 7-Zip FM
+      // !_isMenuForFM && // 21.04: we don't hide CRC SHA menu in Zipr FM
       needCrc
       && currentCommandID + 1 < commandIDLast)
   {
@@ -931,7 +931,7 @@ STDMETHODIMP CZipContextMenu::QueryContextMenu(HMENU hMenu, UINT indexMenu,
           menu.Attach(hMenu);
           // menuDestroyer_CRC.Disable();
         }
-        MyAddSubMenu(_commandMap, kCheckSumCascadedVerb, menu, indexInParent++, currentCommandID++, (UString)"7-Zip ZS Hash", subMenu,
+        MyAddSubMenu(_commandMap, kCheckSumCascadedVerb, menu, indexInParent++, currentCommandID++, (UString)"Zipr ZS Hash", subMenu,
           /* insertHashMenuTo7zipMenu ? NULL : */ bitmap);
         _commandMap.Back().CtxCommandType = CtxCommandType_CrcRoot;
         if (!insertHashMenuTo7zipMenu)
@@ -1267,7 +1267,7 @@ HRESULT CZipContextMenu::InvokeCommandCommon(const CCommandMapItem &cmi)
   }
   catch(...)
   {
-    ::MessageBoxW(0, L"Error", L"7-Zip ZS", MB_ICONERROR);
+    ::MessageBoxW(0, L"Error", L"Zipr ZS", MB_ICONERROR);
   }
   return S_OK;
 }
@@ -1516,10 +1516,10 @@ STDMETHODIMP CZipExplorerCommand::GetTitle(IShellItemArray *psiItemArray, LPWSTR
   if (IsRoot)
   {
     LoadItems(psiItemArray);
-    name = "7-Zip"; //  "New"
+    name = "Zipr"; //  "New"
   }
   else
-    name = "7-Zip item";
+    name = "Zipr item";
   
   if (!_commandMap_Cur.IsEmpty())
   {
@@ -1543,7 +1543,7 @@ STDMETHODIMP CZipExplorerCommand::GetIcon(IShellItemArray * /* psiItemArray */, 
   // return E_NOTIMPL;
   UString imageName = fs2us(NWindows::NDLL::GetModuleDirPrefix());
   // imageName += "7zG.exe";
-  imageName += "7-zip.dll";
+  imageName += "Zipr.dll";
   // imageName += ",190";
   return My_SHStrDupW(imageName, ppszIcon);
   // COM_TRY_END

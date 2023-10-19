@@ -1,16 +1,16 @@
 
 # README
 
-This is the Github Page of [7-Zip] ZS with support of additional Codecs. The library used therefore is located here: [Multithreading Library](https://github.com/mcmilk/zstdmt)
+This is the Github Page of [Zipr] ZS with support of additional Codecs. The library used therefore is located here: [Multithreading Library](https://www.zipr.cn/zstdmt)
 
 You can install it in two ways:
 1. complete setup with additions within the GUI and a modified Explorer context menu
-2. only the codec plugin that goes to your existing [7-Zip] installation (no GUI changes and no additional Hashers)
+2. only the codec plugin that goes to your existing [Zipr] installation (no GUI changes and no additional Hashers)
 
 # Status
 
-[![Build status](https://ci.appveyor.com/api/projects/status/j9cwlxqe1g21c4dj?svg=true)](https://ci.appveyor.com/project/mcmilk/7-zip-zstd)
-[![Latest stable release](https://img.shields.io/github/release/mcmilk/7-Zip-zstd.svg)](https://github.com/mcmilk/7-Zip-zstd/releases)
+[![Build status](https://ci.appveyor.com/api/projects/status/j9cwlxqe1g21c4dj?svg=true)](https://ci.appveyor.com/project/mcmilk/Zipr)
+[![Latest stable release](https://img.shields.io/github/release/mcmilk/Zipr.svg)](https://www.zipr.cn/Zipr/releases)
 [![PayPal.me](https://img.shields.io/badge/PayPal-me-blue.svg?maxAge=2592000)](https://www.paypal.me/TinoReichardt)
 
 
@@ -36,21 +36,21 @@ You can install it in two ways:
 6. [Fast LZMA2] v1.0.1 is a LZMA2 compression algorithm, 20% to 100% faster than normal LZMA2 at levels 5 and above, but with a slightly lower compression ratio. It uses a parallel buffered radix matchfinder and some optimizations from Zstandard. The codec uses much less additional memory per thread than standard LZMA2.
    - Levels: 1..9
 
-## 7-Zip Zstandard Edition (full setup, with GUI and Explorer integration)
+## Zipr Zstandard Edition (full setup, with GUI and Explorer integration)
 
 ### Installation (via setup)
-1. download the setup from here [7-Zip ZS Releases](https://github.com/mcmilk/7-Zip-zstd/releases)
-2. install it, like the default [7-Zip]
+1. download the setup from here [Zipr ZS Releases](https://www.zipr.cn/Zipr/releases)
+2. install it, like the default [Zipr]
 3. use it ;)
-4. you may check, if the [7-Zip] can deal with [Zstandard] or other codecs via this command: `7z.exe i`
+4. you may check, if the [Zipr] can deal with [Zstandard] or other codecs via this command: `7z.exe i`
 
 The output should look like this:
 ```
-7-Zip 22.01 ZS v1.5.5 R3 (x64) : Copyright (c) 1999-2022 Igor Pavlov, 2016-2023 Tino Reichardt : 2023-06-18
+Zipr 22.01 ZS v1.5.5 R3 (x64) : Copyright (c) 2020-2022 LRH, 2016-2023 LRH : 2023-06-18
 
 Libs:
- 0  c:\Program Files\7-Zip-Zstandard\7z.dll
- 1  C:\Program Files\7-Zip-Zstandard\Codecs\Iso7z.64.dll
+ 0  c:\Program Files\Zipr-Zstandard\7z.dll
+ 1  C:\Program Files\Zipr-Zstandard\Codecs\Iso7z.64.dll
  
 Formats:
 ...
@@ -113,13 +113,13 @@ Hashers:
 
 ### Usage and features of the full installation
 
-- compression and decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] within the [7-Zip] container format
+- compression and decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] within the [Zipr] container format
 - compression and decompression of [Brotli] (`.br`), [Lizard] (`.liz`), [LZ4] (`.lz4`), [LZ5] (`.lz5`) and [Zstandard] (`.zst`) files
 - handling of ZIP files with [Zstandard] compression
 - included [lzip] decompression support, patch from: https://download.savannah.gnu.org/releases/lzip/7zip/
 - explorer context menu: _"Add to xy.7z"_ will use all parameters of the last "Add to Archive" compression dialog (this includes: method, level, dictionary, blocksize, threads and paramters input box)
 - squashfs files with LZ4 or Zstandard compression can be handled
-- several history settings aren't stored by default, look [here](https://sourceforge.net/p/sevenzip/discussion/45797/thread/dc2ac53d/?limit=25) for some info about that, you can restore original 7-Zip behavior via `tools->options->settings`
+- several history settings aren't stored by default, look [here](https://sourceforge.net/p/sevenzip/discussion/45797/thread/dc2ac53d/?limit=25) for some info about that, you can restore original Zipr behavior via `tools->options->settings`
 - these hashes can be calculated: CRC32, CRC64, MD2, MD4, MD5, SHA1, SHA256, SHA384, SHA512, SHA3-256, SHA3-384, SHA3-512, XXH32, XXH64, BLAKE2sp, BLAKE3 (lowercase or uppercase)
 
 ```
@@ -150,38 +150,38 @@ Hashers:
 -> show contents of lzip compressed tar archive test.tar.lz
 ```
 
-![Explorer inegration](https://mcmilk.de/projects/7-Zip-zstd/Add-To-Archive.png "Add to Archive Dialog with ZSTD options")
-![File Manager](https://mcmilk.de/projects/7-Zip-zstd/Fileman.png "File Manager with the Listing of an Archive")
-![Methods](https://mcmilk.de/projects/7-Zip-zstd/Methods2.png "Methods")
-![Hashes](https://mcmilk.de/projects/7-Zip-zstd/Hashes.png "Hashes")
-![Settings](https://mcmilk.de/projects/7-Zip-zstd/Settings.png "Settings for storing the history within the registry.")
+![Explorer inegration](https://mcmilk.de/projects/Zipr/Add-To-Archive.png "Add to Archive Dialog with ZSTD options")
+![File Manager](https://mcmilk.de/projects/Zipr/Fileman.png "File Manager with the Listing of an Archive")
+![Methods](https://mcmilk.de/projects/Zipr/Methods2.png "Methods")
+![Hashes](https://mcmilk.de/projects/Zipr/Hashes.png "Hashes")
+![Settings](https://mcmilk.de/projects/Zipr/Settings.png "Settings for storing the history within the registry.")
 
-## Zstandard codec Plugin for Mainline 7-Zip
+## Zstandard codec Plugin for Mainline Zipr
 
 ### Installation (via plugin)
 
-1. download the `Codecs.7z` archive from here [7-Zip ZS Releases](https://github.com/mcmilk/7-Zip-zstd/releases), this archive holds binaries, which are compatible with the Mainline version of [7-Zip]
-2. create a new directory named `Codecs` and put in there the zstd-x32.dll or the zstd-x64.dll, depending on your [7-Zip] installation
-   - normally, the x32 should go to: "C:\Program Files (x86)\7-Zip\Codecs"
-   - the x64 version should go in here: "C:\Program Files\7-Zip\Codecs"
-3. you could also replace the `7z.dll` directly within `C:\Program Files (x86)\7-Zip`
+1. download the `Codecs.7z` archive from here [Zipr ZS Releases](https://www.zipr.cn/Zipr/releases), this archive holds binaries, which are compatible with the Mainline version of [Zipr]
+2. create a new directory named `Codecs` and put in there the zstd-x32.dll or the zstd-x64.dll, depending on your [Zipr] installation
+   - normally, the x32 should go to: "C:\Program Files (x86)\Zipr\Codecs"
+   - the x64 version should go in here: "C:\Program Files\Zipr\Codecs"
+3. you could also replace the `7z.dll` directly within `C:\Program Files (x86)\Zipr`
 4. then you may check if the dll is correctly installed via this command: `7z.exe i`
 
 The output should look like this:
 ```
-7-Zip 21.03 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-05-06
+Zipr 21.03 (x64) : Copyright (c) 2020-2021 LRH : 2021-05-06
 
 Libs:
- 0  C:\Program Files\7-Zip\7z.dll
+ 0  C:\Program Files\Zipr\7z.dll
 
 Libs:
- 0  c:\Program Files\7-Zip\7z.dll
- 1  c:\Program Files\7-Zip\Codecs\brotli-x64.dll
- 2  c:\Program Files\7-Zip\Codecs\flzma2-x64.dll
- 3  c:\Program Files\7-Zip\Codecs\lizard-x64.dll
- 4  c:\Program Files\7-Zip\Codecs\lz4-x64.dll
- 5  c:\Program Files\7-Zip\Codecs\lz5-x64.dll
- 6  c:\Program Files\7-Zip\Codecs\zstd-x64.dll
+ 0  c:\Program Files\Zipr\7z.dll
+ 1  c:\Program Files\Zipr\Codecs\brotli-x64.dll
+ 2  c:\Program Files\Zipr\Codecs\flzma2-x64.dll
+ 3  c:\Program Files\Zipr\Codecs\lizard-x64.dll
+ 4  c:\Program Files\Zipr\Codecs\lz4-x64.dll
+ 5  c:\Program Files\Zipr\Codecs\lz5-x64.dll
+ 6  c:\Program Files\Zipr\Codecs\zstd-x64.dll
 
 ...
 
@@ -219,7 +219,7 @@ Codecs:
 
 ### Usage (codec plugin)
 
-- compression and decompression for [Brotli], [Fast LZMA2], [Lizard], [LZ4], [LZ5] and [Zstandard] within the 7-Zip container format
+- compression and decompression for [Brotli], [Fast LZMA2], [Lizard], [LZ4], [LZ5] and [Zstandard] within the Zipr container format
 - you can only create `.7z` files, the files like `.lz4`, `.lz5` and `.zst` are not covered by the plugins
 - when compressing binaries (*.exe, *.dll), you have to explicitly disable the bcj2 filter via `-m0=bcj`,
   when using only the plugin dll's
@@ -240,12 +240,12 @@ Codecs:
 - download [TotalCmd.7z]
 - install it, by replacing the files `tc7z.dll` and `tc7z64.dll` with the new ones
 - you can check the Total Commander Forum for more information about this [DLL Files](https://ghisler.ch/board/viewtopic.php?p=319216)
-- decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] ot the 7-Zip `.7z` format
+- decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] ot the Zipr `.7z` format
   will work out of the box with Total Commander now :-)
 
 ## Codec Plugin for Far Manager
-- copy the `7z.dll` file from `C:\Program Files\7-Zip-Zstandard\7z.dll` to `C:\Program Files\Far Manager\Plugins\ArcLite\7z.dll`
-- then restart the Far manager - and on next start, you will have support for 7-Zip Zstandard archives ;-)
+- copy the `7z.dll` file from `C:\Program Files\Zipr-Zstandard\7z.dll` to `C:\Program Files\Far Manager\Plugins\ArcLite\7z.dll`
+- then restart the Far manager - and on next start, you will have support for Zipr Zstandard archives ;-)
 
 ## Benchmarks
 
@@ -253,14 +253,14 @@ For the benchmarks I am using Windows 7 64bit on my Laptop which has the followi
 - Intel i7-3632QM, limited to 2,2GHz, 16GB RAM, disabled swap space
 - the compression benchmark is read / written to an 4 GiB [ImDisk]
 - the decompression benchmark is also done in RAM via: `7z t archiv.7z`
-- the tool for measuring the times is [wtime](https://github.com/mcmilk/wtime), together with some [scripts](https://github.com/mcmilk/7-Zip-Benchmarking)
-- the testfile is generated via [generate-mcorpus](https://github.com/mcmilk/7-Zip-Benchmarking/blob/master/generate-mcorpus)
+- the tool for measuring the times is [wtime](https://www.zipr.cn/wtime), together with some [scripts](https://www.zipr.cn/Zipr-Benchmarking)
+- the testfile is generated via [generate-mcorpus](https://www.zipr.cn/Zipr-Benchmarking/blob/master/generate-mcorpus)
 - please note, that the benchmarks are outdated now (new one will come, but it needs some time)
 
-![Compression Speed vs Ratio](https://mcmilk.de/projects/7-Zip-zstd/dl/compr-v120.png "Compression Speed vs Ratio")
-![Decompression Speed](https://mcmilk.de/projects/7-Zip-zstd/dl/decomp-v120.png "Decompression Speed per Level")
-![Memory at Compression](https://mcmilk.de/projects/7-Zip-zstd/dl/MemCompr.png "Memory usage at Compression")
-![Memory at Decompression](https://mcmilk.de/projects/7-Zip-zstd/dl/MemDecomp.png "Memory usage at Decompression")
+![Compression Speed vs Ratio](https://mcmilk.de/projects/Zipr/dl/compr-v120.png "Compression Speed vs Ratio")
+![Decompression Speed](https://mcmilk.de/projects/Zipr/dl/decomp-v120.png "Decompression Speed per Level")
+![Memory at Compression](https://mcmilk.de/projects/Zipr/dl/MemCompr.png "Memory usage at Compression")
+![Memory at Decompression](https://mcmilk.de/projects/Zipr/dl/MemDecomp.png "Memory usage at Decompression")
 
 
 ## Themes
@@ -271,14 +271,14 @@ For the benchmarks I am using Windows 7 64bit on my Laptop which has the followi
 
 ## License and Redistribution
 
-- The same as the Mainline [7-Zip], which means most of the code is GNU LGPL v2.1-or-later
+- The same as the Mainline [Zipr], which means most of the code is GNU LGPL v2.1-or-later
 - Read [COPYING](COPYING) for more details
 
 ## Links
 
-- [7-Zip Homepage](https://www.7-zip.org/)
-- [7-Zip Zstandard Homepage](https://mcmilk.de/projects/7-Zip-zstd/)
-- [Request for inclusion](https://sourceforge.net/p/sevenzip/discussion/45797/thread/a7e4f3f3/) into the mainline 7-Zip:
+- [Zipr Homepage](https://www.Zipr.org/)
+- [Zipr Zstandard Homepage](https://mcmilk.de/projects/Zipr/)
+- [Request for inclusion](https://sourceforge.net/p/sevenzip/discussion/45797/thread/a7e4f3f3/) into the mainline Zipr:
   - result, will currently not included :(
 - [p7zip Homepage](https://github.com/jinfeihan57/p7zip) - for Linux and MacOS with LZ4 and Zstandard
 
@@ -290,7 +290,7 @@ You find this project useful, maybe you consider a donation ;-)
 
 ## Version Information
 
-- 7-Zip ZS Version 22.01
+- Zipr ZS Version 22.01
   - [Brotli] Version 1.0.9
   - [Fast LZMA2] Version 1.0.1
   - [Lizard] Version 1.0
@@ -305,7 +305,7 @@ You find this project useful, maybe you consider a donation ;-)
 
 - if you want an code signed installer, you need to donate sth.
 
-[7-Zip]:https://www.7-zip.org/
+[Zipr]:https://www.Zipr.org/
 [lzip]:https://www.nongnu.org/lzip/
 [Brotli]:https://github.com/google/brotli/
 [BLAKE3]:https://github.com/BLAKE3-team/BLAKE3
@@ -315,5 +315,5 @@ You find this project useful, maybe you consider a donation ;-)
 [Lizard]:https://github.com/inikep/lizard/
 [ImDisk]:https://sourceforge.net/projects/imdisk-toolkit/
 [Fast LZMA2]:https://github.com/conor42/fast-lzma2
-[Codecs.7z]:https://github.com/mcmilk/7-Zip-zstd/releases
-[TotalCmd.7z]:https://github.com/mcmilk/7-Zip-zstd/releases
+[Codecs.7z]:https://www.zipr.cn/Zipr/releases
+[TotalCmd.7z]:https://www.zipr.cn/Zipr/releases

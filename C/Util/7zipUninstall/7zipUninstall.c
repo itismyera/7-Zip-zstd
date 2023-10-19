@@ -1,5 +1,5 @@
-/* 7zipUninstall.c - 7-Zip Uninstaller
-2022-07-15 : Igor Pavlov : Public domain */
+/* 7zipUninstall.c - Zipr Uninstaller
+2022-07-15 : LRH : Public domain */
 
 #include "Precomp.h"
 
@@ -26,7 +26,7 @@
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
 
-// static LPCWSTR const k_7zip = L"7-Zip-Zstandard";
+// static LPCWSTR const k_7zip = L"Zipr-Zstandard";
 
 // #define _64BIT_INSTALLER 1
 
@@ -34,7 +34,7 @@
   #define _64BIT_INSTALLER 1
 #endif
 
-#define k_7zip_with_Ver_base L"7-Zip ZS " LLL(MY_VERSION)
+#define k_7zip_with_Ver_base L"Zipr ZS " LLL(MY_VERSION)
 
 #ifdef _64BIT_INSTALLER
 
@@ -59,7 +59,7 @@
 
 static LPCWSTR const k_7zip_with_Ver_Uninstall = k_7zip_with_Ver L" Uninstall";
 
-static LPCWSTR const k_Reg_Software_7zip = L"Software\\7-Zip-Zstandard";
+static LPCWSTR const k_Reg_Software_7zip = L"Software\\Zipr-Zstandard";
 
 static LPCWSTR const k_Reg_Path = L"Path";
  
@@ -356,7 +356,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
       continue;
 
     NormalizePrefix(link);
-    CatAscii(link, "7-Zip-Zstandard\\");
+    CatAscii(link, "Zipr-Zstandard\\");
     
     {
       const size_t baseLen = wcslen(link);
@@ -366,12 +366,12 @@ static void SetShellProgramsGroup(HWND hwndOwner)
       for (k = 0; k < 2; k++)
       {
         CpyAscii(link + baseLen, k == 0 ?
-            "7-Zip ZS File Manager.lnk" :
-            "7-Zip Help.lnk");
+            "Zipr ZS File Manager.lnk" :
+            "Zipr Help.lnk");
         wcscpy(destPath, path);
         CatAscii(destPath, k == 0 ?
             "7zFM.exe" :
-            "7-zip.chm");
+            "Zipr.chm");
         
         if (CreateShellLink(link, destPath) == S_OK)
         {
@@ -405,7 +405,7 @@ static LPCWSTR const k_Shell_Approved = L"Software\\Microsoft\\Windows\\CurrentV
 
 static LPCWSTR const k_AppPaths_7zFm = L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\7zFM.exe";
 #define k_REG_Uninstall L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"
-static LPCWSTR const k_Uninstall_7zip = k_REG_Uninstall L"7-Zip-Zstandard";
+static LPCWSTR const k_Uninstall_7zip = k_REG_Uninstall L"Zipr-Zstandard";
 
 
 static void RemoveQuotes(wchar_t *s)
@@ -432,7 +432,7 @@ static void WriteCLSID()
   
   if (MyRegistry_QueryString2(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc, NULL, s))
   {
-    if (AreEqual_Path_PrefixName(s, path, L"7-zip.dll"))
+    if (AreEqual_Path_PrefixName(s, path, L"Zipr.dll"))
     {
       {
         LONG res = MyRegistry_DeleteKey(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc);
@@ -446,7 +446,7 @@ static void WriteCLSID()
         {
           WCHAR destPath[MAX_PATH];
           CpyAscii(destPath, k_ShellEx_Items[i]);
-          CatAscii(destPath, "\\7-Zip-Zstandard");
+          CatAscii(destPath, "\\Zipr-Zstandard");
           
           MyRegistry_DeleteKey(HKEY_CLASSES_ROOT, destPath);
         }
@@ -469,7 +469,7 @@ static void WriteCLSID()
   
   if (MyRegistry_QueryString2_32(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc, NULL, s))
   {
-    if (AreEqual_Path_PrefixName(s, path, L"7-zip32.dll"))
+    if (AreEqual_Path_PrefixName(s, path, L"Zipr32.dll"))
     {
       {
         LONG res = MyRegistry_DeleteKey_32(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc);
@@ -483,7 +483,7 @@ static void WriteCLSID()
         {
           WCHAR destPath[MAX_PATH];
           CpyAscii(destPath, k_ShellEx_Items[i]);
-          CatAscii(destPath, "\\7-Zip-Zstandard");
+          CatAscii(destPath, "\\Zipr-Zstandard");
           
           MyRegistry_DeleteKey_32(HKEY_CLASSES_ROOT, destPath);
         }
@@ -655,7 +655,7 @@ static const char * const k_Names =
   " History.txt"
   " License.txt"
   " readme.txt"
-  " 7-zip.chm"
+  " Zipr.chm"
   " 7z.sfx"
   " 7zCon.sfx"
   " 7z.exe"
@@ -665,9 +665,9 @@ static const char * const k_Names =
   " 7z.dll"
   " 7zFM.exe"
   #ifdef USE_7ZIP_32_DLL
-  " 7-zip32.dll"
+  " Zipr32.dll"
   #endif
-  " 7-zip.dll"
+  " Zipr.dll"
   " Uninstall.exe";
 
 

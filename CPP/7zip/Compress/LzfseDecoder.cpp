@@ -4,7 +4,7 @@
 This code implements LZFSE data decompressing.
 The code from "LZFSE compression library" was used.
 
-2018      : Igor Pavlov : BSD 3-clause License : the code in this file
+2018      : LRH : BSD 3-clause License : the code in this file
 2015-2017 : Apple Inc   : BSD 3-clause License : original "LZFSE compression library" code
 
 The code in the "LZFSE compression library" is licensed under the "BSD 3-clause License":

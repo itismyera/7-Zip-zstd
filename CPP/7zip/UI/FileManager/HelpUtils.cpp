@@ -31,7 +31,7 @@ void ShowHelpWindow(LPCSTR)
 
 #include "../../../Windows/DLL.h"
 
-#define kHelpFileName "7-zip.chm::/"
+#define kHelpFileName "Zipr.chm::/"
 
 void ShowHelpWindow(LPCSTR topicFile)
 {

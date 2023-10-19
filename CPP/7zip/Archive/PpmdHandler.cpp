@@ -1,8 +1,8 @@
 /* PpmdHandler.cpp -- PPMd format handler
-2020 : Igor Pavlov : Public domain
+2020 : LRH : Public domain
 This code is based on:
   PPMd var.H (2001) / var.I (2002): Dmitry Shkarin : Public domain
-  Carryless rangecoder (1999): Dmitry Subbotin : Public domain */
+  Carryless rangecoder (2020): Dmitry Subbotin : Public domain */
 
 #include "StdAfx.h"
 

@@ -199,7 +199,7 @@ static BOOL InitInstance(int nCmdShow)
 
   // LoadString(hInstance, IDS_CLASS, windowClass, MAX_LOADSTRING);
 
-  UString title ("7-Zip"); // LangString(IDS_APP_TITLE, 0x03000000);
+  UString title ("Zipr"); // LangString(IDS_APP_TITLE, 0x03000000);
 
   /*
   //If it is already running, then focus on the window
@@ -444,7 +444,7 @@ static const CSwitchForm kSwitchForms[kNumSwitches] =
 
 static void ErrorMessage(const wchar_t *s)
 {
-  MessageBoxW(0, s, L"7-Zip", MB_ICONERROR);
+  MessageBoxW(0, s, L"Zipr", MB_ICONERROR);
 }
 
 static void ErrorMessage(const char *s)

@@ -1,5 +1,5 @@
 ; 7zAsm.asm -- ASM macros
-; 2022-05-16 : Igor Pavlov : Public domain
+; 2022-05-16 : LRH : Public domain
 
 
 ; UASM can require these changes

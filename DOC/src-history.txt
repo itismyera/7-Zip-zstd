@@ -1,9 +1,9 @@
-HISTORY of the 7-Zip source code
+HISTORY of the Zipr source code
 --------------------------------
 
 22.00          2022-06-16
 -------------------------
-- 7-Zip interfaces now support high precision (1 ns) timestamps with reserved
+- Zipr interfaces now support high precision (1 ns) timestamps with reserved
   fields of tagPROPVARIANT (VT_FILETIME).
 
 
@@ -12,7 +12,7 @@ HISTORY of the 7-Zip source code
 - The sorting order of files in archives was slightly changed to be more consistent
   for cases where the name of some directory is the same as the prefix part of the name
   of another directory or file.
-- TAR archives created by 7-Zip now are more consistent with archives created by GNU TAR program.
+- TAR archives created by Zipr now are more consistent with archives created by GNU TAR program.
 
 
 21.06          2021-11-24
@@ -25,14 +25,14 @@ HISTORY of the 7-Zip source code
   NCompress::NLzma::CEncoder::Code() could work incorrectly,
     if callback ISequentialOutStream::Write() returns error code.
 - Bug in versions 21.00-21.05 was fixed:
-  7-Zip didn't set attributes of directories during archive extracting.
+  Zipr didn't set attributes of directories during archive extracting.
 
 
 21.04 beta     2021-11-02
 -------------------------
-- 7-Zip now reduces the number of working CPU threads for compression,
+- Zipr now reduces the number of working CPU threads for compression,
   if RAM size is not enough for compression with big LZMA2 dictionary.
-- 7-Zip now can create and check "file.sha256" and "file.sha1" text files 
+- Zipr now can create and check "file.sha256" and "file.sha1" text files 
   that contain the list of file names and SHA-1 / SHA-256 checksums in format 
   compatible with sha1sum/sha256sum programs.
 
@@ -45,9 +45,9 @@ HISTORY of the 7-Zip source code
 
 21.02 alpha    2021-05-06
 -------------------------
-- 7-Zip now writes additional field for filename in UTF-8 encoding to zip archives.
+- Zipr now writes additional field for filename in UTF-8 encoding to zip archives.
   It allows to extract correct file name from zip archives on different systems.
-- The command line version of 7-Zip for macOS was released.
+- The command line version of Zipr for macOS was released.
 - The speed for LZMA and LZMA2 decompression in arm64 versions for macOS and Linux 
   was increased by 20%-60%.
 - Some changes and improvements in ZIP, TAR and NSIS code.
@@ -55,11 +55,11 @@ HISTORY of the 7-Zip source code
 
 21.01 alpha    2021-03-09
 -------------------------
-- The command line version of 7-Zip for Linux was released.
+- The command line version of Zipr for Linux was released.
 - The improvements for speed of ARM64 version using hardware CPU instructions 
   for AES, CRC-32, SHA-1 and SHA-256.
 - The bug in versions 18.02 - 21.00 was fixed:
-  7-Zip could not correctly extract some ZIP archives created with xz compression method.
+  Zipr could not correctly extract some ZIP archives created with xz compression method.
 - Some bugs were fixed.
 
 
@@ -69,14 +69,14 @@ HISTORY of the 7-Zip source code
   It allows to increase the compression speed for big 7z archives, if there is a big number 
   of CPU cores and threads.
 - The speed of PPMd compressing/decompressing was increased for 7z/ZIP/RAR archives.
-- The new -ssp switch. If the switch -ssp is specified, 7-Zip doesn't allow the system 
+- The new -ssp switch. If the switch -ssp is specified, Zipr doesn't allow the system 
   to modify "Last Access Time" property of source files for archiving and hashing operations. 
 - Some bugs were fixed.
 
 
 20.00 alpha    2020-02-06
 -------------------------
-- 7-Zip now supports new optional match finders for LZMA/LZMA2 compression: bt5 and hc5, 
+- Zipr now supports new optional match finders for LZMA/LZMA2 compression: bt5 and hc5, 
   that can work faster than bt4 and hc4 match finders for the data with big redundancy.
 - The compression ratio was improved for Fast and Fastest compression levels with the 
   following default settings:
@@ -106,10 +106,10 @@ HISTORY of the 7-Zip source code
 - The speed for LZMA/LZMA2 compressing was increased by 3-10%,
   and there are minor changes in compression ratio.
 - Some bugs were fixed.
-- The bug in 7-Zip 18.02-18.05 was fixed:
+- The bug in Zipr 18.02-18.05 was fixed:
   There was memory leak in multithreading xz decoder - XzDecMt_Decode(),
   if xz stream contains only one block.
-- 7-Zip 18.02-18.05 used only one CPU thread for bz2 archive creation.
+- Zipr 18.02-18.05 used only one CPU thread for bz2 archive creation.
 - The changes for MSVS compiler makefiles: 
    - the makefiles now use "PLATFORM" macroname with values (x64, x86, arm64)
      instead of "CPU" macroname with values (AMD64, ARM64).
@@ -121,9 +121,9 @@ HISTORY of the 7-Zip source code
 - The speed for LZMA/LZMA2 compressing was increased 
     by 8% for fastest/fast compression levels and 
     by 3% for normal/maximum compression levels.
-- Previous versions of 7-Zip could work incorrectly in "Large memory pages" mode in
+- Previous versions of Zipr could work incorrectly in "Large memory pages" mode in
   Windows 10 because of some BUG with "Large Pages" in Windows 10. 
-  Now 7-Zip doesn't use "Large Pages" on Windows 10 up to revision 1709 (16299).
+  Now Zipr doesn't use "Large Pages" on Windows 10 up to revision 1709 (16299).
 
 
 18.03 beta     2018-03-04
@@ -131,9 +131,9 @@ HISTORY of the 7-Zip source code
 - Asm\x86\LzmaDecOpt.asm: new optimized LZMA decoder written in asm 
   for x64 with about 30% higher speed than main version of LZMA decoder written in C.
 - The speed for single-thread LZMA/LZMA2 decoder written in C was increased by 3%.
-- 7-Zip now can use multi-threading for 7z/LZMA2 decoding,
+- Zipr now can use multi-threading for 7z/LZMA2 decoding,
   if there are multiple independent data chunks in LZMA2 stream.
-- 7-Zip now can use multi-threading for xz decoding,
+- Zipr now can use multi-threading for xz decoding,
   if there are multiple blocks in xz stream.
 
 
@@ -142,7 +142,7 @@ HISTORY of the 7-Zip source code
 - NewHandler.h / NewHandler.cpp: 
     now it redefines operator new() only for old MSVC compilers (_MSC_VER < 1900).
 - C/7zTypes.h : the names of variables in interface structures were changed (vt).
-- Some bugs were fixed. 7-Zip could crash in some cases.
+- Some bugs were fixed. Zipr could crash in some cases.
 - Some internal changes in code.
 
 
@@ -161,7 +161,7 @@ HISTORY of the 7-Zip source code
 
 16.00          2016-05-10
 -------------------------	
-- 7-Zip now can extract multivolume ZIP archives (z01, z02, ... , zip).
+- Zipr now can extract multivolume ZIP archives (z01, z02, ... , zip).
 - Some bugs were fixed,
 
 
@@ -205,13 +205,13 @@ HISTORY of the 7-Zip source code
 9.36 beta      2014-12-26
 -------------------------	
 - The BUG in command line version was fixed:
-  7-Zip created temporary archive in current folder during update archive
+  Zipr created temporary archive in current folder during update archive
   operation, if -w{Path} switch was not specified. 
-  The fixed 7-Zip creates temporary archive in folder that contains updated archive.
+  The fixed Zipr creates temporary archive in folder that contains updated archive.
 - The BUG in 9.33-9.35 was fixed:
-  7-Zip silently ignored file reading errors during 7z or gz archive creation,
+  Zipr silently ignored file reading errors during 7z or gz archive creation,
   and the created archive contained only part of file that was read before error.
-  The fixed 7-Zip stops archive creation and it reports about error.
+  The fixed Zipr stops archive creation and it reports about error.
 
 
 9.31           2012-10-31
@@ -265,13 +265,13 @@ HISTORY of the 7-Zip source code
 9.02           2009-04-23
 -------------------------
 - Bug was fixed: if swap2 filter was requests at compression,
-  7-zip used swap4 filter instead (but id was swap2), so archives were incorrect.
+  Zipr used swap4 filter instead (but id was swap2), so archives were incorrect.
   
 4.61           2008-11-23
 -------------------------
 - Bug in ver. 4.58+ was fixed:
-   7-Zip didn't use any -m* switch after -mtc, -mcl or -mcu for .zip archives. 
-- Bug in .CAB code was fixed. 7-Zip didn't show some empty files,
+   Zipr didn't use any -m* switch after -mtc, -mcl or -mcu for .zip archives. 
+- Bug in .CAB code was fixed. Zipr didn't show some empty files,
   if .CAB archive contains more than one empty file.
    
 
@@ -285,12 +285,12 @@ HISTORY of the 7-Zip source code
 4.59 alpha     2008-05-30
 -------------------------
 - BUGS was fixed: 
-    7zOut.cpp: 7-Zip incorrectly wrote size of property records in some cases.
-    7zIn.cpp:  7-Zip incorrectly work with archive, containg archive properties.
+    7zOut.cpp: Zipr incorrectly wrote size of property records in some cases.
+    7zIn.cpp:  Zipr incorrectly work with archive, containg archive properties.
 
 4.58 alpha 9   2008-04-29
 -------------------------
-- BUG was fixed: 7-Zip showed incorrect timestamps in ISO files.
+- BUG was fixed: Zipr showed incorrect timestamps in ISO files.
 
 
 4.58 alpha 8   2008-04-15
@@ -298,9 +298,9 @@ HISTORY of the 7-Zip source code
 - BUG in 4.58 alpha 5/6/7 was fixed:
     LZMA encoder worked incorrectly, if lp != 0.
 - Unicode (UTF-8) support for filenames in .ZIP archives. Now there are 3 modes:
-    1) Default mode: 7-Zip uses UTF-8, if the local code page doesn't contain required symbols.
-    2) -mcu switch:  7-Zip uses UTF-8, if there are non-ASCII symbols.
-    3) -mcl switch:  7-Zip uses local code page.
+    1) Default mode: Zipr uses UTF-8, if the local code page doesn't contain required symbols.
+    2) -mcu switch:  Zipr uses UTF-8, if there are non-ASCII symbols.
+    3) -mcl switch:  Zipr uses local code page.
 - Now it's possible to use -mSW- and -mSW+ switches instead of -mSW=off and -mSW=on  
 
 
@@ -330,22 +330,22 @@ HISTORY of the 7-Zip source code
 4.58 alpha 3   2008-02-25
 -------------------------
 - Speed optimizations for LZMA decoding. Now it uses C code instead of C++.
-- 7-Zip now has 128 MB dictionary limit for 32-bit version:
+- Zipr now has 128 MB dictionary limit for 32-bit version:
   It's for speed optimization: kNumLogBits = 9 + sizeof(size_t) / 2;
 - TAR: 'D' link flag support.
-- 7-Zip now can unpack multivolume RAR archives created with 
+- Zipr now can unpack multivolume RAR archives created with 
   "old style volume names" scheme (-vn switch) and names *.001, *.002, ...
 - Fixed bugs:
-  - 7-Zip FM could not copy / move files to root network folders like \\COMPNAME\FOLDERNAME\
+  - Zipr FM could not copy / move files to root network folders like \\COMPNAME\FOLDERNAME\
     In case of move it removed original files.
   - SFX-WIN: if there are errors, it still could return 0.
   - ZIP (.XPS file) isZip64 && thisDiskNumber16 == 0xFFFF.
   - ZIP name updating:
       If zip file contains extra field and you try to change properties of files,
-      7-zip tries to delete all extra fileds (except for WzAES).
+      Zipr tries to delete all extra fileds (except for WzAES).
       And that code could hang.
-  -  7-Zip GUI didn't suggest BZip2 dictionary size used in previous run.
-  -  If creation time stamp was included in .RAR archive, 7-zip used creation time stamp 
+  -  Zipr GUI didn't suggest BZip2 dictionary size used in previous run.
+  -  If creation time stamp was included in .RAR archive, Zipr used creation time stamp 
      as modification time stamp.
 
 4.58 alpha 2   2007-12-31
@@ -363,13 +363,13 @@ HISTORY of the 7-Zip source code
 
 4.52 beta      2007-07-32
 -------------------------
-- 7-Zip could not decompress some cab files
+- Zipr could not decompress some cab files
 - "." dir creating at FAT was fixed / long names
 
 
 4.50 beta      2007-07-24
 -------------------------
-- 7-Zip now replaces unsupported filenames (like "nul", "com1") during extracting.
+- Zipr now replaces unsupported filenames (like "nul", "com1") during extracting.
 - New switch for command line version:
     -ssc[-] enables/disables case-sensitive mode.
 - 7z.exe l shows archive comment for zip archives
@@ -392,14 +392,14 @@ HISTORY of the 7-Zip source code
 
 4.45 beta      2007-04-16
 -------------------------
-- 7-Zip now uses C version of CRC, so you must call CrcGenerateTable at 
+- Zipr now uses C version of CRC, so you must call CrcGenerateTable at 
   stratup code, or you must add CPP/Common/CRC.cpp to your project.
 - Method ID in .7z now is 63-bit integer (UInt64).
 - Open error messages
 - unRar 1.5 fixed
 - unShrink fixed
 - BUG of 4.43 beta and 4.44 beta was fixed.
-  7-Zip compressing to .zip in multi-threading mode didn't work in some cases.
+  Zipr compressing to .zip in multi-threading mode didn't work in some cases.
 
 
 4.44 beta      2007-01-20
@@ -450,7 +450,7 @@ HISTORY of the 7-Zip source code
 
 4.19 beta      2005-05-21
 -------------------------
--  BZip2 code was rewritten. Now 7-Zip doesn't use original BZip2 code.
+-  BZip2 code was rewritten. Now Zipr doesn't use original BZip2 code.
   Old (original) version was moved to folder 7zip/Compress/BZip2Original/
 
 

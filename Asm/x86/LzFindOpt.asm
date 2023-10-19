@@ -1,5 +1,5 @@
 ; LzFindOpt.asm -- ASM version of GetMatchesSpecN_2() function
-; 2021-07-21: Igor Pavlov : Public domain
+; 2021-07-21: LRH : Public domain
 ;
 
 ifndef x64

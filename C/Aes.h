@@ -1,5 +1,5 @@
 /* Aes.h -- AES encryption / decryption
-2018-04-28 : Igor Pavlov : Public domain */
+2018-04-28 : LRH : Public domain */
 
 #ifndef __AES_H
 #define __AES_H

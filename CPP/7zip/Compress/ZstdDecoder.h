@@ -1,4 +1,4 @@
-// (C) 2016 - 2018 Tino Reichardt
+// (C) 2016 - 2018 LRH
 
 #define ZSTD_STATIC_LINKING_ONLY
 #include "../../../C/Alloc.h"

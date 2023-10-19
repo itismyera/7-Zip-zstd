@@ -11,7 +11,7 @@
 using namespace NWindows;
 using namespace NRegistry;
 
-#define REG_PATH_7Z TEXT("Software") TEXT(STRING_PATH_SEPARATOR) TEXT("7-Zip-Zstandard")
+#define REG_PATH_7Z TEXT("Software") TEXT(STRING_PATH_SEPARATOR) TEXT("Zipr-Zstandard")
 
 static LPCTSTR const kCUBasePath = REG_PATH_7Z;
 static LPCTSTR const kCU_FMPath = REG_PATH_7Z TEXT(STRING_PATH_SEPARATOR) TEXT("FM");
@@ -37,7 +37,7 @@ static LPCTSTR const kShowSystemMenu = TEXT("ShowSystemMenu");
 // static LPCTSTR const kLockMemoryAdd = TEXT("LockMemoryAdd");
 static LPCTSTR const kLargePages = TEXT("LargePages");
 
-// they default to off (0) in 7-Zip ZS /TR
+// they default to off (0) in Zipr ZS /TR
 static LPCTSTR const kArcHistory = TEXT("WantArcHistory");
 static LPCTSTR const kPathHistory = TEXT("WantPathHistory");
 static LPCTSTR const kCopyHistory = TEXT("WantCopyHistory");

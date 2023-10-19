@@ -16,7 +16,7 @@ EXTERNAL_CODECS
   if EXTERNAL_CODECS is defined, then the code tries to load external
   plugins from DLL files (shared libraries).
 
-  There are two types of executables in 7-Zip:
+  There are two types of executables in Zipr:
   
   1) Executable that uses external plugins must be compiled
      with EXTERNAL_CODECS defined:
@@ -27,7 +27,7 @@ EXTERNAL_CODECS
   
   2) Standalone modules are compiled without EXTERNAL_CODECS:
     - SFX modules: 7z.sfx, 7zCon.sfx
-    - standalone versions of console 7-Zip: 7za.exe, 7zr.exe
+    - standalone versions of console Zipr: 7za.exe, 7zr.exe
 
   if EXTERNAL_CODECS is defined, CCodecs class implements interfaces:
     - ICompressCodecsInfo : for Codecs

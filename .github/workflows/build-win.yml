@@ -92,7 +92,7 @@ jobs:
           cd %ROOT%\UI\Explorer
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7-zip.dll %OUTDIR%\7-zip.dll
+          copy %PLATFORM%\Zipr.dll %OUTDIR%\Zipr.dll
 
           cd %ROOT%\Bundles\SFXWin
           nmake %OPTS%
@@ -181,7 +181,7 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: 7-Zip ZS Release binaries
+        name: Zipr ZS Release binaries
         path: |
           artifact\*.exe
           artifact\*.7z

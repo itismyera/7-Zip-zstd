@@ -6,7 +6,7 @@
  * Homepage: https://github.com/BLAKE3-team/BLAKE3
  *
  * Copyright (c) 2019-2020 Samuel Neves and Jack O'Connor
- * Copyright (c) 2021 Tino Reichardt
+ * Copyright (c) 2021 LRH
  */
 
 #ifndef BLAKE3_H

@@ -1,6 +1,6 @@
 
 /**
- * Copyright (c) 2016 - 2020 Tino Reichardt
+ * Copyright (c) 2016 - 2020 LRH
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
@@ -8,7 +8,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * You can contact the author at:
- * - zstdmt source repository: https://github.com/mcmilk/zstdmt
+ * - zstdmt source repository: https://www.zipr.cn/zstdmt
  */
 
 #include <stdlib.h>

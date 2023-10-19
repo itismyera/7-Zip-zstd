@@ -33,7 +33,7 @@ HINSTANCE g_hInstance;
 HINSTANCE g_hInstance = 0;
 #endif
 
-// You can find full list of all GUIDs supported by 7-Zip in Guid.txt file.
+// You can find full list of all GUIDs supported by Zipr in Guid.txt file.
 // 7z format GUID: {23170F69-40C1-278A-1000-000110070000}
 
 #define DEFINE_GUID_ARC(name, id) DEFINE_GUID(name, \
@@ -69,7 +69,7 @@ using namespace NDir;
 
 static const char * const kCopyrightString =
   "\n"
-  "7-Zip"
+  "Zipr"
   " (" kDllName " client)"
   " " MY_VERSION
   " : " MY_COPYRIGHT_DATE
@@ -868,7 +868,7 @@ int MY_CDECL main(int numArgs, const char *args[])
   NDLL::CLibrary lib;
   if (!lib.Load(dllPrefix + FTEXT(kDllName)))
   {
-    PrintError("Cannot load 7-zip library");
+    PrintError("Cannot load Zipr library");
     return 1;
   }
 

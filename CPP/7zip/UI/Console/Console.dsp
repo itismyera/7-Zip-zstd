@@ -708,7 +708,7 @@ SOURCE=..\Common\UpdateProduce.h
 SOURCE=..\Common\ZipRegistry.h
 # End Source File
 # End Group
-# Begin Group "7-zip Common"
+# Begin Group "Zipr Common"
 
 # PROP Default_Filter ""
 # Begin Source File

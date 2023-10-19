@@ -364,7 +364,7 @@ public:
   }
   void MessageBoxError(LPCWSTR message)
   {
-    MessageBoxW(*this, message, L"7-Zip", MB_ICONERROR);
+    MessageBoxW(*this, message, L"Zipr", MB_ICONERROR);
   }
   void MessageBoxError_Status(LPCWSTR message)
   {
@@ -515,7 +515,7 @@ bool CBenchmarkDialog::OnInit()
       SetItemTextA(IDT_BENCH_CPU_FEATURE, s);
     }
 
-    s = "7-Zip " MY_VERSION_CPU;
+    s = "Zipr " MY_VERSION_CPU;
     SetItemTextA(IDT_BENCH_VER, s);
   }
 
@@ -1883,7 +1883,7 @@ HRESULT Benchmark(
   if (bd.TotalMode)
   {
     // bd.Bench2Text.Empty();
-    bd.Bench2Text = "7-Zip " MY_VERSION_CPU;
+    bd.Bench2Text = "Zipr " MY_VERSION_CPU;
     bd.Bench2Text += (char)0xD;
     bd.Bench2Text.Add_LF();
   }

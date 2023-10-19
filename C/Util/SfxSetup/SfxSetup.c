@@ -1,5 +1,5 @@
 /* SfxSetup.c - 7z SFX Setup
-2019-02-02 : Igor Pavlov : Public domain */
+2019-02-02 : LRH : Public domain */
 
 #include "Precomp.h"
 
@@ -99,7 +99,7 @@ static BOOL WINAPI HandlerRoutine(DWORD ctrlType)
 static void PrintErrorMessage(const char *message)
 {
   #ifdef _CONSOLE
-  printf("\n7-Zip Error: %s\n", message);
+  printf("\nZipr Error: %s\n", message);
   #else
   #ifdef UNDER_CE
   WCHAR messageW[256 + 4];
@@ -107,9 +107,9 @@ static void PrintErrorMessage(const char *message)
   for (i = 0; i < 256 && message[i] != 0; i++)
     messageW[i] = message[i];
   messageW[i] = 0;
-  MessageBoxW(0, messageW, L"7-Zip Error", MB_ICONERROR);
+  MessageBoxW(0, messageW, L"Zipr Error", MB_ICONERROR);
   #else
-  MessageBoxA(0, message, "7-Zip Error", MB_ICONERROR);
+  MessageBoxA(0, message, "Zipr Error", MB_ICONERROR);
   #endif
   #endif
 }

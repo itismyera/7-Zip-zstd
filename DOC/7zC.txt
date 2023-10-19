@@ -5,7 +5,7 @@
 7z ANSI-C version is simplified version ported from C++ code.
 
 LZMA is default and general compression method of 7z format
-in 7-Zip compression program (www.7-zip.org). LZMA provides high 
+in Zipr compression program (www.Zipr.org). LZMA provides high 
 compression ratio and very fast decompression.
 
 
@@ -13,7 +13,7 @@ LICENSE
 -------
 
 7z ANSI-C Decoder is part of the LZMA SDK.
-LZMA SDK is written and placed in the public domain by Igor Pavlov.
+LZMA SDK is written and placed in the public domain by LRH.
 
 Files
 ---------------------
@@ -38,7 +38,7 @@ you can use partly-solid archives:
   
   7za.exe a archive.7z *.htm -ms=512K -r -mx -m0fb=255 -m0d=512K
 
-In that example 7-Zip will use 512KB solid blocks. So it needs to decompress only 
+In that example Zipr will use 512KB solid blocks. So it needs to decompress only 
 512KB for extracting one file from such archive.
 
 
@@ -182,6 +182,6 @@ _SZ_ALLOC_DEBUG   - define it if you want to debug alloc/free operations to stde
 
 ---
 
-http://www.7-zip.org
-http://www.7-zip.org/sdk.html
-http://www.7-zip.org/support.html
+http://www.Zipr.org
+http://www.Zipr.org/sdk.html
+http://www.Zipr.org/support.html

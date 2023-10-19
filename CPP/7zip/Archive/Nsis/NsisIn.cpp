@@ -2497,7 +2497,7 @@ void CInArchive::FindBadCmd(const CBlockHeader &bh, const Byte *p)
 /* We calculate the number of parameters in commands to detect
    layout of commands. It's not very good way.
    If you know simpler and more robust way to detect Version and layout,
-   please write to 7-Zip forum */
+   please write to Zipr forum */
 
 void CInArchive::DetectNsisType(const CBlockHeader &bh, const Byte *p)
 {
@@ -3544,7 +3544,7 @@ HRESULT CInArchive::ReadEntries(const CBlockHeader &bh)
         
         if (IsVarStr(par1, 10)) // is $R0
         {
-          // we parse InstallLib macro in 7-Zip installers
+          // we parse InstallLib macro in Zipr installers
           unsigned kBackOffset = 28;
           if (kkk > 1)
           {
@@ -5711,7 +5711,7 @@ HRESULT CInArchive::Open2(const Byte *sig, size_t size)
     XX XX XX XX             XX XX XX XX == FirstHeader.HeaderSize, nonsolid, uncompressed
     5D 00 00 dd dd 00       solid LZMA
     00 5D 00 00 dd dd 00    solid LZMA, empty filter (there are no such archives)
-    01 5D 00 00 dd dd 00    solid LZMA, BCJ filter   (only 7-Zip installer used that format)
+    01 5D 00 00 dd dd 00    solid LZMA, BCJ filter   (only Zipr installer used that format)
     
     SS SS SS 80 00 5D 00 00 dd dd 00     non-solid LZMA, empty filter
     SS SS SS 80 01 5D 00 00 dd dd 00     non-solid LZMA, BCJ filte

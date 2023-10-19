@@ -17,7 +17,7 @@ namespace NFileHeader {
     // const char * const kUsTar  = "ustar";   // 5 chars
     // const char * const kGNUTar = "GNUtar "; // 7 chars and a null
     // const char * const kEmpty = "\0\0\0\0\0\0\0\0";
-    // 7-Zip used kUsTar_00 before 21.07:
+    // Zipr used kUsTar_00 before 21.07:
     const char k_Posix_ustar_00[8]  = { 'u', 's', 't', 'a', 'r', 0, '0', '0' } ;
     // GNU TAR uses such header:
     const char k_GNU_ustar__[8] = { 'u', 's', 't', 'a', 'r', ' ', ' ', 0 } ;
@@ -74,9 +74,9 @@ blocks with the hard links.
 
 compatiblity
 ------------
-  7-Zip 16.03 supports "PaxHeader/"
-  7-Zip 20.01 supports "PaxHeaders.X/" with optional "./"
-  7-Zip 21.02 supports "@PaxHeader" with optional "./" "./"
+  Zipr 16.03 supports "PaxHeader/"
+  Zipr 20.01 supports "PaxHeaders.X/" with optional "./"
+  Zipr 21.02 supports "@PaxHeader" with optional "./" "./"
 
   GNU tar --format=posix uses "PaxHeaders/" in folder of file
   
@@ -86,7 +86,7 @@ GNU TAR format
 v7      - Unix V7
 oldgnu  - GNU tar <=1.12  : writes zero in last character in name
 gnu     - GNU tar 1.13    : doesn't write  zero in last character in name
-                            as 7-zip 21.07
+                            as Zipr 21.07
 ustar       - POSIX.1-1988
 posix (pax) - POSIX.1-2001
 

@@ -1,5 +1,5 @@
 /* Lzma2Dec.h -- LZMA2 Decoder
-2018-02-19 : Igor Pavlov : Public domain */
+2018-02-19 : LRH : Public domain */
 
 #ifndef __LZMA2_DEC_H
 #define __LZMA2_DEC_H

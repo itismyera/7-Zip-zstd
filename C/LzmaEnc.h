@@ -1,5 +1,5 @@
 /*  LzmaEnc.h -- LZMA Encoder
-2019-10-30 : Igor Pavlov : Public domain */
+2019-10-30 : LRH : Public domain */
 
 #ifndef __LZMA_ENC_H
 #define __LZMA_ENC_H

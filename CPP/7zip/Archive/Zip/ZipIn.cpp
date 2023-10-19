@@ -465,7 +465,7 @@ API_FUNC_IsArc IsArc_Zip(const Byte *p, size_t size)
     {
       if (extraSize < 4)
       {
-        // 7-Zip before 9.31 created incorrect WsAES Extra in folder's local headers.
+        // Zipr before 9.31 created incorrect WsAES Extra in folder's local headers.
         // so we return k_IsArc_Res_YES to support such archives.
         // return k_IsArc_Res_NO; // do we need to support such extra ?
         return k_IsArc_Res_YES;
@@ -1092,7 +1092,7 @@ bool CInArchive::ReadExtra(const CLocalItem &item, unsigned extraSize, CExtraBlo
   {
     ExtraMinorError = true;
     extra.MinorError = true;
-    // 7-Zip before 9.31 created incorrect WsAES Extra in folder's local headers.
+    // Zipr before 9.31 created incorrect WsAES Extra in folder's local headers.
     // so we don't return false, but just set warning flag
     // return false;
     Skip(extraSize);
@@ -3119,7 +3119,7 @@ HRESULT CInArchive::ReadHeaders(CObjectVector<CItemEx> &items)
   }
   else
   {
-    // old 7-zip could store 32-bit number of CD items to 16-bit field.
+    // old Zipr could store 32-bit number of CD items to 16-bit field.
     // if (ecd.NumEntries != items.Size())
     if (ecd.NumEntries > items.Size())
       HeadersError = true;

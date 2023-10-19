@@ -1,5 +1,5 @@
 /* Lzma86Enc.c -- LZMA + x86 (BCJ) Filter Encoder
-2018-07-04 : Igor Pavlov : Public domain */
+2018-07-04 : LRH : Public domain */
 
 #include "Precomp.h"
 

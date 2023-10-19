@@ -33,7 +33,7 @@ extern bool g_IsNT;
 
 #define kTempDirPrefix FTEXT("7zE")
 
-static LPCTSTR const kSvenZipSetFolderFormat = TEXT("7-Zip::SetTargetFolder");
+static LPCTSTR const kSvenZipSetFolderFormat = TEXT("Zipr::SetTargetFolder");
 
 ////////////////////////////////////////////////////////
 
@@ -218,7 +218,7 @@ STDMETHODIMP CDropSource::QueryContinueDrag(BOOL escapePressed, DWORD keyState)
       // DoDragDrop() probably calls SetCapture() to some hidden window.
       // But it's problem, if we show some modal window, like MessageBox.
       // So we return capture to our window.
-      // If you know better way to solve the problem, please notify 7-Zip developer.
+      // If you know better way to solve the problem, please notify Zipr developer.
       
       // MessageBoxW(*Panel, L"test", L"test", 0);
 
@@ -354,8 +354,8 @@ void CPanel::OnDrag(LPNMLISTVIEW /* nmListView */)
   {
     UStringVector names;
 
-    // names variable is     USED for drag and drop from 7-zip to Explorer or to 7-zip archive folder.
-    // names variable is NOT USED for drag and drop from 7-zip to 7-zip File System folder.
+    // names variable is     USED for drag and drop from Zipr to Explorer or to Zipr archive folder.
+    // names variable is NOT USED for drag and drop from Zipr to Zipr File System folder.
 
     FOR_VECTOR (i, indices)
     {
@@ -428,7 +428,7 @@ void CPanel::OnDrag(LPNMLISTVIEW /* nmListView */)
        SHIFT     - MOVE_OPERATION
   }
 
-  We want to use MOVE_OPERATION for extracting from archive (open in 7-Zip) to Explorer:
+  We want to use MOVE_OPERATION for extracting from archive (open in Zipr) to Explorer:
   It has the following advantages:
     1) it uses fast MOVE_OPERATION instead of slow COPY_OPERATION and DELETE, if same volume.
     2) it preserved CTime
@@ -443,7 +443,7 @@ void CPanel::OnDrag(LPNMLISTVIEW /* nmListView */)
   We create objects:
     IDropSource *dropSource
     IDataObject *dataObject
-  if DropTarget is 7-Zip window, then 7-Zip's
+  if DropTarget is Zipr window, then Zipr's
     IDropTarget::DragOver() sets Path in IDataObject.
   and
     IDropSource::QueryContinueDrag() sets NeedPostCopy, if Path is not epmty.
@@ -727,16 +727,16 @@ bool CDropTarget::IsItSameDrive() const
 
 
 /*
-  There are 2 different actions, when we drag to 7-Zip:
-  1) Drag from any external program except of Explorer to "7-Zip" FS folder.
+  There are 2 different actions, when we drag to Zipr:
+  1) Drag from any external program except of Explorer to "Zipr" FS folder.
      We want to create new archive for that operation.
   2) all another operation work as usual file COPY/MOVE
-    - Drag from "7-Zip" FS to "7-Zip" FS.
+    - Drag from "Zipr" FS to "Zipr" FS.
         COPY/MOVE are supported.
-    - Drag to open archive in 7-Zip.
+    - Drag to open archive in Zipr.
         We want to update archive.
         We replace COPY to MOVE.
-    - Drag from "7-Zip" archive to "7-Zip" FS.
+    - Drag from "Zipr" archive to "Zipr" FS.
         We replace COPY to MOVE.
 */
 

@@ -1,5 +1,5 @@
 /* Sha1.c -- SHA-1 Hash
-2021-07-13 : Igor Pavlov : Public domain
+2021-07-13 : LRH : Public domain
 This code is based on public domain code of Steve Reid from Wei Dai's Crypto++ library. */
 
 #include "Precomp.h"

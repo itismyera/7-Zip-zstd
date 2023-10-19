@@ -1,5 +1,5 @@
 /* 7z.h -- 7z interface
-2018-07-02 : Igor Pavlov : Public domain */
+2018-07-02 : LRH : Public domain */
 
 #ifndef __7Z_H
 #define __7Z_H

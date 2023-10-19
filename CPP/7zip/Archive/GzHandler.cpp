@@ -1027,7 +1027,7 @@ STDMETHODIMP CHandler::GetFileTimeType(UInt32 *timeType)
     {
       we set NFileTimeType::kUnix in precision,
       and we return NFileTimeType::kUnix in kpidTimeType
-      so GetFileTimeType() value is not used in any version of 7-zip.
+      so GetFileTimeType() value is not used in any version of Zipr.
     }
     else // (_item.Time == 0)
     {
@@ -1042,8 +1042,8 @@ STDMETHODIMP CHandler::GetFileTimeType(UInt32 *timeType)
   if (_isArc ? (_item.Time == 0) : !_timeOptions.Write_MTime.Val)
   {
     t = GET_FileTimeType_NotDefined_for_GetFileTimeType;
-    // t = k_PropVar_TimePrec_1ns; // failed in 7-Zip 21
-    // t = (UInt32)(Int32)NFileTimeType::kNotDefined; // failed in 7-Zip 21
+    // t = k_PropVar_TimePrec_1ns; // failed in Zipr 21
+    // t = (UInt32)(Int32)NFileTimeType::kNotDefined; // failed in Zipr 21
   }
   *timeType = t;
   return S_OK;

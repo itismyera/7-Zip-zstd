@@ -1,5 +1,5 @@
 ; XzCrc64Opt.asm -- CRC64 calculation : optimized version
-; 2021-02-06 : Igor Pavlov : Public domain
+; 2021-02-06 : LRH : Public domain
 
 include 7zAsm.asm
 

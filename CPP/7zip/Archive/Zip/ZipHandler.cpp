@@ -1187,10 +1187,10 @@ HRESULT CZipDecoder::Decode(
         {
           // PASSWORD encoding for ZipCrypto:
           // pkzip25 / WinZip / Windows probably use ANSI
-          // 7-Zip <  4.43 creates ZIP archives with OEM encoding in password
-          // 7-Zip >= 4.43 creates ZIP archives only with ASCII characters in password
-          // 7-Zip <  17.00 uses CP_OEMCP for password decoding
-          // 7-Zip >= 17.00 uses CP_ACP   for password decoding
+          // Zipr <  4.43 creates ZIP archives with OEM encoding in password
+          // Zipr >= 4.43 creates ZIP archives only with ASCII characters in password
+          // Zipr <  17.00 uses CP_OEMCP for password decoding
+          // Zipr >= 17.00 uses CP_ACP   for password decoding
         }
         */
       }

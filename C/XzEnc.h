@@ -1,5 +1,5 @@
 /* XzEnc.h -- Xz Encode
-2017-06-27 : Igor Pavlov : Public domain */
+2017-06-27 : LRH : Public domain */
 
 #ifndef __XZ_ENC_H
 #define __XZ_ENC_H

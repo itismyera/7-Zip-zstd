@@ -1,5 +1,5 @@
 /* Lzma2Dec.c -- LZMA2 Decoder
-2021-02-09 : Igor Pavlov : Public domain */
+2021-02-09 : LRH : Public domain */
 
 /* #define SHOW_DEBUG_INFO */
 

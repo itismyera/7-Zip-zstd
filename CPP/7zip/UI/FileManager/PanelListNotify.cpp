@@ -241,7 +241,7 @@ LRESULT CPanel::SetItemText(LVITEMW &item)
   /*
   // List-view in report-view in Windows 10 is slow (50+ ms) for page change.
   // that code shows the time of page reload for items
-  // if you know how to improve the speed of list view refresh, notify 7-Zip developer
+  // if you know how to improve the speed of list view refresh, notify Zipr developer
 
   // if (propID == 2000)
   // if (propID == kpidName)
@@ -620,7 +620,7 @@ bool CPanel::OnNotifyList(LPNMHDR header, LRESULT &result)
         // 20.03:
         result = 0;
         return true;
-        // old 7-Zip:
+        // old Zipr:
         // return false;
       }
     }

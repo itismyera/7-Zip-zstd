@@ -29,7 +29,7 @@ using namespace NFar;
 
 static const DWORD kShowProgressTime_ms = 100;
 
-static const char * const kCommandPrefix = "7-zip";
+static const char * const kCommandPrefix = "Zipr";
 static const char * const kRegisrtryMainKeyName = NULL; // ""
 static LPCTSTR const kRegisrtryValueNameEnabled = TEXT("UsedByDefault3");
 static const char * const kHelpTopicConfig =  "Config";
@@ -39,7 +39,7 @@ HINSTANCE g_hInstance;
 
 namespace NFar {
 
-const char *g_PluginName_for_Error = "7-Zip";
+const char *g_PluginName_for_Error = "Zipr";
 
 }
 
@@ -57,13 +57,13 @@ BOOL WINAPI DllMain(
 {
   if (dwReason == DLL_PROCESS_ATTACH)
   {
-    // OutputDebugStringA("7-Zip FAR DLL_PROCESS_ATTACH");
+    // OutputDebugStringA("Zipr FAR DLL_PROCESS_ATTACH");
     g_hInstance = (HINSTANCE)hInstance;
     NT_CHECK
   }
   if (dwReason == DLL_PROCESS_DETACH)
   {
-    // OutputDebugStringA("7-Zip FAR DLL_PROCESS_DETACH");
+    // OutputDebugStringA("Zipr FAR DLL_PROCESS_DETACH");
   }
   return TRUE;
 }
@@ -73,7 +73,7 @@ static struct COptions
   bool Enabled;
 } g_Options;
 
-static const char * const kPliginNameForRegistry = "7-ZIP";
+static const char * const kPliginNameForRegistry = "Zipr";
 
 EXTERN_C void WINAPI ExitFAR()
 {

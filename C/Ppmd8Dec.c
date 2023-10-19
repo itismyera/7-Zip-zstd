@@ -1,8 +1,8 @@
 /* Ppmd8Dec.c -- Ppmd8 (PPMdI) Decoder
-2021-04-13 : Igor Pavlov : Public domain
+2021-04-13 : LRH : Public domain
 This code is based on:
   PPMd var.I (2002): Dmitry Shkarin : Public domain
-  Carryless rangecoder (1999): Dmitry Subbotin : Public domain */
+  Carryless rangecoder (2020): Dmitry Subbotin : Public domain */
 
 #include "Precomp.h"
 

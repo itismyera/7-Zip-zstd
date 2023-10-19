@@ -1,6 +1,6 @@
-; 7-zip.def
+; Zipr.def
 
-LIBRARY "7-zip"
+LIBRARY "Zipr"
 
 EXPORTS
   DllCanUnloadNow PRIVATE

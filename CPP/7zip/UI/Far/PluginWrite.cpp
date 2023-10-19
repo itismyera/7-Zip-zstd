@@ -29,7 +29,7 @@ using namespace NUpdateArchive;
 
 static const char * const kHelpTopic = "Update";
 
-static const char * const kArchiveHistoryKeyName = "7-ZipArcName";
+static const char * const kArchiveHistoryKeyName = "ZiprArcName";
 
 static const UInt32 g_MethodMap[] = { 0, 1, 3, 5, 7, 9 };
 
@@ -405,11 +405,11 @@ HRESULT CompressFiles(const CObjectVector<PluginPanelItem> &pluginPanelItems)
   CCodecs *codecs = new CCodecs;
   CMyComPtr<ICompressCodecsInfo> compressCodecsInfo = codecs;
   if (codecs->Load() != S_OK)
-    throw "Can't load 7-Zip codecs";
+    throw "Can't load Zipr codecs";
   */
   
   if (LoadGlobalCodecs() != S_OK)
-    throw "Can't load 7-Zip codecs";
+    throw "Can't load Zipr codecs";
 
   CCodecs *codecs = g_CodecsObj;
 

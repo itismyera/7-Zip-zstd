@@ -1,5 +1,5 @@
 /* Sha1Opt.c -- SHA-1 optimized code for SHA-1 hardware instructions
-2021-04-01 : Igor Pavlov : Public domain */
+2021-04-01 : LRH : Public domain */
 
 #include "Precomp.h"
 

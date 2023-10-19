@@ -8,7 +8,7 @@
 <?define MmmmVer = "$(var.MmVer).$(var.VerBuild).0" ?>
 <?define UpgradeMinVer = "4.38" ?>
 
-<?define ProductName = "7-Zip" ?>
+<?define ProductName = "Zipr" ?>
 
 <?ifndef MyCPU?>
   <?define MyCPU = "Intel" ?>
@@ -71,8 +71,8 @@
 <?define CompInstallRegFolder     = "$(var.CompId)88" ?>
 
 
-<?define Manufacturer = "Igor Pavlov" ?>
-<?define HomePage = "http://www.7-zip.org/" ?>
+<?define Manufacturer = "LRH" ?>
+<?define HomePage = "http://www.Zipr.org/" ?>
 <?define AboutURL = "$(var.HomePage)" ?>
 <?define UpdatesURL = "$(var.HomePage)download.html" ?>
 <?define SupportURL = "$(var.HomePage)support.html" ?>
@@ -107,10 +107,10 @@
     <Property Id="MSIRMSHUTDOWN" Value="2"/>
 
     <Property Id="INSTALLDIR">
-      <RegistrySearch Id="My7zipPathLM"  Type="raw" Root="HKLM" Key="Software\7-Zip" Name="Path" />
-      <RegistrySearch Id="My7zipPathLM2" Type="raw" Root="HKLM" Key="Software\7-Zip" Name="Path$(var.NumBits)" />
-      <RegistrySearch Id="My7zipPath"    Type="raw" Root="HKCU" Key="Software\7-Zip" Name="Path" />
-      <RegistrySearch Id="My7zipPath2"   Type="raw" Root="HKCU" Key="Software\7-Zip" Name="Path$(var.NumBits)" />
+      <RegistrySearch Id="My7zipPathLM"  Type="raw" Root="HKLM" Key="Software\Zipr" Name="Path" />
+      <RegistrySearch Id="My7zipPathLM2" Type="raw" Root="HKLM" Key="Software\Zipr" Name="Path$(var.NumBits)" />
+      <RegistrySearch Id="My7zipPath"    Type="raw" Root="HKCU" Key="Software\Zipr" Name="Path" />
+      <RegistrySearch Id="My7zipPath2"   Type="raw" Root="HKCU" Key="Software\Zipr" Name="Path$(var.NumBits)" />
     </Property>
 
     <Property Id="ALLUSERS">2</Property>
@@ -124,46 +124,46 @@
 
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="$(var.PFilesFolder)" Name="Files">
-        <Directory Id="INSTALLDIR" Name="7-Zip">
+        <Directory Id="INSTALLDIR" Name="Zipr">
 
           <Component Id="InstallRegCU" Guid="$(var.CompInstallRegCU)" DiskId="1" Win64="$(var.Is64)">
-            <Registry Id="MyInstallRegCU"  Root="HKCU" Key="Software\7-Zip" Name="Path" Action="write" Type="string" Value="[INSTALLDIR]" />
-            <Registry Id="MyInstallRegCU2" Root="HKCU" Key="Software\7-Zip" Name="Path$(var.NumBits)" Action="write" Type="string" Value="[INSTALLDIR]" />
+            <Registry Id="MyInstallRegCU"  Root="HKCU" Key="Software\Zipr" Name="Path" Action="write" Type="string" Value="[INSTALLDIR]" />
+            <Registry Id="MyInstallRegCU2" Root="HKCU" Key="Software\Zipr" Name="Path$(var.NumBits)" Action="write" Type="string" Value="[INSTALLDIR]" />
           </Component>
           <Component Id="InstallRegLM" Guid="$(var.CompInstallRegLM)" DiskId="1" Win64="$(var.Is64)">
             <Condition>Privileged</Condition>
-            <Registry Id="MyInstallRegLM"  Root="HKLM" Key="Software\7-Zip" Name="Path" Action="write" Type="string" Value="[INSTALLDIR]" />
-            <Registry Id="MyInstallRegLM2" Root="HKLM" Key="Software\7-Zip" Name="Path$(var.NumBits)" Action="write" Type="string" Value="[INSTALLDIR]" />
+            <Registry Id="MyInstallRegLM"  Root="HKLM" Key="Software\Zipr" Name="Path" Action="write" Type="string" Value="[INSTALLDIR]" />
+            <Registry Id="MyInstallRegLM2" Root="HKLM" Key="Software\Zipr" Name="Path$(var.NumBits)" Action="write" Type="string" Value="[INSTALLDIR]" />
           </Component>
           
 
           <Component Id="InstallRegWild" Guid="$(var.CompInstallRegWild)" DiskId="1" Win64="$(var.Is64)">
             <Registry Id="MyInstallRegWild" Action="write" Type="string"
-               Root="HKCR" Key="*\shellex\ContextMenuHandlers\7-Zip"
+               Root="HKCR" Key="*\shellex\ContextMenuHandlers\Zipr"
                Value="$(var.ShellExtId)" />
           </Component>
 
           <Component Id="InstallRegDirectory" Guid="$(var.CompInstallRegDirectory)" DiskId="1" Win64="$(var.Is64)">
             <Registry Id="MyInstallRegDirectory" Action="write" Type="string"
-               Root="HKCR" Key="Directory\shellex\ContextMenuHandlers\7-Zip"
+               Root="HKCR" Key="Directory\shellex\ContextMenuHandlers\Zipr"
                Value="$(var.ShellExtId)" />
           </Component>
 
           <Component Id="InstallRegFolder" Guid="$(var.CompInstallRegFolder)" DiskId="1" Win64="$(var.Is64)">
             <Registry Id="MyInstallRegFolder" Action="write" Type="string"
-               Root="HKCR" Key="Folder\shellex\ContextMenuHandlers\7-Zip"
+               Root="HKCR" Key="Folder\shellex\ContextMenuHandlers\Zipr"
                Value="$(var.ShellExtId)" />
           </Component>
 
           <Component Id="InstallRegDirDD" Guid="$(var.CompInstallRegDirDD)" DiskId="1" Win64="$(var.Is64)">
             <Registry Id="MyInstallRegDirDD" Action="write" Type="string"
-               Root="HKCR" Key="Directory\shellex\DragDropHandlers\7-Zip"
+               Root="HKCR" Key="Directory\shellex\DragDropHandlers\Zipr"
                Value="$(var.ShellExtId)" />
           </Component>
 
           <Component Id="InstallRegDriveDD" Guid="$(var.CompInstallRegDriveDD)" DiskId="1" Win64="$(var.Is64)">
             <Registry Id="MyInstallRegDriveDD" Action="write" Type="string"
-               Root="HKCR" Key="Drive\shellex\DragDropHandlers\7-Zip"
+               Root="HKCR" Key="Drive\shellex\DragDropHandlers\Zipr"
                Value="$(var.ShellExtId)" />
           </Component>
 
@@ -171,7 +171,7 @@
             <Condition>Privileged</Condition>
             <Registry Id="MyInstallRegApproved" Action="write" Type="string"
                Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved"
-               Name="$(var.ShellExtId)" Value="7-Zip Shell Extension" />
+               Name="$(var.ShellExtId)" Value="Zipr Shell Extension" />
           </Component>
 
 
@@ -187,17 +187,17 @@
 
           <Component Id="Fm" Guid="$(var.CompFm)" DiskId="1" Win64="$(var.Is64)">
             <File Id="_7zFM.exe" Name="7zFM.exe">
-              <Shortcut Id="startmenuFmShortcut" Directory="PMenu" Name="7zipFM" LongName="7-Zip ZS File Manager" />
+              <Shortcut Id="startmenuFmShortcut" Directory="PMenu" Name="7zipFM" LongName="Zipr ZS File Manager" />
             </File>
           </Component>
 
           <?if $(var.MyCPU) = "x64" ?>
 
           <Component Id="ShellExt32" Guid="$(var.CompShellExt2)" DiskId="1" Win64="no">
-            <File Id="_7zip32.dll" Name="7-zip32.dll" />
+            <File Id="_7zip32.dll" Name="Zipr32.dll" />
             <Registry Id="shellReg0_32" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
-               Value="[INSTALLDIR]7-zip32.dll" />
+               Value="[INSTALLDIR]Zipr32.dll" />
             <Registry Id="shellReg1_32" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
                Name="ThreadingModel"
@@ -207,10 +207,10 @@
           <?endif ?>
 
           <Component Id="ShellExt" Guid="$(var.CompShellExt)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7zip.dll" Name="7-zip.dll" />
+            <File Id="_7zip.dll" Name="Zipr.dll" />
             <Registry Id="shellReg0" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
-               Value="[INSTALLDIR]7-zip.dll" />
+               Value="[INSTALLDIR]Zipr.dll" />
             <Registry Id="shellReg1" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
                Name="ThreadingModel"
@@ -246,8 +246,8 @@
 
 
           <Component Id="Help" Guid="$(var.CompHelp)">
-            <File Id="_7zip.chm" Name="7-zip.chm" DiskId="1" >
-              <Shortcut Id="startmenuHelpShortcut" Directory="PMenu" Name="7zipHelp" LongName="7-Zip Help" />
+            <File Id="_7zip.chm" Name="Zipr.chm" DiskId="1" >
+              <Shortcut Id="startmenuHelpShortcut" Directory="PMenu" Name="7zipHelp" LongName="Zipr Help" />
             </File>
           </Component>
 
@@ -354,11 +354,11 @@
       </Directory>
 
       <Directory Id="ProgramMenuFolder" Name="PMenu" LongName="Programs">
-        <Directory Id="PMenu" Name="7zip" LongName="7-Zip" />
+        <Directory Id="PMenu" Name="7zip" LongName="Zipr" />
       </Directory>
     </Directory>
 
-    <Feature Id="Complete" Title="7-Zip" Description="The complete package."
+    <Feature Id="Complete" Title="Zipr" Description="The complete package."
          Display="expand" Level="1" ConfigurableDirectory="INSTALLDIR"
          Absent="disallow" AllowAdvertise="no" >
       <Feature Id="Program" Title="Program files" Description="Program files." Level="1"

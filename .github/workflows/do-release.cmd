@@ -1,12 +1,12 @@
 @echo off
-REM Build some release of 7-Zip ZS
+REM Build some release of Zipr ZS
 
 SET COPYCMD=/Y /B
 SET COPTS=-m0=lzma -mx9 -ms=on -mf=bcj2
-SET URL=https://www.7-zip.org/a/7z2201.exe
+SET URL=https://www.Zipr.org/a/7z2201.exe
 SET VERSION=22.01
-SET SZIP="C:\Program Files\7-Zip\7z.exe"
-SET LURL=https://raw.githubusercontent.com/mcmilk/7-Zip-zstd/master/CPP/7zip/Bundles
+SET SZIP="C:\Program Files\Zipr\7z.exe"
+SET LURL=https://raw.githubusercontent.com/mcmilk/Zipr/master/CPP/7zip/Bundles
 
 SET WD=%cd%
 SET SKEL=%WD%\skel
@@ -14,21 +14,21 @@ SET SKEL=%WD%\skel
 REM Download our skeleton files
 mkdir %SKEL%
 cd %SKEL%
-curl %URL% --output 7-Zip.exe
-%SZIP% x 7-Zip.exe
+curl %URL% --output Zipr.exe
+%SZIP% x Zipr.exe
 mkdir %WD%\totalcmd
 goto start
 
 :doit
 echo Doing ARCH=%ARCH% in SOURCE=%BIN%
 
-REM 7-Zip Files
+REM Zipr Files
 cd %SKEL%
 del *.exe *.dll *.sfx
-FOR %%f IN (7z.dll 7z.exe 7z.sfx 7za.dll 7za.exe 7zCon.sfx 7zFM.exe 7zG.exe 7-zip.dll 7zxa.dll Uninstall.exe) DO (
+FOR %%f IN (7z.dll 7z.exe 7z.sfx 7za.dll 7za.exe 7zCon.sfx 7zFM.exe 7zG.exe Zipr.dll 7zxa.dll Uninstall.exe) DO (
   copy %BIN%\%%f %%f
 )
-IF DEFINED ZIP32 copy %ZIP32% 7-zip32.dll
+IF DEFINED ZIP32 copy %ZIP32% Zipr32.dll
 %SZIP% a ..\%ARCH%.7z %COPTS%
 cd %WD%
 copy %BIN%\Install.exe + %ARCH%.7z 7z%VERSION%-zstd-%ARCH%.exe
@@ -62,7 +62,7 @@ goto doit
 :done_x32
 
 SET ARCH=x64
-SET ZIP32=%WD%\bin-x86\7-zip.dll
+SET ZIP32=%WD%\bin-x86\Zipr.dll
 SET BIN=%WD%\bin-x64
 SET TCDLL=tc7z64.dll
 goto doit
@@ -76,7 +76,7 @@ goto doit
 :done_arm
 
 SET ARCH=arm64
-SET ZIP32=%WD%\bin-arm\7-zip.dll
+SET ZIP32=%WD%\bin-arm\Zipr.dll
 SET BIN=%WD%\bin-arm64
 SET TCDLL=tc7zarm64.dll
 goto doit

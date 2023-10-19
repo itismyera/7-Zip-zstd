@@ -972,7 +972,7 @@ INT_PTR CProgressDialog::Create(const UString &title, NWindows::CThread &thread,
   }
   thread.Wait_Close();
   if (!MessagesDisplayed)
-    MessageBoxW(wndParent, L"Progress Error", L"7-Zip", MB_ICONERROR);
+    MessageBoxW(wndParent, L"Progress Error", L"Zipr", MB_ICONERROR);
   return res;
 }
 
@@ -1006,7 +1006,7 @@ bool CProgressDialog::OnExternalCloseMessage()
   {
     MessagesDisplayed = true;
     if (fm.ErrorMessage.Title.IsEmpty())
-      fm.ErrorMessage.Title = "7-Zip";
+      fm.ErrorMessage.Title = "Zipr";
     MessageBoxW(*this, fm.ErrorMessage.Message, fm.ErrorMessage.Title, MB_ICONERROR);
   }
   else if (!thereAreMessages)
@@ -1016,7 +1016,7 @@ bool CProgressDialog::OnExternalCloseMessage()
     if (!fm.OkMessage.Message.IsEmpty())
     {
       if (fm.OkMessage.Title.IsEmpty())
-        fm.OkMessage.Title = "7-Zip";
+        fm.OkMessage.Title = "Zipr";
       MessageBoxW(*this, fm.OkMessage.Message, fm.OkMessage.Title, MB_OK);
     }
   }

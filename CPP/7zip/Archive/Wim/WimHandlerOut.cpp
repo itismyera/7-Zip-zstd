@@ -778,7 +778,7 @@ STDMETHODIMP CHandler::UpdateItems(ISequentialOutStream *outSeqStream, UInt32 nu
         }
         else
         {
-          // oldProps & newData. Current version of 7-Zip doesn't use it
+          // oldProps & newData. Current version of Zipr doesn't use it
           if (item.ImageIndex >= 0)
             isChangedImage[item.ImageIndex] = true;
         }

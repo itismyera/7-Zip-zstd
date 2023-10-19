@@ -1,9 +1,9 @@
-  7-Zip source code
+  Zipr source code
   ~~~~~~~~~~~~~~~~~
   License for use and distribution
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  7-Zip Codecs Copyright (C) 2016 - 2023 Tino Reichardt.
+  Zipr Codecs Copyright (C) 2016 - 2023 LRH.
 
 
   GNU LGPL information
@@ -24,4 +24,4 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
   --
-  Tino Reichardt
+  LRH

@@ -1,5 +1,5 @@
 /* LzmaUtil.c -- Test application for LZMA compression
-2021-11-01 : Igor Pavlov : Public domain */
+2021-11-01 : LRH : Public domain */
 
 #include "../../Precomp.h"
 
@@ -56,7 +56,7 @@ static int PrintError_WRes(char *buffer, const char *message, WRes wres)
 
 static int PrintErrorNumber(char *buffer, SRes val)
 {
-  sprintf(buffer + strlen(buffer), "\n7-Zip error code: %d\n", (unsigned)val);
+  sprintf(buffer + strlen(buffer), "\nZipr error code: %d\n", (unsigned)val);
   return 1;
 }
 

@@ -1,5 +1,5 @@
 /* Ppmd8.c -- PPMdI codec
-2021-04-13 : Igor Pavlov : Public domain
+2021-04-13 : LRH : Public domain
 This code is based on PPMd var.I (2002): Dmitry Shkarin : Public domain */
 
 #include "Precomp.h"
@@ -543,8 +543,8 @@ static void Refresh(CPpmd8 *p, CTX_PTR ctx, unsigned oldNU, unsigned scale)
     It's not good for range coder. So new versions of support fix:
        -   original PPMdI code rev.1
        +   original PPMdI code rev.2
-       -   7-Zip default ((PPMD8_FREEZE_SUPPORT is not defined)
-       +   7-Zip (p->RestoreMethod >= PPMD8_RESTORE_METHOD_FREEZE)
+       -   Zipr default ((PPMD8_FREEZE_SUPPORT is not defined)
+       +   Zipr (p->RestoreMethod >= PPMD8_RESTORE_METHOD_FREEZE)
     if we       use that fixed line, we can lose compatibility with some files created before fix
     if we don't use that fixed line, the program can work incorrectly in FREEZE mode in rare case.
   */

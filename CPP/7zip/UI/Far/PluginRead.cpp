@@ -25,7 +25,7 @@ static const char * const kHelpTopicExtrFromSevenZip =  "Extract";
 
 static const char kDirDelimiter = CHAR_PATH_SEPARATOR;
 
-static const char * const kExractPathHistoryName  = "7-ZipExtractPath";
+static const char * const kExractPathHistoryName  = "ZiprExtractPath";
 
 HRESULT CPlugin::ExtractFiles(
     bool decompressAllItems,

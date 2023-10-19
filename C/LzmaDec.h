@@ -1,5 +1,5 @@
 /* LzmaDec.h -- LZMA Decoder
-2020-03-19 : Igor Pavlov : Public domain */
+2020-03-19 : LRH : Public domain */
 
 #ifndef __LZMA_DEC_H
 #define __LZMA_DEC_H

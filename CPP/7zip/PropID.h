@@ -137,7 +137,7 @@ linux ctime :
    changing the file modification time
    counts as a metadata change, so will also have the side effect of updating the ctime.
 
-PROPVARIANT for timestamps in 7-Zip:
+PROPVARIANT for timestamps in Zipr:
 {
   vt = VT_FILETIME
   wReserved1: set precision level
@@ -164,7 +164,7 @@ NOTE: TAR-PAX archives created by GNU TAR don't keep
   whole information about original level of precision,
   and timestamp are stored in reduced form, where tail zero
   digits after point are removed.
-  So 7-Zip can return different precision levels for different items for such TAR archives.
+  So Zipr can return different precision levels for different items for such TAR archives.
 */
 
 /*

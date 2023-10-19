@@ -10,7 +10,7 @@ EXTERNAL_CODECS
     - "Codecs"  subdir
   The order of check:
     1) directory of client executable
-    2) WIN32: directory for REGISTRY item [HKEY_*\Software\7-Zip\Path**]
+    2) WIN32: directory for REGISTRY item [HKEY_*\Software\Zipr\Path**]
        The order for HKEY_* : Path** :
          - HKEY_CURRENT_USER  : PathXX
          - HKEY_LOCAL_MACHINE : PathXX
@@ -24,7 +24,7 @@ EXPORT_CODECS
 -------------
   if (EXTERNAL_CODECS) is defined, then the code exports internal
   codecs of client from CCodecs object to external plugins.
-  7-Zip doesn't use that feature. 7-Zip uses the scheme:
+  Zipr doesn't use that feature. Zipr uses the scheme:
     - client application without internal plugins.
     - 7z.dll module contains all (or almost all) plugins.
       7z.dll can use codecs from another plugins, if required.
@@ -92,7 +92,7 @@ static CFSTR const kMainDll =
 
 #ifdef _WIN32
 
-static LPCTSTR const kRegistryPath = TEXT("Software") TEXT(STRING_PATH_SEPARATOR) TEXT("7-zip");
+static LPCTSTR const kRegistryPath = TEXT("Software") TEXT(STRING_PATH_SEPARATOR) TEXT("Zipr");
 static LPCWSTR const kProgramPathValue = L"Path";
 static LPCWSTR const kProgramPath2Value = L"Path"
   #ifdef _WIN64
@@ -634,13 +634,13 @@ HRESULT CCodecs::LoadDll(const FString &dllPath, bool needCheckDll, bool *loaded
         error.ErrorCode = res;
       }
     }
-    // plugins can use non-7-zip dlls, so we silently ignore non7zip DLLs
+    // plugins can use non-Zipr dlls, so we silently ignore non7zip DLLs
     /*
     if (!used)
     {
       CCodecError &error = Errors.AddNew();
       error.Path = dllPath;
-      error.Message = "no 7-Zip code";
+      error.Message = "no Zipr code";
     }
     */
   }

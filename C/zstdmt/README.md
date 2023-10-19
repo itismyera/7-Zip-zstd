@@ -31,11 +31,11 @@ size    | value             | description
 
 
 ## Usage of the Testutils
-- see [programs](https://github.com/mcmilk/zstdmt/tree/master/programs)
+- see [programs](https://www.zipr.cn/zstdmt/tree/master/programs)
 
 ## Usage of the Library
 
-- see [lib](https://github.com/mcmilk/zstdmt/tree/master/lib)
+- see [lib](https://www.zipr.cn/zstdmt/tree/master/lib)
 
 
 [Brotli]:https://github.com/google/brotli/

@@ -389,7 +389,7 @@ SOURCE=..\Common\ParseProperties.cpp
 SOURCE=..\Common\ParseProperties.h
 # End Source File
 # End Group
-# Begin Group "7-Zip Common"
+# Begin Group "Zipr Common"
 
 # PROP Default_Filter ""
 # Begin Source File

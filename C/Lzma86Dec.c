@@ -1,5 +1,5 @@
 /* Lzma86Dec.c -- LZMA + x86 (BCJ) Filter Decoder
-2016-05-16 : Igor Pavlov : Public domain */
+2016-05-16 : LRH : Public domain */
 
 #include "Precomp.h"
 

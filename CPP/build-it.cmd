@@ -34,8 +34,8 @@ copy %PLATFORM%\7zG.exe %OUTDIR%\7zG.exe
 
 cd %ROOT%\UI\Explorer
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7-zip.dll" >> %ERRFILE%
-copy %PLATFORM%\7-zip.dll %OUTDIR%\7-zip.dll
+IF %errorlevel% NEQ 0 echo "Error @ Zipr.dll" >> %ERRFILE%
+copy %PLATFORM%\Zipr.dll %OUTDIR%\Zipr.dll
 
 cd %ROOT%\Bundles\SFXWin
 nmake %OPTS%

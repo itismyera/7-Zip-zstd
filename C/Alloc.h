@@ -1,5 +1,5 @@
 /* Alloc.h -- Memory allocation functions
-2021-07-13 : Igor Pavlov : Public domain */
+2021-07-13 : LRH : Public domain */
 
 #ifndef __COMMON_ALLOC_H
 #define __COMMON_ALLOC_H

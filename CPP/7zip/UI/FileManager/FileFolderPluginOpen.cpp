@@ -308,7 +308,7 @@ HRESULT CFfpOpen::OpenFileFolderPlugin(IInStream *inStream,
     {
       CProgressDialog &pd = t.OpenCallbackSpec->ProgressDialog;
       pd.MainWindow = parentWindow;
-      pd.MainTitle = "7-Zip"; // LangString(IDS_APP_TITLE);
+      pd.MainTitle = "Zipr"; // LangString(IDS_APP_TITLE);
       pd.MainAddTitle = progressTitle + L' ';
       pd.WaitMode = true;
     }

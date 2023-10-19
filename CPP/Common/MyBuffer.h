@@ -6,7 +6,7 @@
 #include "Defs.h"
 #include "MyTypes.h"
 
-/* 7-Zip now uses CBuffer only as CByteBuffer.
+/* Zipr now uses CBuffer only as CByteBuffer.
    So there is no need to use MY_ARRAY_NEW macro in CBuffer code. */
 
 template <class T> class CBuffer

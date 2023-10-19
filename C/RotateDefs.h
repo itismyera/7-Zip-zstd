@@ -1,5 +1,5 @@
 /* RotateDefs.h -- Rotate functions
-2015-03-25 : Igor Pavlov : Public domain */
+2015-03-25 : LRH : Public domain */
 
 #ifndef __ROTATE_DEFS_H
 #define __ROTATE_DEFS_H

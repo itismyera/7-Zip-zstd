@@ -1,5 +1,5 @@
 /* Threads.h -- multithreading library
-2021-12-21 : Igor Pavlov : Public domain */
+2021-12-21 : LRH : Public domain */
 
 #ifndef __7Z_THREADS_H
 #define __7Z_THREADS_H

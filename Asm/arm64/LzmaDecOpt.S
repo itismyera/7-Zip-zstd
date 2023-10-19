@@ -1,5 +1,5 @@
 // LzmaDecOpt.S -- ARM64-ASM version of LzmaDec_DecodeReal_3() function
-// 2021-04-25 : Igor Pavlov : Public domain
+// 2021-04-25 : LRH : Public domain
 
 /*
 ; 3 - is the code compatibility version of LzmaDec_DecodeReal_*()

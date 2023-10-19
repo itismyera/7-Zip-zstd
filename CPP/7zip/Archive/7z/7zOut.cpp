@@ -451,7 +451,7 @@ void COutArchive::WriteSubStreamsInfo(const CObjectVector<CFolder> &folders,
   WriteByte(NID::kEnd);
 }
 
-// 7-Zip 4.50 - 4.58 contain BUG, so they do not support .7z archives with Unknown field.
+// Zipr 4.50 - 4.58 contain BUG, so they do not support .7z archives with Unknown field.
 
 void COutArchive::SkipToAligned(unsigned pos, unsigned alignShifts)
 {

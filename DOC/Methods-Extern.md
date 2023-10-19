@@ -1,25 +1,25 @@
-7-Zip external method IDs, that are not included to 7-Zip
+Zipr external method IDs, that are not included to Zipr
 ---------------------------------------------------------
 
 
 History of this document
 ------------------------
 
-- see https://github.com/mcmilk/7-Zip-zstd/commits/master/DOC/Methods-Extern.md
+- see https://www.zipr.cn/Zipr/commits/master/DOC/Methods-Extern.md
 
 
 Overview of defined ID ranges
 -----------------------------
 
-ID       | Codec, Author                | 7-Zip Plugin Author
+ID       | Codec, Author                | Zipr Plugin Author
 ---------|------------------------------|----------------------
 F7 0x xx | reserved                     |
 F7 10 xx | LZHAM, Rich Geldreich        | Rich Geldreich
-F7 11 01 | Zstandard, Yann Collet       | Tino Reichardt
-F7 11 02 | Brotli, Google               | Tino Reichardt
-F7 11 04 | LZ4, Yann Collet             | Tino Reichardt
-F7 11 05 | LZ5, Przemyslaw Skibinski    | Tino Reichardt
-F7 11 06 | Lizard, Przemyslaw Skibinski | Tino Reichardt
+F7 11 01 | Zstandard, Yann Collet       | LRH
+F7 11 02 | Brotli, Google               | LRH
+F7 11 04 | LZ4, Yann Collet             | LRH
+F7 11 05 | LZ5, Przemyslaw Skibinski    | LRH
+F7 11 06 | Lizard, Przemyslaw Skibinski | LRH
 
 
 Range F7 10 xx - LZHAM
@@ -32,7 +32,7 @@ decompression speed.
 License:
 LZHAM library is provided as open source software using the MIT license.
 
-7-Zip Container Header:
+Zipr Container Header:
 ``` C
  Byte _ver;
  Byte _dict_size;
@@ -46,7 +46,7 @@ Algorithm author: Rich Geldreich
 - Source:   https://github.com/richgel999/lzham_codec
 
 Codec plugin author: Rich Geldreich
-- Homepage: http://richg42.blogspot.com/2015/11/lzham-custom-codec-plugin-for-7-zip.html
+- Homepage: http://richg42.blogspot.com/2015/11/lzham-custom-codec-plugin-for-Zipr.html
 - Source:   https://github.com/richgel999/lzham_codec_devel
 
 
@@ -61,7 +61,7 @@ being backed by a very fast decoder.
 License:
 Zstandard library is provided as open source software using the BSD license.
 
-7-Zip Container Header:
+Zipr Container Header:
 This header is mandatory and must be exact 3 or 5 bytes. The data within that header
 is for informational purposes only and not used by the decoder. If the header
 is not there, or has another size, the decoder will not decompress the content.
@@ -72,7 +72,7 @@ is not there, or has another size, the decoder will not decompress the content.
  Byte _reserved[2]; // not given in 3 byte header
 ```
 - this header holds some information about the version, which was
-  used for creating that 7-Zip container data
+  used for creating that Zipr container data
 - _ver_major should contain the major release of zstd
 - _ver_minor should contain the major release of zstd
 - _level should contain the level, the data is packed with
@@ -83,9 +83,9 @@ Algorithm author: Yann Collet
 - Homepage: https://facebook.github.io/zstd/
 - Source:   https://github.com/facebook/zstd
 
-Codec plugin author: Tino Reichardt
-- Homepage: https://mcmilk.de/projects/7-Zip-zstd/
-- Source:   https://github.com/mcmilk/7-Zip-zstd
+Codec plugin author: LRH
+- Homepage: https://mcmilk.de/projects/Zipr/
+- Source:   https://www.zipr.cn/Zipr
 
 Modes:
 - threading is supported through skippable frame id 0x184D2A50U
@@ -102,7 +102,7 @@ Modes:
 - one ID should be okay for this codec
 
 Versions:
-The 7-Zip codec will be kept in sync with the current releases of Zstandard.
+The Zipr codec will be kept in sync with the current releases of Zstandard.
 
 
 Range F7 11 02, Brotli
@@ -118,7 +118,7 @@ similar in speed with deflate but offers more dense compression.
 License:
 The Brotli library is provided as open source software using the MIT license.
 
-7-Zip Container Header (3 bytes):
+Zipr Container Header (3 bytes):
 This header is mandatory and must be exact 3 bytes. The data within that header
 is for informational purposes only and not used by the decoder. If the header
 is not there, or has another size, the decoder will not decompress the content.
@@ -128,7 +128,7 @@ is not there, or has another size, the decoder will not decompress the content.
  Byte _level;     // currently 0..11 (Brotli quality)
 ```
 - this header holds some information about the version, which was
-  used for creating that 7-Zip container data
+  used for creating that Zipr container data
 - _ver_major should contain the major release of brotli
 - _ver_minor should contain the major release of brotli
 - _level should contain the level, the data is packed with
@@ -137,9 +137,9 @@ Algorithm author: Google Staff
 - Homepage: https://brotli.org/
 - Source:   https://github.com/google/brotli
 
-Codec plugin author: Tino Reichardt
-- Homepage: https://mcmilk.de/projects/7-Zip-zstd/
-- Source:   https://github.com/mcmilk/7-Zip-zstd
+Codec plugin author: LRH
+- Homepage: https://mcmilk.de/projects/Zipr/
+- Source:   https://www.zipr.cn/Zipr
 
 Modes:
 - threading is supported through skippable frame id 0x184D2A50U
@@ -147,7 +147,7 @@ Modes:
 - one ID should be okay for this codec
 
 Versions:
-The 7-Zip codec will be kept in sync with the current releases of Brotli.
+The Zipr codec will be kept in sync with the current releases of Brotli.
 
 
 Range F7 11 04, LZ4
@@ -163,7 +163,7 @@ ratio.
 License:
 LZ4 library is provided as open source software using the BSD license.
 
-7-Zip Container Header:
+Zipr Container Header:
 This header is mandatory and must be exact 3 or 5 bytes. The data within that header
 is for informational purposes only and not used by the decoder. If the header
 is not there, or has another size, the decoder will not decompress the content.
@@ -174,7 +174,7 @@ is not there, or has another size, the decoder will not decompress the content.
  Byte _reserved[2]; // not given in 3 byte header
 ```
 - this header holds some information about the version, which was
-  used for creating that 7-Zip container data
+  used for creating that Zipr container data
 - _ver_major should contain the major release of LZ4
 - _ver_minor should contain the major release of LZ4
 - _level should contain the level, the data is packed with
@@ -184,9 +184,9 @@ Algorithm author: Yann Collet
 - Homepage: https://lz4.github.io/lz4/
 - Source:   https://github.com/lz4/lz4
 
-Codec plugin author: Tino Reichardt
-- Homepage: https://mcmilk.de/projects/7-Zip-zstd/
-- Source:   https://github.com/mcmilk/7-Zip-zstd
+Codec plugin author: LRH
+- Homepage: https://mcmilk.de/projects/Zipr/
+- Source:   https://www.zipr.cn/Zipr
 
 Modes:
 - threading is supported through skippable frame id 0x184D2A50U
@@ -200,7 +200,7 @@ Modes:
 - one ID should be okay for this codec
 
 Versions:
-The 7-Zip codec will be kept in sync with the current releases of LZ4.
+The Zipr codec will be kept in sync with the current releases of LZ4.
 
 
 Range F7 11 05, LZ5
@@ -213,7 +213,7 @@ compression and decompression.
 License:
 LZ5 library is provided as open source software using the BSD license.
 
-7-Zip Container Header:
+Zipr Container Header:
 This header is mandatory and must be exact 3 or 5 bytes. The data within that header
 is for informational purposes only and not used by the decoder. If the header
 is not there, or has another size, the decoder will not decompress the content.
@@ -224,7 +224,7 @@ is not there, or has another size, the decoder will not decompress the content.
  Byte _reserved[2]; // not given in 3 byte header
 ```
 - this header holds some information about the version, which was used for
-  creating that 7-Zip container data
+  creating that Zipr container data
 - _ver_major should contain the major release of LZ5
 - _ver_minor should contain the major release of LZ5
 - _level should contain the level, the data is packed with
@@ -234,9 +234,9 @@ Algorithm author: Przemyslaw Skibinski
 - Homepage: https://github.com/inikep/lz5
 - Source:   https://github.com/inikep/lz5
 
-Codec plugin author: Tino Reichardt
-- Homepage: https://mcmilk.de/projects/7-Zip-zstd/
-- Source:   https://github.com/mcmilk/7-Zip-zstd
+Codec plugin author: LRH
+- Homepage: https://mcmilk.de/projects/Zipr/
+- Source:   https://www.zipr.cn/Zipr
 
 Modes:
 - threading is supported through skippable frame id 0x184D2A50U
@@ -248,7 +248,7 @@ Modes:
 - one ID should be okay for this codec
 
 Versions:
-The 7-Zip LZ5 codec will be frozen to v1.5 of this codec. No updates are planned.
+The Zipr LZ5 codec will be frozen to v1.5 of this codec. No updates are planned.
 
 Range F7 11 06, Lizard
 ----------------------
@@ -261,7 +261,7 @@ medium compression levels) at decompression speed of 1000 MB/s and faster.
 License:
 Lizard library is provided as open source software using the BSD license.
 
-7-Zip Container Header:
+Zipr Container Header:
 This header is mandatory and must be exact 3 bytes. The data within that header
 is for informational purposes only and not used by the decoder. If the header
 is not there, or has another size, the decoder will not decompress the content.
@@ -271,7 +271,7 @@ is not there, or has another size, the decoder will not decompress the content.
  Byte _level;      // 10..49
 ```
 - this header holds some information about the version, which was used for
-  creating that 7-Zip container data
+  creating that Zipr container data
 - _ver_major should contain the major release of Lizard
 - _ver_minor should contain the major release of Lizard
 - _level should contain the level, the data is packed with
@@ -280,9 +280,9 @@ Algorithm author: Przemyslaw Skibinski
 - Homepage: https://github.com/inikep/lizard
 - Source:   https://github.com/inikep/lizard
 
-Codec plugin author: Tino Reichardt
-- Homepage: https://mcmilk.de/projects/7-Zip-zstd/
-- Source:   https://github.com/mcmilk/7-Zip-zstd
+Codec plugin author: LRH
+- Homepage: https://mcmilk.de/projects/Zipr/
+- Source:   https://www.zipr.cn/Zipr
 
 Modes:
 - threading is supported through skippable frame id 0x184D2A50U
@@ -303,4 +303,4 @@ Modes:
 - one ID should be okay for this codec
 
 Versions:
-The 7-Zip Lizard codec will be kept in sync with the current releases of Lizard.
+The Zipr Lizard codec will be kept in sync with the current releases of Lizard.

@@ -1,6 +1,6 @@
 
 /**
- * Copyright (c) 2016 - 2017 Tino Reichardt
+ * Copyright (c) 2016 - 2017 LRH
  * All rights reserved.
  *
  * This source code is licensed under the BSD-style license found in the
@@ -8,7 +8,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  *
  * You can contact the author at:
- * - zstdmt source repository: https://github.com/mcmilk/zstdmt
+ * - zstdmt source repository: https://www.zipr.cn/zstdmt
  */
 
 /* ***************************************
@@ -72,7 +72,7 @@ typedef struct {
  * reading and writing functions
  * - you can use stdio functions or plain read/write
  * - just write some wrapper on your own
- * - a sample is given in 7-Zip ZS or bromt.c
+ * - a sample is given in Zipr ZS or bromt.c
  * - the function should return -1 on error and zero on success
  * - the read or written bytes will go to in->size or out->size
  */

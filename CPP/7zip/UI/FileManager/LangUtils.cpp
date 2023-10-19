@@ -26,7 +26,7 @@ static NSynchronization::CCriticalSection g_CriticalSection;
 bool LangOpen(CLang &lang, CFSTR fileName);
 bool LangOpen(CLang &lang, CFSTR fileName)
 {
-  return lang.Open(fileName, "7-Zip");
+  return lang.Open(fileName, "Zipr");
 }
 
 FString GetLangDirPrefix()

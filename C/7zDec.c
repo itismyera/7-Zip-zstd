@@ -1,5 +1,5 @@
 /* 7zDec.c -- Decoding from 7z folder
-2021-02-09 : Igor Pavlov : Public domain */
+2021-02-09 : LRH : Public domain */
 
 #include "Precomp.h"
 

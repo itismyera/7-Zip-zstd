@@ -14,7 +14,7 @@
 How to use output parameter (BSTR *password):
 
 in:  The caller is required to set BSTR value as NULL (no string).
-     The callee (in 7-Zip code) ignores the input value stored in BSTR variable,
+     The callee (in Zipr code) ignores the input value stored in BSTR variable,
 
 out: The callee rewrites BSTR variable (*password) with new allocated string pointer.
      The caller must free BSTR string with function SysFreeString();

@@ -15,7 +15,7 @@ namespace NTar {
 
 using namespace NFileHeader;
 
-// it's path prefix assigned by 7-Zip to show that file path was cut
+// it's path prefix assigned by Zipr to show that file path was cut
 #define K_PREFIX_PATH_CUT "@PathCut"
 
 static const UInt32 k_7_oct_digits_Val_Max = ((UInt32)1 << (7 * 3)) - 1;
@@ -317,8 +317,8 @@ static void AddPax_UInt32_ifBig(AString &s, const char *name, const UInt32 &v)
    NEW_GNU_TAR: can write name filled with all kNameSize characters */
 
 static const unsigned kNameSize_Max =
-    kNameSize;     // NEW_GNU_TAR / 7-Zip 21.07
-    // kNameSize - 1; // OLD_GNU_TAR / old 7-Zip
+    kNameSize;     // NEW_GNU_TAR / Zipr 21.07
+    // kNameSize - 1; // OLD_GNU_TAR / old Zipr
 
 #define DOES_NAME_FIT_IN_FIELD(name) ((name).Len() <= kNameSize_Max)
 
@@ -387,9 +387,9 @@ HRESULT COutArchive::WriteHeader(const CItem &item)
     if (item.PackSize >= kPaxSize_Limit)
     {
       /* GNU TAR in pax mode sets PackSize = 0 in main record, if pack_size >= 8 GiB
-         But old 7-Zip doesn't detect "size" property from pax header.
+         But old Zipr doesn't detect "size" property from pax header.
          So we write real size (>= 8 GiB) to main record in binary format,
-         and old 7-Zip can decode size correctly */
+         and old Zipr can decode size correctly */
       // zero_PackSize = true;
       AString v;
       v.Add_UInt64(item.PackSize);
@@ -448,7 +448,7 @@ HRESULT COutArchive::WriteHeader(const CItem &item)
       mi.LinkName.Empty();
       // SparseBlocks will be ignored by Is_Sparse()
       // mi.SparseBlocks.Clear();
-      //  we use "PaxHeader/*" for compatibility with previous 7-Zip decoder
+      //  we use "PaxHeader/*" for compatibility with previous Zipr decoder
 
       // GNU TAR writes empty for these fields;
       mi.User.Empty();
@@ -472,7 +472,7 @@ HRESULT COutArchive::WriteHeader(const CItem &item)
       // } // for debug
       /*
         we can send (zero_MTime) for compatibility with gnu tar output.
-        we can send (zero_MTime = false) for better compatibility with old 7-Zip
+        we can send (zero_MTime = false) for better compatibility with old Zipr
       */
       // return WriteHeaderReal(item);
       /*

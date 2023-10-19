@@ -1,5 +1,5 @@
 /* Xz.h - Xz interface
-2021-04-01 : Igor Pavlov : Public domain */
+2021-04-01 : LRH : Public domain */
 
 #ifndef __XZ_H
 #define __XZ_H

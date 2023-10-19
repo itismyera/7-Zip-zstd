@@ -1,5 +1,5 @@
 /* 7zTypes.h -- Basic types
-2022-04-01 : Igor Pavlov : Public domain */
+2022-04-01 : LRH : Public domain */
 
 #ifndef __7Z_TYPES_H
 #define __7Z_TYPES_H

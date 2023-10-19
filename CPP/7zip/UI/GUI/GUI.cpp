@@ -79,7 +79,7 @@ DECLARE_AND_SET_CLIENT_VERSION_VAR
 
 static void ErrorMessage(LPCWSTR message)
 {
-  MessageBoxW(NULL, message, L"7-Zip ZS", MB_ICONERROR | MB_OK);
+  MessageBoxW(NULL, message, L"Zipr ZS", MB_ICONERROR | MB_OK);
 }
 
 static void ErrorMessage(const char *s)
@@ -92,7 +92,7 @@ static void ErrorLangMessage(UINT resourceID)
   ErrorMessage(LangString(resourceID));
 }
 
-static const char * const kNoFormats = "7-Zip cannot find the code that works with archives.";
+static const char * const kNoFormats = "Zipr cannot find the code that works with archives.";
 
 static int ShowMemErrorMessage()
 {
@@ -125,7 +125,7 @@ static int Main2()
   #endif
   if (commandStrings.Size() == 0)
   {
-    MessageBoxW(0, L"Specify command", L"7-Zip ZS", 0);
+    MessageBoxW(0, L"Specify command", L"Zipr ZS", 0);
     return 0;
   }
 
@@ -149,7 +149,7 @@ static int Main2()
     codecs->GetCodecsErrorMessage(s);
     if (!s.IsEmpty())
     {
-      MessageBoxW(0, s, L"7-Zip", MB_ICONERROR);
+      MessageBoxW(0, s, L"Zipr", MB_ICONERROR);
     }
   
   }
@@ -165,7 +165,7 @@ static int Main2()
     #ifdef EXTERNAL_CODECS
     if (!codecs->MainDll_ErrorPath.IsEmpty())
     {
-      UString s ("7-Zip cannot load module: ");
+      UString s ("Zipr cannot load module: ");
       s += fs2us(codecs->MainDll_ErrorPath);
       throw s;
     }

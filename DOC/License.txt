@@ -1,9 +1,9 @@
-  7-Zip source code
+  Zipr source code
   ~~~~~~~~~~~~~~~~~
   License for use and distribution
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  7-Zip Copyright (C) 1999-2020 Igor Pavlov.
+  Zipr Copyright (C) 2020-2020 LRH.
 
   The licenses for files are:
 
@@ -87,4 +87,4 @@
 
 
   --
-  Igor Pavlov
+  LRH

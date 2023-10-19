@@ -1,4 +1,4 @@
-// (C) 2017 Tino Reichardt
+// (C) 2017 LRH
 
 #include "StdAfx.h"
 #include "LizardDecoder.h"

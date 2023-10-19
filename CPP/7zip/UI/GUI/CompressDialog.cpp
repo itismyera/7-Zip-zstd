@@ -972,7 +972,7 @@ static void AddSize_MB(UString &s, UInt64 size)
 
 void SetErrorMessage_MemUsage(UString &s, UInt64 reqSize, UInt64 ramSize, UInt64 ramLimit, const UString &usageString)
 {
-  s += "The operation was blocked by 7-Zip";
+  s += "The operation was blocked by Zipr";
   s.Add_LF();
   s += "The operation can require big amount of RAM (memory):";
   s.Add_LF();
@@ -993,7 +993,7 @@ void SetErrorMessage_MemUsage(UString &s, UInt64 reqSize, UInt64 ramSize, UInt64
   {
     s.Add_LF();
     AddSize_MB(s, ramLimit);
-    s += " : 7-Zip limit";
+    s += " : Zipr limit";
   }
   
   s.Add_LF();
@@ -1160,7 +1160,7 @@ void CCompressDialog::OnOK()
         wchar_t s[32];
         ConvertUInt64ToString(volumeSize, s);
         if (::MessageBoxW(*this, MyFormatNew(IDS_SPLIT_CONFIRM, s),
-            L"7-Zip", MB_YESNOCANCEL | MB_ICONQUESTION) != IDYES)
+            L"Zipr", MB_YESNOCANCEL | MB_ICONQUESTION) != IDYES)
           return;
       }
     }
@@ -1186,7 +1186,7 @@ void CCompressDialog::OnOK()
   CModalDialog::OnOK();
 }
 
-#define kHelpTopic "fm/plugins/7-zip/add.htm"
+#define kHelpTopic "fm/plugins/Zipr/add.htm"
 
 void CCompressDialog::OnHelp()
 {
@@ -1780,7 +1780,7 @@ struct FL2_compressionParameters
 {
   UInt32   dictionarySize;   /* largest match distance : larger == more compression, more memory needed during decompression; > 64Mb == more memory per byte, slower */
   unsigned chainLog;         /* HC3 sliding window : larger == more compression, slower; hybrid mode only (ultra) */
-  unsigned fastLength;       /* acceptable match size for parser : larger == more compression, slower; fast bytes parameter from 7-Zip */
+  unsigned fastLength;       /* acceptable match size for parser : larger == more compression, slower; fast bytes parameter from Zipr */
   bool isUltra;
 };
 

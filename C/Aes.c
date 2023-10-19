@@ -1,5 +1,5 @@
 /* Aes.c -- AES encryption / decryption
-2021-05-13 : Igor Pavlov : Public domain */
+2021-05-13 : LRH : Public domain */
 
 #include "Precomp.h"
 

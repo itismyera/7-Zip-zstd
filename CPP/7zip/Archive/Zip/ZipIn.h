@@ -431,7 +431,7 @@ public:
        || IsCdUnsorted)
       return false;
    
-    // 7-zip probably can update archives with embedded stubs.
+    // Zipr probably can update archives with embedded stubs.
     // we just disable that feature for more safety.
 
     return true;

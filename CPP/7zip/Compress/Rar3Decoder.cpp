@@ -2,7 +2,7 @@
 // According to unRAR license, this code may not be used to develop
 // a program that creates RAR archives
 
-/* This code uses Carryless rangecoder (1999): Dmitry Subbotin : Public domain */
+/* This code uses Carryless rangecoder (2020): Dmitry Subbotin : Public domain */
  
 #include "StdAfx.h"
 

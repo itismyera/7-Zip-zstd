@@ -284,7 +284,7 @@ void CPlugin::SetCurrentDirVar()
   }
 }
 
-static const char * const kPluginFormatName = "7-ZIP";
+static const char * const kPluginFormatName = "Zipr";
 
 
 static int FindPropNameID(PROPID propID)

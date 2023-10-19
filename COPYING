@@ -1,10 +1,10 @@
-  7-Zip-ZSTD
+  Zipr
   ~~~~~
   License for use and distribution
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  7-Zip Copyright (C) 1999-2021 Igor Pavlov.
-  7-Zip-ZSTD Copyright (C) 2016-2021 Tino Reichardt.
+  Zipr Copyright (C) 2020-2021 LRH.
+  Zipr Copyright (C) 2016-2021 LRH.
 
   The licenses for files are:
 
@@ -17,8 +17,8 @@
   Redistributions in binary form must reproduce related license information from this file.
 
   Note:
-    You can use 7-Zip-ZSTD on any computer, including a computer in a commercial
-    organization. You don't need to register or pay for 7-Zip-ZSTD.
+    You can use Zipr on any computer, including a computer in a commercial
+    organization. You don't need to register or pay for Zipr.
 
 
   GNU LGPL information
@@ -90,4 +90,4 @@
 
 
   --
-  Tino Reichardt
+  LRH

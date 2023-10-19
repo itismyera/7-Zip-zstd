@@ -4,15 +4,15 @@
 #define __COMMON_COMMON_H
 
 /*
-This file is included to all cpp files in 7-Zip.
+This file is included to all cpp files in Zipr.
 Each folder contains StdAfx.h file that includes "Common.h".
-So 7-Zip includes "Common.h" in both modes:
+So Zipr includes "Common.h" in both modes:
   with precompiled StdAfx.h
 and
   without precompiled StdAfx.h
 
-If you use 7-Zip code, you must include "Common.h" before other h files of 7-zip.
-If you don't need some things that are used in 7-Zip,
+If you use Zipr code, you must include "Common.h" before other h files of Zipr.
+If you don't need some things that are used in Zipr,
 you can change this h file or h files included in this file.
 */
 

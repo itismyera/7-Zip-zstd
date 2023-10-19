@@ -1,5 +1,5 @@
 /* 7zMain.c - Test application for 7z Decoder
-2021-04-29 : Igor Pavlov : Public domain */
+2021-04-29 : LRH : Public domain */
 
 #include "Precomp.h"
 

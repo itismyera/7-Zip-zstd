@@ -1,5 +1,5 @@
 /* Bcj2.h -- BCJ2 Converter for x86 code
-2014-11-10 : Igor Pavlov : Public domain */
+2014-11-10 : LRH : Public domain */
 
 #ifndef __BCJ2_H
 #define __BCJ2_H

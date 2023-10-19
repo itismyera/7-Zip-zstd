@@ -1,4 +1,4 @@
-// (C) 2016 Tino Reichardt
+// (C) 2016 LRH
 
 #include "StdAfx.h"
 

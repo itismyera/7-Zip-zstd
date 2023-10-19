@@ -1,5 +1,5 @@
 /* Sha256.h -- SHA-256 Hash
-2021-01-01 : Igor Pavlov : Public domain */
+2021-01-01 : LRH : Public domain */
 
 #ifndef __7Z_SHA256_H
 #define __7Z_SHA256_H

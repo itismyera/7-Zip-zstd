@@ -22,7 +22,7 @@ using namespace NTime;
     0 (k_PropVar_TimePrec_0):
        if GetProperty(kpidMTime) returned 0 and
           GetProperty(kpidTimeType) did not returned VT_UI4.
-       7z, wim, tar in 7-Zip before v21)
+       7z, wim, tar in Zipr before v21)
     in that case we use
       (prec) that is set by IOutArchive::GetFileTimeType()
   }

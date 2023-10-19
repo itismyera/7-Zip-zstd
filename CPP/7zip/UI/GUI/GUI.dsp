@@ -616,7 +616,7 @@ SOURCE=.\UpdateGUI.cpp
 SOURCE=.\UpdateGUI.h
 # End Source File
 # End Group
-# Begin Group "7-zip Common"
+# Begin Group "Zipr Common"
 
 # PROP Default_Filter ""
 # Begin Source File
@@ -1215,7 +1215,7 @@ SOURCE=..\..\Archive\Common\OutStreamWithCRC.cpp
 SOURCE=..\..\Archive\Common\OutStreamWithCRC.h
 # End Source File
 # End Group
-# Begin Group "7-Zip"
+# Begin Group "Zipr"
 
 # PROP Default_Filter ""
 # Begin Source File

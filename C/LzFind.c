@@ -1,5 +1,5 @@
 /* LzFind.c -- Match finder for LZ algorithms
-2021-11-29 : Igor Pavlov : Public domain */
+2021-11-29 : LRH : Public domain */
 
 #include "Precomp.h"
 

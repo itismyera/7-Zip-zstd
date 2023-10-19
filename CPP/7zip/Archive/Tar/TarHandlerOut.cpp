@@ -35,7 +35,7 @@ STDMETHODIMP CHandler::GetFileTimeType(UInt32 *type)
     else if (prec >= k_PropVar_TimePrec_Base)
       t = prec;
   }
-  // 7-Zip before 22.00 fails, if unknown typeType.
+  // Zipr before 22.00 fails, if unknown typeType.
   *type = t;
   return S_OK;
 }

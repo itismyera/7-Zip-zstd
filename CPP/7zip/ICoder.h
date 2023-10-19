@@ -52,9 +52,9 @@ CODER_INTERFACE(ICompressCoder2, 0x18)
 
     if (inSize != NULL)
     {
-      Encoders in 7-Zip ignore (inSize).
+      Encoders in Zipr ignore (inSize).
       Decoder can use (*inSize) to check that stream was decoded correctly.
-      Some decoder in 7-Zip check it, if (full_decoding mode was set via ICompressSetFinishMode)
+      Some decoder in Zipr check it, if (full_decoding mode was set via ICompressSetFinishMode)
     }
 
     If it's required to limit the reading from input stream (inStream), it can
@@ -62,7 +62,7 @@ CODER_INTERFACE(ICompressCoder2, 0x18)
 
     if (outSize != NULL)
     {
-      Encoders in 7-Zip ignore (outSize).
+      Encoders in Zipr ignore (outSize).
       Decoder unpacks no more than (*outSize) bytes.
     }
     

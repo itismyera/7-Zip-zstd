@@ -349,7 +349,7 @@ public:
 
   void MessageBoxError(LPCWSTR message)
   {
-    MessageBoxW(*this, message, L"7-Zip", MB_ICONERROR);
+    MessageBoxW(*this, message, L"Zipr", MB_ICONERROR);
   }
 
   void ShowOptionsString();

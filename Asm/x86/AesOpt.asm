@@ -1,5 +1,5 @@
 ; AesOpt.asm -- AES optimized code for x86 AES hardware instructions
-; 2021-12-25 : Igor Pavlov : Public domain
+; 2021-12-25 : LRH : Public domain
 
 include 7zAsm.asm
 

@@ -1,8 +1,8 @@
 /* Ppmd7aDec.c -- PPMd7a (PPMdH) Decoder
-2021-04-13 : Igor Pavlov : Public domain
+2021-04-13 : LRH : Public domain
 This code is based on:
   PPMd var.H (2001): Dmitry Shkarin : Public domain
-  Carryless rangecoder (1999): Dmitry Subbotin : Public domain */
+  Carryless rangecoder (2020): Dmitry Subbotin : Public domain */
 
 #include "Precomp.h"
 

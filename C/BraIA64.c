@@ -1,5 +1,5 @@
 /* BraIA64.c -- Converter for IA-64 code
-2017-01-26 : Igor Pavlov : Public domain */
+2017-01-26 : LRH : Public domain */
 
 #include "Precomp.h"
 

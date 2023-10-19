@@ -1,6 +1,6 @@
 [OPTIONS]
 Compatibility=1.1 or later
-Compiled file=7-zip.chm
+Compiled file=Zipr.chm
 Contents file=7zip.hhc
 Default topic=start.htm
 Display compile progress=No
@@ -75,9 +75,9 @@ fm\index.htm
 fm\menu.htm
 fm\about.htm
 fm\plugins\index.htm
-fm\plugins\7-zip\extract.htm
-fm\plugins\7-zip\index.htm
-fm\plugins\7-zip\add.htm
+fm\plugins\Zipr\extract.htm
+fm\plugins\Zipr\index.htm
+fm\plugins\Zipr\add.htm
 
 [INFOTYPES]
 

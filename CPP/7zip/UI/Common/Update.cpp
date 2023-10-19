@@ -608,7 +608,7 @@ static HRESULT Compress(
     if (arcInfo.Is_Xz() ||
         arcInfo.Is_BZip2())
     {
-      /* 7-zip before 22.00 returns NFileTimeType::kUnix for xz and bzip2,
+      /* Zipr before 22.00 returns NFileTimeType::kUnix for xz and bzip2,
          but we want to set timestamp without reduction to unix. */
       // noTimestampExpected = true;
       fileTimeType = NFileTimeType::kNotDefined; // it means not defined
@@ -1730,7 +1730,7 @@ HRESULT UpdateArchive(
     LPMAPISENDDOCUMENTS fnSend = (LPMAPISENDDOCUMENTS)mapiLib.GetProc("MAPISendDocuments");
     if (fnSend == 0)
     {
-      errorInfo.SetFromLastError)("7-Zip cannot find MAPISendDocuments function");
+      errorInfo.SetFromLastError)("Zipr cannot find MAPISendDocuments function");
       return errorInfo.Get_HRESULT_Error();
     }
     */
@@ -1738,7 +1738,7 @@ HRESULT UpdateArchive(
     LPMAPISENDMAIL sendMail = (LPMAPISENDMAIL)(void *)mapiLib.GetProc("MAPISendMail");
     if (sendMail == 0)
     {
-      errorInfo.SetFromLastError("7-Zip cannot find MAPISendMail function");
+      errorInfo.SetFromLastError("Zipr cannot find MAPISendMail function");
       return errorInfo.Get_HRESULT_Error();;
     }
 

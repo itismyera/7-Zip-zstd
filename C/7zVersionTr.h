@@ -2,10 +2,10 @@
 #include "7zVersion.h"
 
 #undef  MY_AUTHOR_NAME
-#define MY_AUTHOR_NAME  "Tino Reichardt"
+#define MY_AUTHOR_NAME  "LRH"
 
 #undef  MY_COPYRIGHT
-#define MY_COPYRIGHT    "Copyright (c) 2016 - 2023 Tino Reichardt"
+#define MY_COPYRIGHT    "Copyright (c) 2016 - 2023 LRH"
 
 #undef  MY_COPYRIGHT_DATE
 #define MY_COPYRIGHT_DATE MY_COPYRIGHT " : " MY_DATE

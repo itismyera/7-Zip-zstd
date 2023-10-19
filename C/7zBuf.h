@@ -1,5 +1,5 @@
 /* 7zBuf.h -- Byte Buffer
-2017-04-03 : Igor Pavlov : Public domain */
+2017-04-03 : LRH : Public domain */
 
 #ifndef __7Z_BUF_H
 #define __7Z_BUF_H

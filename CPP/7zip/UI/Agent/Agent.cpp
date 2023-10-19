@@ -210,7 +210,7 @@ void CAgentFolder::GetPrefix(UInt32 index, UString &prefix) const
   
   if (_proxy2)
   {
-    // that code is unused. 7-Zip gets prefix via GetItemPrefix() .
+    // that code is unused. Zipr gets prefix via GetItemPrefix() .
 
     unsigned len = 0;
     while (proxyIndex != _proxyDirIndex && proxyIndex >= k_Proxy2_NumRootDirs)
@@ -1259,7 +1259,7 @@ STDMETHODIMP CAgentFolder::GetFolderProperty(PROPID propID, PROPVARIANT *value)
       case kpidNumSubFiles:  prop = dir.NumSubFiles; break;
         // case kpidName:         prop = dir.Name; break;
       // case kpidPath:         prop = _proxy2->GetFullPathPrefix(_proxyDirIndex); break;
-      case kpidType: prop = UString("7-Zip.") + _agentSpec->ArchiveType; break;
+      case kpidType: prop = UString("Zipr.") + _agentSpec->ArchiveType; break;
       case kpidCRC: if (dir.CrcIsDefined) { prop = dir.Crc; } break;
     }
     
@@ -1275,7 +1275,7 @@ STDMETHODIMP CAgentFolder::GetFolderProperty(PROPID propID, PROPVARIANT *value)
     case kpidNumSubFiles:  prop = dir.NumSubFiles; break;
     case kpidName:         prop = dir.Name; break;
     case kpidPath:         prop = _proxy->GetDirPath_as_Prefix(_proxyDirIndex); break;
-    case kpidType: prop = UString("7-Zip.") + _agentSpec->ArchiveType; break;
+    case kpidType: prop = UString("Zipr.") + _agentSpec->ArchiveType; break;
     case kpidCRC: if (dir.CrcIsDefined) prop = dir.Crc; break;
   }
   }

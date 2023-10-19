@@ -1,5 +1,5 @@
 /* CpuArch.h -- CPU specific code
-2022-07-15 : Igor Pavlov : Public domain */
+2022-07-15 : LRH : Public domain */
 
 #ifndef __CPU_ARCH_H
 #define __CPU_ARCH_H

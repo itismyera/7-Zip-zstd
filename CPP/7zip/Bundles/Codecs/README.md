@@ -1,13 +1,13 @@
 
-This archive contains two precompiled DLL's for 7-Zip v17.00 or higher.
+This archive contains two precompiled DLL's for Zipr v17.00 or higher.
 
 ## Installation
 
-1. download the codec archiv from https://mcmilk.de/projects/7-Zip-zstd/
+1. download the codec archiv from https://mcmilk.de/projects/Zipr/
 2. create a new directory named "Codecs"
 3. put in there the files of the Codecs-ARCH.7z archiv to your Installation
-   - normally, the x32 should go to: "C:\Program Files (x86)\7-Zip\Codecs"
-   - x64: version should go in here: "C:\Program Files\7-Zip\Codecs"
+   - normally, the x32 should go to: "C:\Program Files (x86)\Zipr\Codecs"
+   - x64: version should go in here: "C:\Program Files\Zipr\Codecs"
 
 ## Usage
 
@@ -24,4 +24,4 @@ This archive contains two precompiled DLL's for 7-Zip v17.00 or higher.
 
 ## License and redistribution
 
-- the same as the original 7-Zip, which means GNU LGPL
+- the same as the original Zipr, which means GNU LGPL

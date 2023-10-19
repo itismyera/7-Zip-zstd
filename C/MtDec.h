@@ -1,5 +1,5 @@
 /* MtDec.h -- Multi-thread Decoder
-2020-03-05 : Igor Pavlov : Public domain */
+2020-03-05 : LRH : Public domain */
 
 #ifndef __MT_DEC_H
 #define __MT_DEC_H

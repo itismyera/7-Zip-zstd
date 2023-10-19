@@ -13,7 +13,7 @@ using namespace NWindows;
 using namespace NFile;
 
 /*
-static LPCTSTR const kLMBasePath = TEXT("Software\\7-Zip\\FM");
+static LPCTSTR const kLMBasePath = TEXT("Software\\Zipr\\FM");
 
 static LPCTSTR const kPluginsKeyName = TEXT("Plugins");
 static LPCTSTR const kPluginsOpenClassIDValue = TEXT("CLSID");
@@ -97,7 +97,7 @@ void ReadPluginInfoList(CObjectVector<CPluginInfo> &plugins)
   FString baseFolderPrefix = NDLL::GetModuleDirPrefix();
   {
     CPluginInfo pluginInfo;
-    pluginInfo.FilePath = baseFolderPrefix + FTEXT("7-zip.dll");
+    pluginInfo.FilePath = baseFolderPrefix + FTEXT("Zipr.dll");
     if (::ReadPluginInfo(pluginInfo, false))
       plugins.Add(pluginInfo);
   }
@@ -129,7 +129,7 @@ void ReadFileFolderPluginInfoList(CObjectVector<CPluginInfo> &plugins)
     CPluginInfo p;
     // p.FilePath.Empty();
     p.Type = kPluginTypeFF;
-    p.Name = "7-Zip";
+    p.Name = "Zipr";
     // p.ClassID = CLSID_CAgentArchiveHandler;
     p.ClassIDDefined = true;
     // p.OptionsClassID;

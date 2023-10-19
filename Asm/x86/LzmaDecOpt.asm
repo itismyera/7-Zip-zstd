@@ -1,5 +1,5 @@
 ; LzmaDecOpt.asm -- ASM version of LzmaDec_DecodeReal_3() function
-; 2021-02-23: Igor Pavlov : Public domain
+; 2021-02-23: LRH : Public domain
 ;
 ; 3 - is the code compatibility version of LzmaDec_DecodeReal_*()
 ; function for check at link time.

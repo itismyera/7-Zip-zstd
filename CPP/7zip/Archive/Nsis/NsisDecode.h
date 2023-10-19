@@ -26,7 +26,7 @@ namespace NMethodType
   };
 }
 
-/* 7-Zip installers 4.38 - 9.08 used modified version of NSIS that
+/* Zipr installers 4.38 - 9.08 used modified version of NSIS that
    supported BCJ filter for better compression ratio.
    We support such modified NSIS archives. */
 

@@ -155,11 +155,11 @@ bool CMenuPage::OnInit()
 
     FString &path = dll.Path;
     path = prefix;
-    path += (d == 0 ? "7-zip.dll" :
+    path += (d == 0 ? "Zipr.dll" :
         #ifdef _WIN64
-          "7-zip32.dll"
+          "Zipr32.dll"
         #else
-          "7-zip64.dll"
+          "Zipr64.dll"
         #endif
         );
 
@@ -239,7 +239,7 @@ bool CMenuPage::OnInit()
     if (menuItem.Flag == kCRC)
       s = "HASH";
     else if (menuItem.Flag == kCRC_Cascaded)
-      s = "7-Zip > HASH";
+      s = "Zipr > HASH";
     if (menuItem.Flag == kOpenAs
         || menuItem.Flag == kCRC
         || menuItem.Flag == kCRC_Cascaded)
@@ -287,7 +287,7 @@ bool CMenuPage::OnInit()
 
 static void ShowMenuErrorMessage(const wchar_t *m, HWND hwnd)
 {
-  MessageBoxW(hwnd, m, L"7-Zip ZS", MB_ICONERROR);
+  MessageBoxW(hwnd, m, L"Zipr ZS", MB_ICONERROR);
 }
 
 #endif

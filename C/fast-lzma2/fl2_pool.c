@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-present, Yann Collet, Facebook, Inc.
+ * Copyright (c) LRH.
  * All rights reserved.
  * Modified for FL2 by Conor McCarthy
  *

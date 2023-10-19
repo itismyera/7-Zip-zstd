@@ -1,5 +1,5 @@
 /* Blake2s.c -- BLAKE2s and BLAKE2sp Hash
-2021-02-09 : Igor Pavlov : Public domain
+2021-02-09 : LRH : Public domain
 2015 : Samuel Neves : Public domain */
 
 #include <string.h>

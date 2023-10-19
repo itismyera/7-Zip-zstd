@@ -1,5 +1,5 @@
 /* Sort.c -- Sort functions
-2014-04-05 : Igor Pavlov : Public domain */
+2014-04-05 : LRH : Public domain */
 
 #include "Precomp.h"
 

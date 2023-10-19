@@ -1,4 +1,4 @@
-// (C) 2016 - 2020 Tino Reichardt
+// (C) 2016 - 2020 LRH
 
 #include "StdAfx.h"
 #include "ZstdEncoder.h"

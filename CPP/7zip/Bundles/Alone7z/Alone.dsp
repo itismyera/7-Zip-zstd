@@ -1237,7 +1237,7 @@ SOURCE=..\..\UI\Common\UpdateProduce.cpp
 SOURCE=..\..\UI\Common\UpdateProduce.h
 # End Source File
 # End Group
-# Begin Group "7-zip"
+# Begin Group "Zipr"
 
 # PROP Default_Filter ""
 # Begin Source File

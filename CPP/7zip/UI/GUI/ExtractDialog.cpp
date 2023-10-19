@@ -412,7 +412,7 @@ void CExtractDialog::OnOK()
 }
 
 #ifndef NO_REGISTRY
-#define kHelpTopic "fm/plugins/7-zip/extract.htm"
+#define kHelpTopic "fm/plugins/Zipr/extract.htm"
 void CExtractDialog::OnHelp()
 {
   ShowHelpWindow(kHelpTopic);

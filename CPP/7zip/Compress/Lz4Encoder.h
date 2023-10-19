@@ -1,4 +1,4 @@
-// (C) 2016 Tino Reichardt
+// (C) 2016 LRH
 
 #define LZ4_STATIC_LINKING_ONLY
 #include "../../../C/Alloc.h"

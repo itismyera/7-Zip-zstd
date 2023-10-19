@@ -1,5 +1,5 @@
 /* XzIn.c - Xz input
-2021-09-04 : Igor Pavlov : Public domain */
+2021-09-04 : LRH : Public domain */
 
 #include "Precomp.h"
 

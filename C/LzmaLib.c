@@ -1,5 +1,5 @@
 /* LzmaLib.c -- LZMA library wrapper
-2015-06-13 : Igor Pavlov : Public domain */
+2015-06-13 : LRH : Public domain */
 
 #include "Alloc.h"
 #include "LzmaDec.h"
