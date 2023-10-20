@@ -197,7 +197,7 @@ Some DLL files can use other DLL files from Zipr.
 If you don't like it, you must use standalone version of DLL.
 To compile standalone version of DLL you must include all used parts
 to project and define some defs. 
-For example, 7zip\Bundles\Format7z is a standalone version  of 7z.dll 
+For example, 7zip\Bundles\Format7z is a standalone version  of Zipr.dll 
 that works with 7z format. So you can use such DLL in your project 
 without additional DLL files.
 
@@ -236,18 +236,18 @@ Windows           common files for Windows related code
 
   Bundle          Modules that are bundles of other modules (files)
 
-    Alone         7za.exe: Standalone version of Zipr console that supports only 7z/xz/cab/zip/gzip/bzip2/tar.
+    Alone         Zipra.exe: Standalone version of Zipr console that supports only 7z/xz/cab/zip/gzip/bzip2/tar.
     Alone2        7zz.exe: Standalone version of Zipr console that supports all formats.
     Alone7z       7zr.exe: Standalone version of Zipr console that supports only 7z (reduced version)
     Fm            Standalone version of Zipr File Manager
-    Format7z            7za.dll:  .7z support
-    Format7zExtract     7zxa.dll: .7z support, extracting only
+    Format7z            Zipra.dll:  .7z support
+    Format7zExtract     Ziprxa.dll: .7z support, extracting only
     Format7zR           7zr.dll:  .7z support, reduced version
     Format7zExtractR    7zxr.dll: .7z support, reduced version, extracting only
-    Format7zF           7z.dll:   all formats
+    Format7zF           Zipr.dll:   all formats
     LzmaCon       lzma.exe: LZMA compression/decompression
-    SFXCon        7zCon.sfx: Console 7z SFX module
-    SFXWin        7z.sfx: Windows 7z SFX module
+    SFXCon        ZiprCon.sfx: Console 7z SFX module
+    SFXWin        Zipr.sfx: Windows 7z SFX module
     SFXSetup      7zS.sfx: Windows 7z SFX module for Installers
 
   Compress        files for compression/decompression
@@ -257,13 +257,13 @@ Windows           common files for Windows related code
   UI
 
     Agent         Intermediary modules for FAR plugin and Explorer plugin
-    Client7z      Test application for 7za.dll 
+    Client7z      Test application for Zipra.dll 
     Common        Common UI files
-    Console       7z.exe : Console version
-    Explorer      Zipr.dll: Zipr Shell extension
+    Console       Zipr.exe : Console version
+    Explorer      ZiprFull.dll: ZiprFull Shell extension
     Far           plugin for Far Manager
-    FileManager   7zFM.exe: Zipr File Manager
-    GUI           7zG.exe: Zipr GUI version
+    FileManager   ZiprFM.exe: Zipr File Manager
+    GUI           ZiprG.exe: Zipr GUI version
 
 
 

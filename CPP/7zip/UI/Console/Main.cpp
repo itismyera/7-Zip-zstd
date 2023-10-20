@@ -175,7 +175,7 @@ static const char * const kNoFormats = "Zipr cannot find the code that works wit
 static const char * const kUnsupportedArcTypeMessage = "Unsupported archive type";
 // static const char * const kUnsupportedUpdateArcType = "Can't create archive for that type";
 
-#define kDefaultSfxModule "7zCon.sfx"
+#define kDefaultSfxModule "ZiprCon.sfx"
 
 MY_ATTR_NORETURN
 static void ShowMessageAndThrowException(LPCSTR message, NExitCode::EEnum code)

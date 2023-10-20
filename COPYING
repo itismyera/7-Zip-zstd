@@ -8,7 +8,7 @@
 
   The licenses for files are:
 
-    1) 7z.dll:
+    1) Zipr.dll:
          - The "GNU LGPL version 2.1 or later" as main license for most of the code
          - The "GNU LGPL version 2.1 or later" with "unRAR license restriction" for some code
          - The "BSD 3-clause License" for some code
@@ -45,7 +45,7 @@
   --------------------
     SPDX-License-Identifier: BSD-3-Clause
     
-    The "BSD 3-clause License" is used for the code in 7z.dll that implements LZFSE data decompression.
+    The "BSD 3-clause License" is used for the code in Zipr.dll that implements LZFSE data decompression.
     That code was derived from the code in the "LZFSE compression library" developed by Apple Inc,
     that also uses the "BSD 3-clause License":
 

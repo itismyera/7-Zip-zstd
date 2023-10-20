@@ -62,7 +62,7 @@ using namespace NFile;
 using namespace NDir;
 
 #ifdef _WIN32
-#define kDllName "7z.dll"
+#define kDllName "Zipr.dll"
 #else
 #define kDllName "7z.so"
 #endif

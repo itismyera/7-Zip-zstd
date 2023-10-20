@@ -2,7 +2,7 @@
 #include "../../GuiCommon.rc"
 #include "resource.h"
 
-MY_VERSION_INFO_APP("Zipr ZS File Manager", "7zFM")
+MY_VERSION_INFO_APP("Zipr ZS File Manager", "ZiprFM")
 
 IDR_ACCELERATOR1 ACCELERATORS
 BEGIN
@@ -147,7 +147,7 @@ END
 IDI_ICON  ICON  "../../UI/FileManager/FM.ico"
 
 #ifndef UNDER_CE
-1  24  MOVEABLE PURE   "../../UI/FileManager/7zFM.exe.manifest"
+1  24  MOVEABLE PURE   "../../UI/FileManager/ZiprFM.exe.manifest"
 #endif
 
 IDB_ADD        BITMAP  "../../UI/FileManager/Add.bmp"

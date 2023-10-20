@@ -67,37 +67,37 @@ jobs:
           cd %ROOT%\Bundles\Format7zExtract
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7zxa.dll %OUTDIR%\7zxa.dll
+          copy %PLATFORM%\Ziprxa.dll %OUTDIR%\Ziprxa.dll
 
           cd %ROOT%\Bundles\Format7z
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7za.dll %OUTDIR%\7za.dll
+          copy %PLATFORM%\Zipra.dll %OUTDIR%\Zipra.dll
 
           cd %ROOT%\Bundles\Format7zF
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7z.dll %OUTDIR%\7z.dll
+          copy %PLATFORM%\Zipr.dll %OUTDIR%\Zipr.dll
 
           cd %ROOT%\UI\FileManager
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7zFM.exe %OUTDIR%\7zFM.exe
+          copy %PLATFORM%\ZiprFM.exe %OUTDIR%\ZiprFM.exe
 
           cd %ROOT%\UI\GUI
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7zG.exe %OUTDIR%\7zG.exe
+          copy %PLATFORM%\ZiprG.exe %OUTDIR%\ZiprG.exe
 
           cd %ROOT%\UI\Explorer
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\Zipr.dll %OUTDIR%\Zipr.dll
+          copy %PLATFORM%\ZiprFull.dll %OUTDIR%\ZiprFull.dll
 
           cd %ROOT%\Bundles\SFXWin
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7z.sfx %OUTDIR%\7z.sfx
+          copy %PLATFORM%\Zipr.sfx %OUTDIR%\Zipr.sfx
 
           cd %ROOT%\Bundles\Codec_brotli
           nmake %OPTS%
@@ -143,17 +143,17 @@ jobs:
           cd %ROOT%\UI\Console
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7z.exe %OUTDIR%\7z.exe
+          copy %PLATFORM%\Zipr.exe %OUTDIR%\Zipr.exe
 
           cd %ROOT%\Bundles\SFXCon
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7zCon.sfx %OUTDIR%\7zCon.sfx
+          copy %PLATFORM%\ZiprCon.sfx %OUTDIR%\ZiprCon.sfx
 
           cd %ROOT%\Bundles\Alone
           nmake %OPTS%
           IF %errorlevel% NEQ 0 EXIT 1
-          copy %PLATFORM%\7za.exe %OUTDIR%\7za.exe
+          copy %PLATFORM%\Zipra.exe %OUTDIR%\Zipra.exe
 
           REM Will be by the do-release action
           copy %WDIR%\.github\workflows\do-release.cmd %WDIR%\build\do-release.cmd

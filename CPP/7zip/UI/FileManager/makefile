@@ -1,4 +1,4 @@
-PROG = 7zFM.exe
+PROG = ZiprFM.exe
 CFLAGS = $(CFLAGS) \
   -DEXTERNAL_CODECS \
 

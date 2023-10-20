@@ -4,7 +4,7 @@
 MY_VERSION_INFO_DLL("Zipr Shell Extension", "Zipr")
 
 #ifndef UNDER_CE
-1 24 MOVEABLE PURE "Zipr.dll.manifest"
+1 24 MOVEABLE PURE "ZiprFull.dll.manifest"
 #endif
 
 IDI_ICON ICON "../FileManager/FM.ico"

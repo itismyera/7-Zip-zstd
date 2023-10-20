@@ -155,11 +155,11 @@ bool CMenuPage::OnInit()
 
     FString &path = dll.Path;
     path = prefix;
-    path += (d == 0 ? "Zipr.dll" :
+    path += (d == 0 ? "ZiprFull.dll" :
         #ifdef _WIN64
-          "Zipr32.dll"
+          "ZiprFull32.dll"
         #else
-          "Zipr64.dll"
+          "ZiprFull64.dll"
         #endif
         );
 

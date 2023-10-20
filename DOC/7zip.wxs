@@ -178,15 +178,15 @@
           <Component Id="InstallRegAppPath" Guid="$(var.CompInstallRegAppPath)" DiskId="1" Win64="$(var.Is64)">
             <Condition>Privileged</Condition>
             <Registry Id="MyInstallRegAppPath" Action="write" Type="string"
-               Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\7zFM.exe"
-               Value="[INSTALLDIR]7zFM.exe" />
+               Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\ZiprFM.exe"
+               Value="[INSTALLDIR]ZiprFM.exe" />
             <Registry Id="MyInstallRegAppPath2" Action="write" Type="string"
-               Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\7zFM.exe" Name="Path"
+               Root="HKLM" Key="Software\Microsoft\Windows\CurrentVersion\App Paths\ZiprFM.exe" Name="Path"
                Value="[INSTALLDIR]" />
           </Component>
 
           <Component Id="Fm" Guid="$(var.CompFm)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7zFM.exe" Name="7zFM.exe">
+            <File Id="_ZiprFM.exe" Name="ZiprFM.exe">
               <Shortcut Id="startmenuFmShortcut" Directory="PMenu" Name="7zipFM" LongName="Zipr ZS File Manager" />
             </File>
           </Component>
@@ -194,10 +194,10 @@
           <?if $(var.MyCPU) = "x64" ?>
 
           <Component Id="ShellExt32" Guid="$(var.CompShellExt2)" DiskId="1" Win64="no">
-            <File Id="_7zip32.dll" Name="Zipr32.dll" />
+            <File Id="_7zip32.dll" Name="ZiprFull32.dll" />
             <Registry Id="shellReg0_32" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
-               Value="[INSTALLDIR]Zipr32.dll" />
+               Value="[INSTALLDIR]ZiprFull32.dll" />
             <Registry Id="shellReg1_32" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
                Name="ThreadingModel"
@@ -207,10 +207,10 @@
           <?endif ?>
 
           <Component Id="ShellExt" Guid="$(var.CompShellExt)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7zip.dll" Name="Zipr.dll" />
+            <File Id="_7zip.dll" Name="ZiprFull.dll" />
             <Registry Id="shellReg0" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
-               Value="[INSTALLDIR]Zipr.dll" />
+               Value="[INSTALLDIR]ZiprFull.dll" />
             <Registry Id="shellReg1" Action="write" Type="string" Root="HKCR"
                Key="CLSID\$(var.ShellExtId)\InprocServer32"
                Name="ThreadingModel"
@@ -218,23 +218,23 @@
           </Component>
 
           <Component Id="Gui" Guid="$(var.CompGui)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7zG.exe" Name="7zG.exe" />
+            <File Id="_ZiprG.exe" Name="ZiprG.exe" />
           </Component>
 
           <Component Id="Formats" Guid="$(var.CompFormats)" DiskId="1" Win64="$(var.Is64)">
-              <File Id="_7z.dll" Name="7z.dll" />
+              <File Id="_Zipr.dll" Name="Zipr.dll" />
           </Component>
 
           <Component Id="CmdLine" Guid="$(var.CompCmdLine)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7z.exe" Name="7z.exe" />
+            <File Id="_Zipr.exe" Name="Zipr.exe" />
           </Component>
 
           <Component Id="GuiSfx" Guid="$(var.CompGuiSfx)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7z.sfx" Name="7z.sfx" />
+            <File Id="_Zipr.sfx" Name="Zipr.sfx" />
           </Component>
 
           <Component Id="ConSfx" Guid="$(var.CompConSfx)" DiskId="1" Win64="$(var.Is64)">
-            <File Id="_7zCon.sfx" Name="7zCon.sfx" />
+            <File Id="_ZiprCon.sfx" Name="ZiprCon.sfx" />
           </Component>
 
           <Component Id="Docs" Guid="$(var.CompDocs)" DiskId="1" Win64="$(var.Is64)">

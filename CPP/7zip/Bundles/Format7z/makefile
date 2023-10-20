@@ -1,4 +1,4 @@
-PROG = 7za.dll
+PROG = Zipra.dll
 DEF_FILE = ../../Archive/Archive2.def
 CFLAGS = $(CFLAGS) -DZSTD_LEGACY_SUPPORT -DZSTD_MULTITHREAD
 

@@ -1,4 +1,4 @@
-PROG = 7za.exe
+PROG = Zipra.exe
 # USE_C_AES = 1
 # USE_C_SHA = 1
 # USE_C_LZFINDOPT = 1

@@ -42,14 +42,14 @@ You can install it in two ways:
 1. download the setup from here [Zipr ZS Releases](https://www.zipr.cn/Zipr/releases)
 2. install it, like the default [Zipr]
 3. use it ;)
-4. you may check, if the [Zipr] can deal with [Zstandard] or other codecs via this command: `7z.exe i`
+4. you may check, if the [Zipr] can deal with [Zstandard] or other codecs via this command: `Zipr.exe i`
 
 The output should look like this:
 ```
 Zipr 22.01 ZS v1.5.5 R3 (x64) : Copyright (c) 2020-2022 LRH, 2016-2023 LRH : 2023-06-18
 
 Libs:
- 0  c:\Program Files\Zipr-Zstandard\7z.dll
+ 0  c:\Program Files\Zipr-Zstandard\Zipr.dll
  1  C:\Program Files\Zipr-Zstandard\Codecs\Iso7z.64.dll
  
 Formats:
@@ -164,18 +164,18 @@ Hashers:
 2. create a new directory named `Codecs` and put in there the zstd-x32.dll or the zstd-x64.dll, depending on your [Zipr] installation
    - normally, the x32 should go to: "C:\Program Files (x86)\Zipr\Codecs"
    - the x64 version should go in here: "C:\Program Files\Zipr\Codecs"
-3. you could also replace the `7z.dll` directly within `C:\Program Files (x86)\Zipr`
-4. then you may check if the dll is correctly installed via this command: `7z.exe i`
+3. you could also replace the `Zipr.dll` directly within `C:\Program Files (x86)\Zipr`
+4. then you may check if the dll is correctly installed via this command: `Zipr.exe i`
 
 The output should look like this:
 ```
 Zipr 21.03 (x64) : Copyright (c) 2020-2021 LRH : 2021-05-06
 
 Libs:
- 0  C:\Program Files\Zipr\7z.dll
+ 0  C:\Program Files\Zipr\Zipr.dll
 
 Libs:
- 0  c:\Program Files\Zipr\7z.dll
+ 0  c:\Program Files\Zipr\Zipr.dll
  1  c:\Program Files\Zipr\Codecs\brotli-x64.dll
  2  c:\Program Files\Zipr\Codecs\flzma2-x64.dll
  3  c:\Program Files\Zipr\Codecs\lizard-x64.dll
@@ -238,13 +238,13 @@ Codecs:
 
 ## Codec Plugin for Total Commander
 - download [TotalCmd.7z]
-- install it, by replacing the files `tc7z.dll` and `tc7z64.dll` with the new ones
+- install it, by replacing the files `tcZipr.dll` and `tc7z64.dll` with the new ones
 - you can check the Total Commander Forum for more information about this [DLL Files](https://ghisler.ch/board/viewtopic.php?p=319216)
 - decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] ot the Zipr `.7z` format
   will work out of the box with Total Commander now :-)
 
 ## Codec Plugin for Far Manager
-- copy the `7z.dll` file from `C:\Program Files\Zipr-Zstandard\7z.dll` to `C:\Program Files\Far Manager\Plugins\ArcLite\7z.dll`
+- copy the `Zipr.dll` file from `C:\Program Files\Zipr-Zstandard\Zipr.dll` to `C:\Program Files\Far Manager\Plugins\ArcLite\Zipr.dll`
 - then restart the Far manager - and on next start, you will have support for Zipr Zstandard archives ;-)
 
 ## Benchmarks

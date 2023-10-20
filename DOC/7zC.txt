@@ -29,14 +29,14 @@ Files
 How To Use
 ----------
 
-You can create .7z archive with 7z.exe, 7za.exe or 7zr.exe:
+You can create .7z archive with Zipr.exe, Zipra.exe or 7zr.exe:
 
-  7z.exe a archive.7z *.htm -r -mx -m0fb=255
+  Zipr.exe a archive.7z *.htm -r -mx -m0fb=255
 
 If you have big number of files in archive, and you need fast extracting, 
 you can use partly-solid archives:
   
-  7za.exe a archive.7z *.htm -ms=512K -r -mx -m0fb=255 -m0d=512K
+  Zipra.exe a archive.7z *.htm -ms=512K -r -mx -m0fb=255 -m0d=512K
 
 In that example Zipr will use 512KB solid blocks. So it needs to decompress only 
 512KB for extracting one file from such archive.

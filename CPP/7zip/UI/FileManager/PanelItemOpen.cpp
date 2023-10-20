@@ -581,7 +581,7 @@ HRESULT CPanel::OpenAsArc_Index(int index, const wchar_t *type
   HRESULT res = OpenAsArc_Name(GetItemRelPath2(index), type ? type : L"" /* , encrypted, showErrorMessage */);
   if (res != S_OK)
   {
-    RefreshTitle(true); // in case of error we must refresh changed title of 7zFM
+    RefreshTitle(true); // in case of error we must refresh changed title of ZiprFM
     return res;
   }
   RefreshListCtrl();

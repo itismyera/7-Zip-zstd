@@ -9,38 +9,38 @@ mkdir %OUTDIR%
 
 cd %ROOT%\Bundles\Format7zExtract
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7zxa.dll" >> %ERRFILE%
-copy %PLATFORM%\7zxa.dll %OUTDIR%\7zxa.dll
+IF %errorlevel% NEQ 0 echo "Error @ Ziprxa.dll" >> %ERRFILE%
+copy %PLATFORM%\Ziprxa.dll %OUTDIR%\Ziprxa.dll
 
 cd %ROOT%\Bundles\Format7z
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7za.dll" >> %ERRFILE%
-copy %PLATFORM%\7za.dll %OUTDIR%\7za.dll
+IF %errorlevel% NEQ 0 echo "Error @ Zipra.dll" >> %ERRFILE%
+copy %PLATFORM%\Zipra.dll %OUTDIR%\Zipra.dll
 
 cd %ROOT%\Bundles\Format7zF
-nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7z.dll" >> %ERRFILE%
-copy %PLATFORM%\7z.dll %OUTDIR%\7z.dll
-
-cd %ROOT%\UI\FileManager
-nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7zFM.exe" >> %ERRFILE%
-copy %PLATFORM%\7zFM.exe %OUTDIR%\7zFM.exe
-
-cd %ROOT%\UI\GUI
-nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7zG.exe" >> %ERRFILE%
-copy %PLATFORM%\7zG.exe %OUTDIR%\7zG.exe
-
-cd %ROOT%\UI\Explorer
 nmake %OPTS%
 IF %errorlevel% NEQ 0 echo "Error @ Zipr.dll" >> %ERRFILE%
 copy %PLATFORM%\Zipr.dll %OUTDIR%\Zipr.dll
 
+cd %ROOT%\UI\FileManager
+nmake %OPTS%
+IF %errorlevel% NEQ 0 echo "Error @ ZiprFM.exe" >> %ERRFILE%
+copy %PLATFORM%\ZiprFM.exe %OUTDIR%\ZiprFM.exe
+
+cd %ROOT%\UI\GUI
+nmake %OPTS%
+IF %errorlevel% NEQ 0 echo "Error @ ZiprG.exe" >> %ERRFILE%
+copy %PLATFORM%\ZiprG.exe %OUTDIR%\ZiprG.exe
+
+cd %ROOT%\UI\Explorer
+nmake %OPTS%
+IF %errorlevel% NEQ 0 echo "Error @ ZiprFull.dll" >> %ERRFILE%
+copy %PLATFORM%\ZiprFull.dll %OUTDIR%\ZiprFull.dll
+
 cd %ROOT%\Bundles\SFXWin
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7z.sfx" >> %ERRFILE%
-copy %PLATFORM%\7z.sfx %OUTDIR%\7z.sfx
+IF %errorlevel% NEQ 0 echo "Error @ Zipr.sfx" >> %ERRFILE%
+copy %PLATFORM%\Zipr.sfx %OUTDIR%\Zipr.sfx
 
 cd %ROOT%\Bundles\Codec_brotli
 nmake %OPTS%
@@ -85,18 +85,18 @@ copy %PLATFORM%\7zipUninstall.exe %OUTDIR%\Uninstall.exe
 set LFLAGS=/SUBSYSTEM:CONSOLE,%SUBSYS%
 cd %ROOT%\UI\Console
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7z.exe" >> %ERRFILE%
-copy %PLATFORM%\7z.exe %OUTDIR%\7z.exe
+IF %errorlevel% NEQ 0 echo "Error @ Zipr.exe" >> %ERRFILE%
+copy %PLATFORM%\Zipr.exe %OUTDIR%\Zipr.exe
 
 cd %ROOT%\Bundles\SFXCon
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7zCon.sfx" >> %ERRFILE%
-copy %PLATFORM%\7zCon.sfx %OUTDIR%\7zCon.sfx
+IF %errorlevel% NEQ 0 echo "Error @ ZiprCon.sfx" >> %ERRFILE%
+copy %PLATFORM%\ZiprCon.sfx %OUTDIR%\ZiprCon.sfx
 
 cd %ROOT%\Bundles\Alone
 nmake %OPTS%
-IF %errorlevel% NEQ 0 echo "Error @ 7za.exe" >> %ERRFILE%
-copy %PLATFORM%\7za.exe %OUTDIR%\7za.exe
+IF %errorlevel% NEQ 0 echo "Error @ Zipra.exe" >> %ERRFILE%
+copy %PLATFORM%\Zipra.exe %OUTDIR%\Zipra.exe
 
 :ende
 cd %ROOT%\..

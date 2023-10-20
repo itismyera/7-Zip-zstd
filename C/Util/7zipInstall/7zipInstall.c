@@ -808,7 +808,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
            );
         wcscpy(destPath, path);
         CatAscii(destPath, k == 0 ?
-            "7zFM.exe" :
+            "ZiprFM.exe" :
             "Zipr.chm");
         
         if (i == 0)
@@ -843,7 +843,7 @@ static void WriteCLSID()
   {
     WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    CatAscii(destPath, "Zipr32.dll");
+    CatAscii(destPath, "ZiprFull32.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -862,7 +862,7 @@ static void WriteCLSID()
   {
     WCHAR destPath[MAX_PATH + 40];
     wcscpy(destPath, path);
-    CatAscii(destPath, "Zipr.dll");
+    CatAscii(destPath, "ZiprFull.dll");
     /* res = */ MyRegistry_SetString(destKey, NULL, destPath);
     /* res = */ MyRegistry_SetString(destKey, L"ThreadingModel", L"Apartment");
     // DeleteRegValue(destKey, L"InprocServer32");
@@ -902,11 +902,11 @@ static void WriteShellEx()
 
 
   wcscpy(destPath, path);
-  CatAscii(destPath, "7zFM.exe");
+  CatAscii(destPath, "ZiprFM.exe");
   
   {
     HKEY destKey = 0;
-    LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\7zFM.exe", &destKey);
+    LONG res = MyRegistry_CreateKey(HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\ZiprFM.exe", &destKey);
     if (res == ERROR_SUCCESS)
     {
       MyRegistry_SetString(destKey, NULL, destPath);
@@ -1462,9 +1462,9 @@ if (res == SZ_OK)
               continue;
             }
             
-            if (FindSubString(temp, "Zipr.dll")
+            if (FindSubString(temp, "ZiprFull.dll")
                 #ifdef USE_7ZIP_32_DLL
-                || FindSubString(temp, "Zipr32.dll")
+                || FindSubString(temp, "ZiprFull32.dll")
                 #endif
                 )
             {

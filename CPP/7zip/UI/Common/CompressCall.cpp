@@ -33,7 +33,7 @@ using namespace NWindows;
 #define MY_TRY_FINISH_VOID } \
   catch(...) { ErrorMessageHRESULT(E_FAIL); }
 
-#define k7zGui  "7zG.exe"
+#define kZiprGui  "ZiprG.exe"
 
 // 21.07 : we can disable wildcard
 // #define ISWITCH_NO_WILDCARD_POSTFIX "w-"
@@ -66,13 +66,13 @@ static void ErrorMessageHRESULT(HRESULT res, LPCWSTR s = NULL)
   ErrorMessage(s2);
 }
 
-static HRESULT Call7zGui(const UString &params,
+static HRESULT CallZiprGui(const UString &params,
     // LPCWSTR curDir,
     bool waitFinish,
     NSynchronization::CBaseEvent *event)
 {
   UString imageName = fs2us(NWindows::NDLL::GetModuleDirPrefix());
-  imageName += k7zGui;
+  imageName += kZiprGui;
 
   CProcess process;
   const WRes wres = process.Create(imageName, params, NULL); // curDir);
@@ -307,7 +307,7 @@ HRESULT CompressFiles(
   }
   
   // ErrorMessage(params);
-  return Call7zGui(params,
+  return CallZiprGui(params,
       // (arcPathPrefix.IsEmpty()? 0: (LPCWSTR)arcPathPrefix),
       waitFinish, &event);
   MY_TRY_FINISH
@@ -321,7 +321,7 @@ static void ExtractGroupCommand(const UStringVector &arcPaths, UString &params, 
   NSynchronization::CManualResetEvent event;
   HRESULT result = CreateMap(arcPaths, fileMapping, event, params);
   if (result == S_OK)
-    result = Call7zGui(params, false, &event);
+    result = CallZiprGui(params, false, &event);
   if (result != S_OK)
     ErrorMessageHRESULT(result);
 }
@@ -410,7 +410,7 @@ void Benchmark(bool totalMode)
   if (totalMode)
     params += " -mm=*";
   AddLagePagesSwitch(params);
-  HRESULT result = Call7zGui(params, false, NULL);
+  HRESULT result = CallZiprGui(params, false, NULL);
   if (result != S_OK)
     ErrorMessageHRESULT(result);
   MY_TRY_FINISH_VOID

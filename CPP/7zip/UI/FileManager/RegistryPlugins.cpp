@@ -97,7 +97,7 @@ void ReadPluginInfoList(CObjectVector<CPluginInfo> &plugins)
   FString baseFolderPrefix = NDLL::GetModuleDirPrefix();
   {
     CPluginInfo pluginInfo;
-    pluginInfo.FilePath = baseFolderPrefix + FTEXT("Zipr.dll");
+    pluginInfo.FilePath = baseFolderPrefix + FTEXT("ZiprFull.dll");
     if (::ReadPluginInfo(pluginInfo, false))
       plugins.Add(pluginInfo);
   }

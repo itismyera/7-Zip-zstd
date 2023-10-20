@@ -1,4 +1,4 @@
-PROG = 7zxa.dll
+PROG = Ziprxa.dll
 DEF_FILE = ../../Archive/Archive2.def
 CFLAGS = $(CFLAGS) -DEXTRACT_ONLY \
 

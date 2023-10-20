@@ -1,4 +1,4 @@
-PROG = Zipr.dll
+PROG = ZiprFull.dll
 DEF_FILE = Explorer.def
 CFLAGS = $(CFLAGS) \
   -DLANG \

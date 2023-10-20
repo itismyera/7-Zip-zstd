@@ -1,4 +1,4 @@
-PROG = 7z.dll
+PROG = Zipr.dll
 DEF_FILE = ../Archive.def
 CFLAGS = $(CFLAGS) \
   -DEXTERNAL_CODECS \

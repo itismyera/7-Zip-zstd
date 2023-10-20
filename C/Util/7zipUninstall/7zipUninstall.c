@@ -370,7 +370,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
             "Zipr Help.lnk");
         wcscpy(destPath, path);
         CatAscii(destPath, k == 0 ?
-            "7zFM.exe" :
+            "ZiprFM.exe" :
             "Zipr.chm");
         
         if (CreateShellLink(link, destPath) == S_OK)
@@ -403,7 +403,7 @@ static LPCSTR const k_ShellEx_Items[] =
 
 static LPCWSTR const k_Shell_Approved = L"Software\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Approved";
 
-static LPCWSTR const k_AppPaths_7zFm = L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\7zFM.exe";
+static LPCWSTR const k_AppPaths_ZiprFM = L"Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\ZiprFM.exe";
 #define k_REG_Uninstall L"Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\"
 static LPCWSTR const k_Uninstall_7zip = k_REG_Uninstall L"Zipr-Zstandard";
 
@@ -432,7 +432,7 @@ static void WriteCLSID()
   
   if (MyRegistry_QueryString2(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc, NULL, s))
   {
-    if (AreEqual_Path_PrefixName(s, path, L"Zipr.dll"))
+    if (AreEqual_Path_PrefixName(s, path, L"ZiprFull.dll"))
     {
       {
         LONG res = MyRegistry_DeleteKey(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc);
@@ -469,7 +469,7 @@ static void WriteCLSID()
   
   if (MyRegistry_QueryString2_32(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc, NULL, s))
   {
-    if (AreEqual_Path_PrefixName(s, path, L"Zipr32.dll"))
+    if (AreEqual_Path_PrefixName(s, path, L"ZiprFull32.dll"))
     {
       {
         LONG res = MyRegistry_DeleteKey_32(HKEY_CLASSES_ROOT, k_Reg_CLSID_7zip_Inproc);
@@ -504,11 +504,11 @@ static void WriteCLSID()
   #endif
 
 
-  if (MyRegistry_QueryString2(HKEY_LOCAL_MACHINE, k_AppPaths_7zFm, NULL, s))
+  if (MyRegistry_QueryString2(HKEY_LOCAL_MACHINE, k_AppPaths_ZiprFM, NULL, s))
   {
     // RemoveQuotes(s);
-    if (AreEqual_Path_PrefixName(s, path, L"7zFM.exe"))
-      MyRegistry_DeleteKey(HKEY_LOCAL_MACHINE, k_AppPaths_7zFm);
+    if (AreEqual_Path_PrefixName(s, path, L"ZiprFM.exe"))
+      MyRegistry_DeleteKey(HKEY_LOCAL_MACHINE, k_AppPaths_ZiprFM);
   }
 
   if (MyRegistry_QueryString2(HKEY_LOCAL_MACHINE, k_Uninstall_7zip, L"UninstallString", s))
@@ -656,18 +656,18 @@ static const char * const k_Names =
   " License.txt"
   " readme.txt"
   " Zipr.chm"
-  " 7z.sfx"
-  " 7zCon.sfx"
-  " 7z.exe"
-  " 7za.exe"
-  " 7za.dll"
-  " 7zG.exe"
-  " 7z.dll"
-  " 7zFM.exe"
-  #ifdef USE_7ZIP_32_DLL
-  " Zipr32.dll"
-  #endif
+  " Zipr.sfx"
+  " ZiprCon.sfx"
+  " Zipr.exe"
+  " Zipra.exe"
+  " Zipra.dll"
+  " ZiprG.exe"
   " Zipr.dll"
+  " ZiprFM.exe"
+  #ifdef USE_7ZIP_32_DLL
+  " ZiprFull32.dll"
+  #endif
+  " ZiprFull.dll"
   " Uninstall.exe";
 
 

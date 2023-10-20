@@ -20,14 +20,14 @@ EXTERNAL_CODECS
   
   1) Executable that uses external plugins must be compiled
      with EXTERNAL_CODECS defined:
-       - 7z.exe, 7zG.exe, 7zFM.exe
+       - Zipr.exe, ZiprG.exe, ZiprFM.exe
     
      Note: EXTERNAL_CODECS is used also in CPP/7zip/Common/CreateCoder.h
-           that code is used in plugin module (7z.dll).
+           that code is used in plugin module (Zipr.dll).
   
   2) Standalone modules are compiled without EXTERNAL_CODECS:
-    - SFX modules: 7z.sfx, 7zCon.sfx
-    - standalone versions of console Zipr: 7za.exe, 7zr.exe
+    - SFX modules: Zipr.sfx, ZiprCon.sfx
+    - standalone versions of console Zipr: Zipra.exe, 7zr.exe
 
   if EXTERNAL_CODECS is defined, CCodecs class implements interfaces:
     - ICompressCodecsInfo : for Codecs

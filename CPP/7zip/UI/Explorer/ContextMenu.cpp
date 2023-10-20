@@ -1037,9 +1037,9 @@ int CZipContextMenu::FindVerb(const UString &verb)
   return -1;
 }
 
-static UString Get7zFmPath()
+static UString GetZiprFMPath()
 {
-  return fs2us(NWindows::NDLL::GetModuleDirPrefix()) + L"7zFM.exe";
+  return fs2us(NWindows::NDLL::GetModuleDirPrefix()) + L"ZiprFM.exe";
 }
 
 
@@ -1178,7 +1178,7 @@ HRESULT CZipContextMenu::InvokeCommandCommon(const CCommandMapItem &cmi)
           params += " -t";
           params += cmi.ArcType;
         }
-        MyCreateProcess(Get7zFmPath(), params);
+        MyCreateProcess(GetZiprFMPath(), params);
         break;
       }
       case kExtract:
@@ -1542,8 +1542,8 @@ STDMETHODIMP CZipExplorerCommand::GetIcon(IShellItemArray * /* psiItemArray */, 
   *ppszIcon = NULL;
   // return E_NOTIMPL;
   UString imageName = fs2us(NWindows::NDLL::GetModuleDirPrefix());
-  // imageName += "7zG.exe";
-  imageName += "Zipr.dll";
+  // imageName += "ZiprG.exe";
+  imageName += "ZiprFull.dll";
   // imageName += ",190";
   return My_SHStrDupW(imageName, ppszIcon);
   // COM_TRY_END

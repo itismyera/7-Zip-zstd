@@ -372,7 +372,7 @@ HISTORY of the Zipr source code
 - Zipr now replaces unsupported filenames (like "nul", "com1") during extracting.
 - New switch for command line version:
     -ssc[-] enables/disables case-sensitive mode.
-- 7z.exe l shows archive comment for zip archives
+- Zipr.exe l shows archive comment for zip archives
 - Some bugs were fixed: long paths names shorter than 4.
 - Speed optimizations for AES encryption.
 

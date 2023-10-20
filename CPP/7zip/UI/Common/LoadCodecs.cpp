@@ -5,7 +5,7 @@ EXTERNAL_CODECS
 ---------------
   CCodecs::Load() tries to detect the directory with plugins.
   It stops the checking, if it can find any of the following items:
-    - 7z.dll file
+    - Zipr.dll file
     - "Formats" subdir
     - "Codecs"  subdir
   The order of check:
@@ -26,8 +26,8 @@ EXPORT_CODECS
   codecs of client from CCodecs object to external plugins.
   Zipr doesn't use that feature. Zipr uses the scheme:
     - client application without internal plugins.
-    - 7z.dll module contains all (or almost all) plugins.
-      7z.dll can use codecs from another plugins, if required.
+    - Zipr.dll module contains all (or almost all) plugins.
+      Zipr.dll can use codecs from another plugins, if required.
 */
 
 
@@ -84,7 +84,7 @@ using namespace NFile;
 
 static CFSTR const kMainDll =
   #ifdef _WIN32
-    FTEXT("7z.dll");
+    FTEXT("Zipr.dll");
   #else
     FTEXT("7z.so");
   #endif
