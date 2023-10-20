@@ -199,7 +199,7 @@ HISTORY of the Zipr source code
 - The BUG in 9.31-9.37 was fixed:
   IArchiveGetRawProps interface was disabled for 7z archives.
 - The BUG in 9.26-9.36 was fixed:
-  Some code in CPP\7zip\Archive\7z\ worked correctly only under Windows.
+  Some code in CPP\Zipr\Archive\7z\ worked correctly only under Windows.
 
 
 9.36 beta      2014-12-26

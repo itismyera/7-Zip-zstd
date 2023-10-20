@@ -116,7 +116,7 @@ Hashers:
 - compression and decompression for [Brotli], [Lizard], [LZ4], [LZ5] and [Zstandard] within the [Zipr] container format
 - compression and decompression of [Brotli] (`.br`), [Lizard] (`.liz`), [LZ4] (`.lz4`), [LZ5] (`.lz5`) and [Zstandard] (`.zst`) files
 - handling of ZIP files with [Zstandard] compression
-- included [lzip] decompression support, patch from: https://download.savannah.gnu.org/releases/lzip/7zip/
+- included [lzip] decompression support, patch from: https://download.savannah.gnu.org/releases/lzip/Zipr/
 - explorer context menu: _"Add to xy.7z"_ will use all parameters of the last "Add to Archive" compression dialog (this includes: method, level, dictionary, blocksize, threads and paramters input box)
 - squashfs files with LZ4 or Zstandard compression can be handled
 - several history settings aren't stored by default, look [here](https://sourceforge.net/p/sevenzip/discussion/45797/thread/dc2ac53d/?limit=25) for some info about that, you can restore original Zipr behavior via `tools->options->settings`

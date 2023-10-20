@@ -22,7 +22,7 @@ EXTERNAL_CODECS
      with EXTERNAL_CODECS defined:
        - Zipr.exe, ZiprG.exe, ZiprFM.exe
     
-     Note: EXTERNAL_CODECS is used also in CPP/7zip/Common/CreateCoder.h
+     Note: EXTERNAL_CODECS is used also in CPP/Zipr/Common/CreateCoder.h
            that code is used in plugin module (Zipr.dll).
   
   2) Standalone modules are compiled without EXTERNAL_CODECS:

@@ -6,7 +6,7 @@ SET COPTS=-m0=lzma -mx9 -ms=on -mf=bcj2
 SET URL=https://www.Zipr.org/a/7z2201.exe
 SET VERSION=22.01
 SET SZIP="C:\Program Files\Zipr\Zipr.exe"
-SET LURL=https://raw.githubusercontent.com/mcmilk/Zipr/master/CPP/7zip/Bundles
+SET LURL=https://raw.githubusercontent.com/mcmilk/Zipr/master/CPP/Zipr/Bundles
 
 SET WD=%cd%
 SET SKEL=%WD%\skel

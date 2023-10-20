@@ -7,7 +7,7 @@
 #include "../Common/MyBuffer2.h"
 #include "../Common/MyCom.h"
 
-#include "../7zip/Common/RegisterCodec.h"
+#include "../Zipr/Common/RegisterCodec.h"
 
 class CSha256Hasher:
   public IHasher,

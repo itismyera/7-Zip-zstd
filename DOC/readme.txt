@@ -118,17 +118,17 @@ There are 2 main files in folder for compiling:
 
 At first you must change the current folder to folder that contains `makefile.gcc`:
 
-  cd CPP/7zip/Bundles/Alone2
+  cd CPP/Zipr/Bundles/Alone2
 
 Then you can compile `makefile.gcc` with the command:
 
   make -j -f makefile.gcc
 
-Also there are additional "*.mak" files in folder "CPP/7zip/" that can be used to compile 
+Also there are additional "*.mak" files in folder "CPP/Zipr/" that can be used to compile 
 Zipr binaries with optimized code and optimzing options.
 
 To compile with GCC without assembler:
-  cd CPP/7zip/Bundles/Alone2
+  cd CPP/Zipr/Bundles/Alone2
   make -j -f ../../cmpl_gcc.mak
 
 To compile with CLANG without assembler:

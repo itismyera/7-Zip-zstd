@@ -8,7 +8,7 @@
 #include "../../C/zstd/xxhash.h"
 
 #include "../Common/MyCom.h"
-#include "../7zip/Common/RegisterCodec.h"
+#include "../Zipr/Common/RegisterCodec.h"
 
 // XXH32
 class CXXH32Hasher:

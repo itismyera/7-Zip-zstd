@@ -1,6 +1,6 @@
 PROG = 7lzma
 
-include ../../../CPP/7zip/LzmaDec_gcc.mak
+include ../../../CPP/Zipr/LzmaDec_gcc.mak
 
 
 OBJS = \

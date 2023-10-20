@@ -50,7 +50,7 @@ jobs:
           set WDIR=%cd%
           set PLATFORM=${{matrix.platform}}
           set SUBSYS=${{matrix.subsys}}
-          set ROOT=%cd%\CPP\7zip
+          set ROOT=%cd%\CPP\Zipr
           set OUTDIR=%WDIR%\build\bin-%PLATFORM%
           set LFLAGS=/SUBSYSTEM:WINDOWS,%SUBSYS%
 

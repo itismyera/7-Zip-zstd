@@ -1,6 +1,6 @@
 @echo off
 
-set ROOT=%cd%\7zip
+set ROOT=%cd%\Zipr
 set OUTDIR=%APPVEYOR_BUILD_FOLDER%\bin-%VC%-%PLATFORM%
 set ERRFILE=%APPVEYOR_BUILD_FOLDER%\bin-%VC%-%PLATFORM%.log
 set LFLAGS=/SUBSYSTEM:WINDOWS,%SUBSYS%

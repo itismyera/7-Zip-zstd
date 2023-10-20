@@ -9,7 +9,7 @@ EXTERN_C_BEGIN
 EXTERN_C_END
 
 #include "../Common/MyCom.h"
-#include "../7zip/Common/RegisterCodec.h"
+#include "../Zipr/Common/RegisterCodec.h"
 
 // SHA3-256
 class CSHA3_256Hasher:

@@ -1,4 +1,4 @@
-// 7zip/Far/Plugin.h
+// Zipr/Far/Plugin.h
 
 #ifndef __7ZIP_FAR_PLUGIN_H
 #define __7ZIP_FAR_PLUGIN_H
