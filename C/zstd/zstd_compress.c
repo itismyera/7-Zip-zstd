@@ -2928,7 +2928,6 @@ ZSTD_entropyCompressSeqStore_internal(
         assert(op <= oend);
         /* zstd versions <= 1.3.4 mistakenly report corruption when
          * FSE_readNCount() receives a buffer < 4 bytes.
-         * Fixed by https://github.com/facebook/zstd/pull/1146.
          * This can happen when the last set_compressed table present is 2
          * bytes and the bitstream is only one byte.
          * In this exceedingly rare case, we will simply emit an uncompressed
@@ -3128,7 +3127,6 @@ static size_t ZSTD_postProcessSequenceProducerResult(
  * Returns sum(litLen) + sum(matchLen) + lastLits for *seqBuf*.
  * Similar to another function in zstd_compress.c (determine_blockSize),
  * except it doesn't check for a block delimiter to end summation.
- * Removing the early exit allows the compiler to auto-vectorize (https://godbolt.org/z/cY1cajz9P).
  * This function can be deleted and replaced by determine_blockSize after we resolve issue #3456. */
 static size_t ZSTD_fastSequenceLengthSum(ZSTD_Sequence const* seqBuf, size_t seqBufSize) {
     size_t matchLenSum, litLenSum, i;
@@ -4913,7 +4911,6 @@ size_t ZSTD_loadCEntropy(ZSTD_compressedBlockState_t* bs, void* workspace,
 
 /* Dictionary format :
  * See :
- * https://github.com/facebook/zstd/blob/release/doc/zstd_compression_format.md#dictionary-format
  */
 /*! ZSTD_loadZstdDictionary() :
  * @return : dictID, or an error code

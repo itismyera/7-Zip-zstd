@@ -28,9 +28,6 @@
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef MEM_H_MODULE
 #define MEM_H_MODULE

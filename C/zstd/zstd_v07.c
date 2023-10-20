@@ -184,8 +184,6 @@ ZSTDLIBv07_API size_t ZSTDv07_insertBlock(ZSTDv07_DCtx* dctx, const void* blockS
    low-level memory access routines
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -208,10 +206,6 @@ ZSTDLIBv07_API size_t ZSTDv07_insertBlock(ZSTDv07_DCtx* dctx, const void* blockS
    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-    You can contact the author at :
-    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef MEM_H_MODULE
 #define MEM_H_MODULE
@@ -392,8 +386,6 @@ MEM_STATIC size_t MEM_readLEST(const void* memPtr)
    header file (to include)
    Copyright (C) 2013-2016, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -417,8 +409,6 @@ MEM_STATIC size_t MEM_readLEST(const void* memPtr)
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
 ****************************************************************** */
 #ifndef BITSTREAM_H_MODULE
 #define BITSTREAM_H_MODULE
@@ -623,7 +613,7 @@ MEM_STATIC unsigned BITv07_endOfDStream(const BITv07_DStream_t* DStream)
    Public Prototypes declaration
    Copyright (C) 2013-2016, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -648,8 +638,6 @@ MEM_STATIC unsigned BITv07_endOfDStream(const BITv07_DStream_t* DStream)
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
 ****************************************************************** */
 #ifndef FSEv07_H
 #define FSEv07_H
@@ -931,7 +919,7 @@ MEM_STATIC BYTE FSEv07_decodeSymbolFast(FSEv07_DState_t* DStatePtr, BITv07_DStre
    header file
    Copyright (C) 2013-2016, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -956,8 +944,6 @@ MEM_STATIC BYTE FSEv07_decodeSymbolFast(FSEv07_DState_t* DStatePtr, BITv07_DStre
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
 ****************************************************************** */
 #ifndef HUFv07_H_298734234
 #define HUFv07_H_298734234
@@ -1104,7 +1090,7 @@ size_t HUFv07_decompress1X4_usingDTable(void* dst, size_t maxDstSize, const void
    Common functions of New Generation Entropy library
    Copyright (C) 2016, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1128,10 +1114,6 @@ size_t HUFv07_decompress1X4_usingDTable(void* dst, size_t maxDstSize, const void
    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-    You can contact the author at :
-    - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 *************************************************************************** */
 
 
@@ -1328,7 +1310,7 @@ size_t HUFv07_readStats(BYTE* huffWeight, size_t hwSize, U32* rankStats,
    FSE : Finite State Entropy decoder
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1353,9 +1335,6 @@ size_t HUFv07_readStats(BYTE* huffWeight, size_t hwSize, U32* rankStats,
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 
 
@@ -1652,7 +1631,7 @@ size_t FSEv07_decompress(void* dst, size_t maxDstSize, const void* cSrc, size_t 
    Huffman decoder, part of New Generation Entropy library
    Copyright (C) 2013-2016, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1676,10 +1655,6 @@ size_t FSEv07_decompress(void* dst, size_t maxDstSize, const void* cSrc, size_t 
    THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-    You can contact the author at :
-    - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 
 /* **************************************************************
@@ -2530,7 +2505,7 @@ size_t HUFv07_decompress1X_DCtx (HUFv07_DTable* dctx, void* dst, size_t dstSize,
     Common functions of Zstd compression library
     Copyright (C) 2015-2016, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -2553,8 +2528,6 @@ size_t HUFv07_decompress1X_DCtx (HUFv07_DTable* dctx, void* dst, size_t dstSize,
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd homepage : https://facebook.github.io/zstd/
 */
 
 
@@ -2600,7 +2573,7 @@ static void ZSTDv07_defaultFreeFunction(void* opaque, void* address)
     Header File for include
     Copyright (C) 2014-2016, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -2623,8 +2596,6 @@ static void ZSTDv07_defaultFreeFunction(void* opaque, void* address)
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd homepage : https://www.zstd.net
 */
 #ifndef ZSTDv07_CCOMMON_H_MODULE
 #define ZSTDv07_CCOMMON_H_MODULE
@@ -2807,7 +2778,7 @@ static const ZSTDv07_customMem defaultCustomMem = { ZSTDv07_defaultAllocFunction
     zstd - standard compression library
     Copyright (C) 2014-2016, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -2830,8 +2801,6 @@ static const ZSTDv07_customMem defaultCustomMem = { ZSTDv07_defaultAllocFunction
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd homepage : https://facebook.github.io/zstd
 */
 
 /* ***************************************************************
@@ -4209,7 +4178,7 @@ ZSTDLIBv07_API size_t ZSTDv07_decompress_usingDDict(ZSTDv07_DCtx* dctx,
     Buffered version of Zstd compression library
     Copyright (C) 2015-2016, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -4232,8 +4201,6 @@ ZSTDLIBv07_API size_t ZSTDv07_decompress_usingDDict(ZSTDv07_DCtx* dctx,
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd homepage : https://facebook.github.io/zstd/
 */
 
 

@@ -219,7 +219,6 @@ ZSTD_compressSubBlock_sequences(const ZSTD_fseCTables_t* fseTables,
         op += bitstreamSize;
         /* zstd versions <= 1.3.4 mistakenly report corruption when
          * FSE_readNCount() receives a buffer < 4 bytes.
-         * Fixed by https://github.com/facebook/zstd/pull/1146.
          * This can happen when the last set_compressed table present is 2
          * bytes and the bitstream is only one byte.
          * In this exceedingly rare case, we will simply emit an uncompressed
@@ -239,7 +238,6 @@ ZSTD_compressSubBlock_sequences(const ZSTD_fseCTables_t* fseTables,
 
     /* zstd versions <= 1.4.0 mistakenly report error when
      * sequences section body size is less than 3 bytes.
-     * Fixed by https://github.com/facebook/zstd/pull/1664.
      * This can happen when the previous sequences section block is compressed
      * with rle mode and the current block's sequences section is compressed
      * with repeat mode where sequences section body size can be 1 byte.

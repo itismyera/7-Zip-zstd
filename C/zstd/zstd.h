@@ -2809,10 +2809,6 @@ ZSTD_registerSequenceProducer(
 *  However, it is hard to use, and not as well tested as the rest of
 *  our API.
 *
-*  Please use the normal streaming API instead: ZSTD_compressStream2,
-*  and ZSTD_decompressStream.
-*  If there is functionality that you need, but it doesn't provide,
-*  please open an issue on our GitHub.
 ********************************************************************* */
 
 /**
@@ -2973,10 +2969,6 @@ ZSTDLIB_STATIC_API ZSTD_nextInputType_e ZSTD_nextInputType(ZSTD_DCtx* dctx);
       - ZSTD_c_contentSizeFlag = 0
       - ZSTD_c_checksumFlag = 0
       - ZSTD_c_dictIDFlag = 0
-
-    This API is not as well tested as our normal API, so we recommend not using it.
-    We will be removing it in a future version. If the normal API doesn't provide
-    the functionality you need, please open a GitHub issue.
 
     Block functions produce and decode raw zstd blocks, without frame metadata.
     Frame metadata cost is typically ~12 bytes, which can be non-negligible for very small blocks (< 100 bytes).

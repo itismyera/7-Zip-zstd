@@ -2,9 +2,6 @@
  *  xxHash - Fast Hash algorithm
  *  Copyright (c) LRH.
  *
- *  You can contact the author at :
- *  - xxHash homepage: https://cyan4973.github.io/xxHash/
- *  - xxHash source repository : https://github.com/Cyan4973/xxHash
  *
  * This source code is licensed under both the BSD-style license (found in the
  * LICENSE file in the root directory of this source tree) and the GPLv2 (found
@@ -56,7 +53,6 @@ It depends on successfully passing SMHasher test set.
 Note: SMHasher's CRC32 implementation is not the fastest one.
 Other speed-oriented implementations can be faster,
 especially in combination with PCLMUL instruction:
-https://fastcompression.blogspot.com/2019/03/presenting-xxh3.html?showComment=1552696407071#c3490092340461170735
 
 A 64-bit version, named XXH64, is available since r35.
 It offers much better speed, but for 64-bit applications only.
@@ -78,7 +74,6 @@ extern "C" {
  * Inlining improves performance on small inputs, especially when the length is
  * expressed as a compile-time constant:
  *
- *      https://fastcompression.blogspot.com/2018/03/xxhash-for-small-keys-impressive-power.html
  *
  * It also keeps xxHash symbols private to the unit, so they are not exported.
  *
@@ -611,8 +606,6 @@ XXH_PUBLIC_API XXH32_hash_t XXH32_hashFromCanonical(const XXH32_canonical_t* src
 /*
 Define XXH_FALLTHROUGH macro for annotating switch case with the 'fallthrough' attribute
 introduced in CPP17 and C23.
-CPP17 : https://en.cppreference.com/w/cpp/language/attributes/fallthrough
-C23   : https://en.cppreference.com/w/c/language/attributes/fallthrough
 */
 #if XXH_HAS_C_ATTRIBUTE(x)
 # define XXH_FALLTHROUGH [[fallthrough]]
@@ -733,7 +726,6 @@ XXH_PUBLIC_API XXH64_hash_t XXH64_hashFromCanonical(const XXH64_canonical_t* src
  *
  * Speed analysis methodology is explained here:
  *
- *    https://fastcompression.blogspot.com/2019/03/presenting-xxh3.html
  *
  * Compared to XXH64, expect XXH3 to run approximately
  * ~2x faster on large inputs and >3x faster on small ones,
@@ -1314,7 +1306,6 @@ XXH3_128bits_reset_withSecretandSeed(XXH3_state_t* statePtr,
  *   care, as what works on one compiler/platform/optimization level may cause
  *   another to read garbage data or even crash.
  *
- * See https://fastcompression.blogspot.com/2015/08/accessing-unaligned-memory.html for details.
  *
  * Prefer these methods in priority order (0 > 3 > 1 > 2)
  */
@@ -1655,7 +1646,6 @@ static xxh_u32 XXH_read32(const void* ptr)
 
 /*
  * Portable and safe solution. Generally efficient.
- * see: https://fastcompression.blogspot.com/2015/08/accessing-unaligned-memory.html
  */
 static xxh_u32 XXH_read32(const void* memPtr)
 {
@@ -2296,7 +2286,6 @@ static xxh_u64 XXH_read64(const void* ptr)
 
 /*
  * Portable and safe solution. Generally efficient.
- * see: https://fastcompression.blogspot.com/2015/08/accessing-unaligned-memory.html
  */
 static xxh_u64 XXH_read64(const void* memPtr)
 {
@@ -2996,8 +2985,6 @@ enum XXH_VECTOR_TYPE /* fake enum */ {
 #  define XXH_SPLIT_IN_PLACE(in, outLo, outHi)                                              \
     do {                                                                                    \
       /* Undocumented GCC/Clang operand modifier: %e0 = lower D half, %f0 = upper D half */ \
-      /* https://github.com/gcc-mirror/gcc/blob/38cf91e5/gcc/config/arm/arm.c#L22486 */     \
-      /* https://github.com/llvm-mirror/llvm/blob/2c4ca683/lib/Target/ARM/ARMAsmPrinter.cpp#L399 */ \
       __asm__("vzip.32  %e0, %f0" : "+w" (in));                                             \
       (outLo) = vget_low_u32 (vreinterpretq_u32_u64(in));                                   \
       (outHi) = vget_high_u32(vreinterpretq_u32_u64(in));                                   \
@@ -3144,7 +3131,7 @@ XXH_FORCE_INLINE xxh_u64x2 XXH_vec_loadu(const void *ptr)
 #  define XXH_vec_mule __builtin_altivec_vmuleuw
 # else
 /* gcc needs inline assembly */
-/* Adapted from https://github.com/google/highwayhash/blob/master/highwayhash/hh_vsx.h. */
+/* Adapted from  */
 XXH_FORCE_INLINE xxh_u64x2 XXH_vec_mulo(xxh_u32x4 a, xxh_u32x4 b)
 {
     xxh_u64x2 result;
@@ -3167,7 +3154,7 @@ XXH_FORCE_INLINE xxh_u64x2 XXH_vec_mule(xxh_u32x4 a, xxh_u32x4 b)
 #  define XXH_PREFETCH(ptr)  (void)(ptr)  /* disabled */
 #else
 #  if defined(_MSC_VER) && (defined(_M_X64) || defined(_M_IX86))  /* _mm_prefetch() not defined outside of x86/x64 */
-#    include <mmintrin.h>   /* https://msdn.microsoft.com/fr-fr/library/84szxsww(v=vs.90).aspx */
+#    include <mmintrin.h>   /* */
 #    define XXH_PREFETCH(ptr)  _mm_prefetch((const char*)(ptr), _MM_HINT_T0)
 #  elif defined(__GNUC__) && ( (__GNUC__ >= 4) || ( (__GNUC__ == 3) && (__GNUC_MINOR__ >= 1) ) )
 #    define XXH_PREFETCH(ptr)  __builtin_prefetch((ptr), 0 /* rw==read */, 3 /* locality */)
@@ -3268,7 +3255,6 @@ XXH_mult64to128(xxh_u64 lhs, xxh_u64 rhs)
      * despite not having the arithmetic for it. This results in a laggy
      * compiler builtin call which calculates a full 128-bit multiply.
      * In that case it is best to use the portable one.
-     * https://github.com/Cyan4973/xxHash/issues/211#issuecomment-515575677
      */
 #if (defined(__GNUC__) || defined(__clang__)) && !defined(__wasm__) \
     && defined(__SIZEOF_INT128__) \
@@ -3688,7 +3674,7 @@ XXH_FORCE_INLINE void XXH_writeLE64(void* dst, xxh_u64 v64)
 }
 
 /* Several intrinsic functions below are supposed to accept __int64 as argument,
- * as documented in https://software.intel.com/sites/landingpage/IntrinsicsGuide/ .
+ *  .
  * However, several environments do not define __int64 type,
  * requiring a workaround.
  */
@@ -3763,14 +3749,12 @@ XXH3_accumulate_512_avx512(void* XXH_RESTRICT acc,
 /*
  * XXH3_scrambleAcc: Scrambles the accumulators to improve mixing.
  *
- * Multiplication isn't perfect, as explained by Google in HighwayHash:
  *
  *  // Multiplication mixes/scrambles bytes 0-7 of the 64-bit result to
  *  // varying degrees. In descending order of goodness, bytes
  *  // 3 4 2 5 1 6 0 7 have quality 228 224 164 160 100 96 36 32.
  *  // As expected, the upper and lower bytes are much worse.
  *
- * Source: https://github.com/google/highwayhash/blob/0aaf66b/highwayhash/hh_avx2.h#L291
  *
  * Since our algorithm uses a pseudorandom secret to add some variance into the
  * mix, we don't need to (or want to) mix as often or as much as HighwayHash does.
@@ -4152,7 +4136,6 @@ XXH3_scrambleAcc_neon(void* XXH_RESTRICT acc, const void* XXH_RESTRICT secret)
                  *
                  * vmull_u32 has the same timing as vmul_u32, and it avoids
                  * this bug completely.
-                 * See https://bugs.llvm.org/show_bug.cgi?id=39967
                  */
                 uint64x2_t prod_hi = vmull_u32 (data_key_hi, prime);
                 /* xacc[i] = prod_hi << 32; */

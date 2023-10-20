@@ -494,7 +494,7 @@ If there is an error, the function will return an error code, which can be teste
    header file (to include)
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -519,9 +519,6 @@ If there is an error, the function will return an error code, which can be teste
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
-   - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef BITSTREAM_H_MODULE
 #define BITSTREAM_H_MODULE
@@ -733,7 +730,7 @@ MEM_STATIC unsigned BIT_endOfDStream(const BIT_DStream_t* DStream)
    header file for static linking (only)
    Copyright (C) 2013-2015, LRH
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -758,9 +755,6 @@ MEM_STATIC unsigned BIT_endOfDStream(const BIT_DStream_t* DStream)
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
-   - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef FSE_STATIC_H
 #define FSE_STATIC_H
@@ -882,7 +876,7 @@ MEM_STATIC unsigned FSE_endOfDState(const FSE_DState_t* DStatePtr)
    FSE : Finite State Entropy coder
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -907,9 +901,6 @@ MEM_STATIC unsigned FSE_endOfDState(const FSE_DState_t* DStatePtr)
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - FSE source repository : https://github.com/Cyan4973/FiniteStateEntropy
-    - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 
 #ifndef FSE_COMMONDEFS_ONLY
@@ -1388,7 +1379,7 @@ static size_t FSE_decompress(void* dst, size_t maxDstSize, const void* cSrc, siz
    header file
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1413,9 +1404,6 @@ static size_t FSE_decompress(void* dst, size_t maxDstSize, const void* cSrc, siz
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
-   - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef HUFF0_H
 #define HUFF0_H
@@ -1466,7 +1454,7 @@ static unsigned    HUF_isError(size_t code);        /* tells if a return value i
    header file for static linking (only)
    Copyright (C) 2013-2015, LRH
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1491,9 +1479,6 @@ static unsigned    HUF_isError(size_t code);        /* tells if a return value i
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
-   - Public forum : https://groups.google.com/forum/#!forum/lz4c
 ****************************************************************** */
 #ifndef HUFF0_STATIC_H
 #define HUFF0_STATIC_H
@@ -1553,7 +1538,7 @@ static size_t HUF_decompress4X4_usingDTable(void* dst, size_t maxDstSize, const 
    Huff0 : Huffman coder, part of New Generation Entropy library
    Copyright (C) 2013-2015, LRH.
 
-   BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+   
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -1578,8 +1563,6 @@ static size_t HUF_decompress4X4_usingDTable(void* dst, size_t maxDstSize, const 
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - FSE+Huff0 source repository : https://github.com/Cyan4973/FiniteStateEntropy
 ****************************************************************** */
 
 /* **************************************************************
@@ -2353,7 +2336,7 @@ static size_t HUF_decompress (void* dst, size_t dstSize, const void* cSrc, size_
     zstd - decompression module fo v0.4 legacy format
     Copyright (C) 2015-2016, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -2376,9 +2359,6 @@ static size_t HUF_decompress (void* dst, size_t dstSize, const void* cSrc, size_
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd source repository : https://github.com/Cyan4973/zstd
-    - ztsd public forum : https://groups.google.com/forum/#!forum/lz4c
 */
 
 /* ***************************************************************
@@ -3241,7 +3221,7 @@ static void ZSTD_decompress_insertDictionary(ZSTD_DCtx* ctx, const void* dict, s
     Buffered version of Zstd compression library
     Copyright (C) 2015, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -3264,9 +3244,6 @@ static void ZSTD_decompress_insertDictionary(ZSTD_DCtx* ctx, const void* dict, s
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd source repository : https://github.com/Cyan4973/zstd
-    - ztsd public forum : https://groups.google.com/forum/#!forum/lz4c
 */
 
 /* The objects defined into this file should be considered experimental.

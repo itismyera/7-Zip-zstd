@@ -1,7 +1,6 @@
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* Build per-context histograms of literals, commands and distance codes. */

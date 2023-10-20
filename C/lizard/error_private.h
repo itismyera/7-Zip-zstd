@@ -27,8 +27,6 @@
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-   - Homepage : http://www.zstd.net
 ****************************************************************** */
 /* Note : this module is expected to remain private, do not expose it */
 

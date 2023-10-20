@@ -26,10 +26,6 @@
     THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-    You can contact the author at :
-       - LZ4 source repository : https://github.com/lz4/lz4
-       - LZ4 public forum : https://groups.google.com/forum/#!forum/lz4c
 */
 /* note : lz4hc is not an independent module, it requires lz4.h/lz4.c for proper compilation */
 

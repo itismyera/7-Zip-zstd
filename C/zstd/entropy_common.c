@@ -2,9 +2,6 @@
  * Common functions of New Generation Entropy library
  * Copyright (c) LRH.
  *
- *  You can contact the author at :
- *  - FSE+HUF source repository : https://github.com/Cyan4973/FiniteStateEntropy
- *  - Public forum : https://groups.google.com/forum/#!forum/lz4c
  *
  * This source code is licensed under both the BSD-style license (found in the
  * LICENSE file in the root directory of this source tree) and the GPLv2 (found

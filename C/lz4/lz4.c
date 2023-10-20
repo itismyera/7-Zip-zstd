@@ -27,9 +27,6 @@
    (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
    OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-   You can contact the author at :
-    - LZ4 homepage : http://www.lz4.org
-    - LZ4 source repository : https://github.com/lz4/lz4
 */
 
 /*-************************************
@@ -70,7 +67,6 @@
  * Method 2 : direct access. This method is portable but violate C standard.
  *            It can generate buggy code on targets which assembly generation depends on alignment.
  *            But in some circumstances, it's the only known way to get the most performance (ie GCC + ARMv6)
- * See https://fastcompression.blogspot.fr/2015/08/accessing-unaligned-memory.html for details.
  * Prefer these methods in priority order (0 > 1 > 2)
  */
 #ifndef LZ4_FORCE_MEMORY_ACCESS   /* can be defined externally */
@@ -461,8 +457,7 @@ static const int      dec64table[8] = {0, 0, 0, -1, -4,  1, 2, 3};
 #    define LZ4_FAST_DEC_LOOP 1
 #  elif defined(__aarch64__) && !defined(__clang__)
      /* On non-Apple aarch64, we disable this optimization for clang because
-      * on certain mobile chipsets, performance is reduced with clang. For
-      * more information refer to https://github.com/lz4/lz4/pull/707 */
+      * on certain mobile chipsets, performance is reduced with clang. */
 #    define LZ4_FAST_DEC_LOOP 1
 #  else
 #    define LZ4_FAST_DEC_LOOP 0
@@ -567,8 +562,7 @@ static unsigned LZ4_NbCommonBytes (reg_t val)
 * including _tzcnt_u64. Therefore, we need to neuter the _tzcnt_u64 code path for ARM64EC.
 ****************************************************************************************************/
 #         if defined(__clang__) && (__clang_major__ < 10)
-            /* Avoid undefined clang-cl intrinsics issue.
-             * See https://github.com/lz4/lz4/pull/1017 for details. */
+            /* Avoid undefined clang-cl intrinsics issue. */
             return (unsigned)__builtin_ia32_tzcnt_u64(val) >> 3;
 #         else
             /* x64 CPUS without BMI support interpret `TZCNT` as `REP BSF` */

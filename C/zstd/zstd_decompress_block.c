@@ -322,7 +322,6 @@ size_t ZSTD_decodeLiteralsBlock(ZSTD_DCtx* dctx,
 
 /* Default FSE distribution tables.
  * These are pre-calculated FSE decoding tables using default distributions as defined in specification :
- * https://github.com/facebook/zstd/blob/release/doc/zstd_compression_format.md#default-distributions
  * They were generated programmatically with following method :
  * - start from default distributions, present in /lib/common/zstd_internal.h
  * - generate tables normally, using ZSTD_buildFSETable()
@@ -1430,7 +1429,6 @@ ZSTD_decompressSequences_bodySplitLitBuffer( ZSTD_DCtx* dctx,
                 * If you are seeing performance stability this script can help test.
                 * It tests on 4 commits in zstd where I saw performance change.
                 *
-                *   https://gist.github.com/terrelln/9889fc06a423fd5ca6e99351564473f4
                 */
 #if defined(__GNUC__) && defined(__x86_64__)
             __asm__(".p2align 6");

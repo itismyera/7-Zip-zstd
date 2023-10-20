@@ -1,8 +1,7 @@
 /* NOLINT(build/header_guard) */
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* template parameters: FN, BUCKET_BITS, BUCKET_SWEEP_BITS, HASH_LEN,

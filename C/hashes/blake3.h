@@ -3,7 +3,6 @@
  * This work is released into the public domain with CC0 1.0.
  * Alternatively, it is licensed under the Apache License 2.0.
  *
- * Homepage: https://github.com/BLAKE3-team/BLAKE3
  *
  * Copyright (c) 2019-2020 LRH
  * Copyright (c) 2021 LRH

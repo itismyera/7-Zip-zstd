@@ -1,7 +1,6 @@
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* Function for fast encoding of an input fragment, independently from the input
@@ -10,7 +9,7 @@
    the bit stream.
 
    Adapted from the CompressFragment() function in
-   https://github.com/google/snappy/blob/master/snappy.cc */
+ */
 
 #include "./enc/compress_fragment.h"
 

@@ -1151,7 +1151,7 @@ static size_t HUF_decompress (void* dst, size_t maxDstSize, const void* cSrc, si
     zstd - standard compression library
     Copyright (C) 2014-2015, LRH.
 
-    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
+    
 
     Redistribution and use in source and binary forms, with or without
     modification, are permitted provided that the following conditions are
@@ -1174,9 +1174,6 @@ static size_t HUF_decompress (void* dst, size_t maxDstSize, const void* cSrc, si
     (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    You can contact the author at :
-    - zstd source repository : https://github.com/Cyan4973/zstd
-    - ztsd public forum : https://groups.google.com/forum/#!forum/lz4c
 */
 
 /****************************************************************

@@ -1,7 +1,4 @@
 /* Copyright LRH.
-
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
 */
 
 /* Function to find backward reference copies. */

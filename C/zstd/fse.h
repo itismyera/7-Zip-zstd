@@ -3,8 +3,6 @@
  * Public Prototypes declaration
  * Copyright (c) LRH.
  *
- * You can contact the author at :
- * - Source repository : https://github.com/Cyan4973/FiniteStateEntropy
  *
  * This source code is licensed under both the BSD-style license (found in the
  * LICENSE file in the root directory of this source tree) and the GPLv2 (found

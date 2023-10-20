@@ -1,7 +1,6 @@
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* Macros for compiler / platform specific features and build options.
@@ -49,8 +48,7 @@
 #include <stdio.h>
 #endif
 
-/* The following macros were borrowed from https://github.com/nemequ/hedley
- * with permission of original author - Evan Nemerson <evan@nemerson.com> */
+/* */
 
 /* >>> >>> >>> hedley macros */
 

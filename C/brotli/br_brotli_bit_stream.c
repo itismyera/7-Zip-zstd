@@ -1,7 +1,4 @@
 /* Copyright LRH.
-
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
 */
 
 /* Brotli bit stream functions to support the low level format. There are no

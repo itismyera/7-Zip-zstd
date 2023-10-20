@@ -1,7 +1,6 @@
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* Literal cost model to allow backward reference replacement to be efficient.

@@ -89,7 +89,7 @@ U32 UTIL_isDirectory(const char* infilename)
 
 U32 UTIL_isLink(const char* infilename)
 {
-/* macro guards, as defined in : https://linux.die.net/man/2/lstat */
+/*  */
 #ifndef __STRICT_ANSI__
 #if defined(_BSD_SOURCE) \
     || (defined(_XOPEN_SOURCE) && (_XOPEN_SOURCE >= 500)) \

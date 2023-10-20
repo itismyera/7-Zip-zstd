@@ -1799,7 +1799,7 @@ static BYTE LZMA_getLcLpPbCode(LZMA2_ECtx *const enc)
     return (BYTE)((enc->pb * 5 + enc->lp) * 9 + enc->lc);
 }
 
-/* Integer square root from https://stackoverflow.com/a/1101217 */
+/* */
 static U32 LZMA2_isqrt(U32 op)
 {
     U32 res = 0;

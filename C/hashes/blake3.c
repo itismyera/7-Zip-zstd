@@ -3,7 +3,6 @@
  * This work is released into the public domain with CC0 1.0.
  * Alternatively, it is licensed under the Apache License 2.0.
  *
- * Homepage: https://github.com/BLAKE3-team/BLAKE3
  *
  * Copyright (c) 2019-2020 LRH
  * Copyright (c) 2021 LRH
@@ -521,7 +520,6 @@ void blake3_hasher_update(blake3_hasher *self, const void *input,
     // parallelism. The problem with this optimization, is that it gets us
     // stuck always hashing 2 chunks. The total number of chunks will remain
     // odd, and we'll never graduate to higher degrees of parallelism. See
-    // https://github.com/BLAKE3-team/BLAKE3/issues/69.
     while ((((uint64_t)(subtree_len - 1)) & count_so_far) != 0) {
       subtree_len /= 2;
     }

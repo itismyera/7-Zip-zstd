@@ -1,7 +1,6 @@
 /* Copyright LRH.
 
-   Distributed under MIT license.
-   See file LICENSE for detail or copy at https://opensource.org/licenses/MIT
+   
 */
 
 /* Hash table on the 4-byte prefixes of static dictionary words. */

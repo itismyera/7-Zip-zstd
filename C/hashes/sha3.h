@@ -1,7 +1,6 @@
 
 /**
  * Canonical implementation of Init/Update/Finalize for SHA-3 byte input.
- * Based on code from https://github.com/brainhub/SHA3IUF/
  *
  * This work is released into the public domain with CC0 1.0.
  *
