@@ -152,7 +152,7 @@ LINK32=link.exe
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE=..\..\UI\FileManager\7zipLogo.ico
+SOURCE=..\..\UI\FileManager\ZiprLogo.ico
 # End Source File
 # Begin Source File
 
@@ -2108,7 +2108,7 @@ SOURCE=..\..\UI\FileManager\ZiprFM.exe.manifest
 # End Source File
 # Begin Source File
 
-SOURCE=..\..\UI\FileManager\7zipLogo.ico
+SOURCE=..\..\UI\FileManager\ZiprLogo.ico
 # End Source File
 # Begin Source File
 

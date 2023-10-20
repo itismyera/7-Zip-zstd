@@ -52,4 +52,4 @@ OBJS = \
   $(COMPRESS_OBJS_2) \
   $(SYS_OBJS) \
 
-include ../../7zip_gcc.mak
+include ../../Zipr_gcc.mak

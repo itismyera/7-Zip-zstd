@@ -78,4 +78,4 @@ GUI_OBJS = \
   $O\UpdateGUI.obj \
 
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

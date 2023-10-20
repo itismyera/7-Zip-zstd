@@ -25,4 +25,4 @@ WIN_OBJS = \
 7ZIP_COMMON_OBJS = \
   $O\FileStreams.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

@@ -25,4 +25,4 @@ WIN_OBJS = $(WIN_OBJS) \
   $O\FilePathAutoRename.obj \
   $O\FileStreams.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

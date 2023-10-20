@@ -365,4 +365,4 @@ FASTLZMA2_OBJS = \
 !include "../../Sha1.mak"
 !include "../../Sha256.mak"
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

@@ -122,4 +122,4 @@ OBJS = \
   $O/LzmaAlone.o \
   $O/Bench.o \
 
-include ../../7zip_gcc.mak
+include ../../Zipr_gcc.mak

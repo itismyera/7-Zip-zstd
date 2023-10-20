@@ -51,4 +51,4 @@ FASTLZMA2_OBJS = \
 
 !include "../../Crc.mak"
 !include "../../LzFindOpt.mak"
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

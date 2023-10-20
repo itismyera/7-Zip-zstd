@@ -58,4 +58,4 @@ ZSTD_OBJS = \
 ZSTDMT_OBJS = \
   $O\zstd-mt_threading.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

@@ -31,4 +31,4 @@ OBJS = \
   $O/7zStream.o \
 
 
-include ../../7zip_gcc_c.mak
+include ../../Zipr_gcc_c.mak

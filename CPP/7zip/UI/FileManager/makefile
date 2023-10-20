@@ -104,4 +104,4 @@ C_OBJS = $(C_OBJS) \
   $O\Sort.obj \
   $O\Threads.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

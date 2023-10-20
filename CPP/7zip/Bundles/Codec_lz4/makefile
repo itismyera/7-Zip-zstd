@@ -35,4 +35,4 @@ ZSTDMT_OBJS = \
   $O\lz4-mt_decompress.obj \
   $O\zstd-mt_threading.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

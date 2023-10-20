@@ -60,4 +60,4 @@ C_OBJS = \
 !include "../../LzFindOpt.mak"
 !include "../../LzmaDec.mak"
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

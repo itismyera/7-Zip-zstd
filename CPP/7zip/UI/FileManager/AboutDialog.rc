@@ -7,7 +7,7 @@
 
 #define y 93
 
-IDI_LOGO ICON "../../UI/FileManager/7zipLogo.ico"
+IDI_LOGO ICON "../../UI/FileManager/ZiprLogo.ico"
 
 #ifndef SS_REALSIZEIMAGE
 #define SS_REALSIZEIMAGE 0x800

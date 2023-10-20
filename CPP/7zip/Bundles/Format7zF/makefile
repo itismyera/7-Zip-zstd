@@ -147,4 +147,4 @@ FASTLZMA2_OBJS = \
   $O\range_enc.obj \
   $O\util.obj \
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

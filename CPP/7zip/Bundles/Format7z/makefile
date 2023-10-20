@@ -276,4 +276,4 @@ FASTLZMA2_OBJS = \
 
 
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

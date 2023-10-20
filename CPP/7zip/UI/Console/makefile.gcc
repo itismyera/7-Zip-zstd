@@ -182,4 +182,4 @@ OBJS = \
   $(CONSOLE_OBJS) \
 
 
-include ../../7zip_gcc.mak
+include ../../Zipr_gcc.mak

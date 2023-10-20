@@ -134,4 +134,4 @@ ZSTD_OBJS = \
   $O\zstd_decompress.obj \
   
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"

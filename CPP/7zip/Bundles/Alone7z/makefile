@@ -158,4 +158,4 @@ C_OBJS = \
 !include "../../LzmaDec.mak"
 !include "../../Sha256.mak"
 
-!include "../../7zip.mak"
+!include "../../Zipr.mak"
