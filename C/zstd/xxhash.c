@@ -1,6 +1,6 @@
 /*
  *  xxHash - Fast Hash algorithm
- *  Copyright (c) Meta Platforms, Inc. and affiliates.
+ *  Copyright (c) LRH.
  *
  *  You can contact the author at :
  *  - xxHash homepage: https://cyan4973.github.io/xxHash/

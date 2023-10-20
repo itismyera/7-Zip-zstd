@@ -1,6 +1,6 @@
 /* ******************************************************************
    FSE : Finite State Entropy decoder
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
 

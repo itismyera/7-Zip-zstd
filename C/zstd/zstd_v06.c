@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Yann Collet, Meta Platforms, Inc. and affiliates.
+ * Copyright (c) LRH.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -21,7 +21,7 @@
 /* ******************************************************************
    mem.h
    low-level memory access routines
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -231,7 +231,7 @@ MEM_STATIC size_t MEM_readLEST(const void* memPtr)
 /*
     zstd - standard compression library
     Header File for static linking only
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -362,7 +362,7 @@ ZSTDLIBv06_API size_t ZSTDv06_decompressBlock(ZSTDv06_DCtx* dctx, void* dst, siz
 /*
     zstd_internal - common functions to include
     Header File for include
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -569,7 +569,7 @@ void ZSTDv06_seqToCodes(const seqStore_t* seqStorePtr, size_t const nbSeq);
 /* ******************************************************************
    FSE : Finite State Entropy codec
    Public Prototypes declaration
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -717,7 +717,7 @@ If there is an error, the function will return an error code, which can be teste
    bitstream
    Part of FSE library
    header file (to include)
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -952,7 +952,7 @@ MEM_STATIC unsigned BITv06_endOfDStream(const BITv06_DStream_t* DStream)
 /* ******************************************************************
    FSE : Finite State Entropy coder
    header file for static linking (only)
-   Copyright (C) 2013-2015, Yann Collet
+   Copyright (C) 2013-2015, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1160,7 +1160,7 @@ MEM_STATIC BYTE FSEv06_decodeSymbolFast(FSEv06_DState_t* DStatePtr, BITv06_DStre
 #endif  /* FSEv06_STATIC_H */
 /*
    Common functions of New Generation Entropy library
-   Copyright (C) 2016, Yann Collet.
+   Copyright (C) 2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1305,7 +1305,7 @@ size_t FSEv06_readNCount (short* normalizedCounter, unsigned* maxSVPtr, unsigned
 }
 /* ******************************************************************
    FSE : Finite State Entropy decoder
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1629,7 +1629,7 @@ size_t FSEv06_decompress(void* dst, size_t maxDstSize, const void* cSrc, size_t 
 /* ******************************************************************
    Huffman coder, part of New Generation Entropy library
    header file
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1699,7 +1699,7 @@ size_t HUFv06_compressBound(size_t size);       /**< maximum compressed size */
 /* ******************************************************************
    Huffman codec, part of New Generation Entropy library
    header file, for static linking only
-   Copyright (C) 2013-2016, Yann Collet
+   Copyright (C) 2013-2016, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1881,7 +1881,7 @@ MEM_STATIC size_t HUFv06_readStats(BYTE* huffWeight, size_t hwSize, U32* rankSta
 #endif /* HUFv06_STATIC_H */
 /* ******************************************************************
    Huffman decoder, part of New Generation Entropy library
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2626,7 +2626,7 @@ size_t HUFv06_decompress (void* dst, size_t dstSize, const void* cSrc, size_t cS
 }
 /*
     Common functions of Zstd compression library
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2680,7 +2680,7 @@ unsigned ZBUFFv06_isError(size_t errorCode) { return ERR_isError(errorCode); }
 const char* ZBUFFv06_getErrorName(size_t errorCode) { return ERR_getErrorName(errorCode); }
 /*
     zstd - standard compression library
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -3845,7 +3845,7 @@ size_t ZSTDv06_decompressBegin_usingDict(ZSTDv06_DCtx* dctx, const void* dict, s
 
 /*
     Buffered version of Zstd compression library
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 

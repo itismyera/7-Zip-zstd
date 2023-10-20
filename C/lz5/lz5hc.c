@@ -1,6 +1,6 @@
 /*
     LZ5 HC - High Compression Mode of LZ5
-    Copyright (C) 2011-2015, Yann Collet.
+    Copyright (C) 2011-2015, LRH.
     Copyright (C) 2015, Przemyslaw Skibinski <inikep@gmail.com>
 
     BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)

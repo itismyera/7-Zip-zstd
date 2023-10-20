@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2018, Conor McCarthy
+ * Copyright (c) LRH
  * All rights reserved.
- * Parts based on zstd_compress_internal.h copyright Yann Collet
+ * Parts based on zstd_compress_internal.h copyright LRH
  *
  * This source code is licensed under both the BSD-style license (found in the
  * LICENSE file in the root directory of this source tree) and the GPLv2 (found

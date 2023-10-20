@@ -1,7 +1,7 @@
 #define MY_VER_MAJOR 22
 #define MY_VER_MINOR 01
 #define MY_VER_BUILD 06
-#define MY_VERSION_NUMBERS "22.01 ZS v1.5.5 R3"
+#define MY_VERSION_NUMBERS "1.0.0"
 #define MY_VERSION MY_VERSION_NUMBERS
 
 #ifdef MY_CPU_NAME
@@ -10,12 +10,12 @@
   #define MY_VERSION_CPU MY_VERSION
 #endif
 
-#define MY_DATE "2023-06-18"
+#define MY_DATE "2023-10-18"
 #undef MY_COPYRIGHT
 #undef MY_VERSION_COPYRIGHT_DATE
-#define MY_AUTHOR_NAME "LRH, LRH"
+#define MY_AUTHOR_NAME "LRH"
 #define MY_COPYRIGHT_PD "LRH : Public domain"
-#define MY_COPYRIGHT_CR "Copyright (c) 2020-2022 LRH, 2016-2023 LRH"
+#define MY_COPYRIGHT_CR "Copyright (c) 2023 BeiJingYiPinChuangXinKeJi"
 
 #ifdef USE_COPYRIGHT_CR
   #define MY_COPYRIGHT MY_COPYRIGHT_CR

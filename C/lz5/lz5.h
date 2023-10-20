@@ -1,7 +1,7 @@
 /*
    LZ5 - Fast LZ compression algorithm
    Header File
-   Copyright (C) 2011-2015, Yann Collet.
+   Copyright (C) 2011-2015, LRH.
 
    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
 

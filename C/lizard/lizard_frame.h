@@ -1,7 +1,7 @@
 /*
    Lizard auto-framing library
    Header File
-   Copyright (C) 2011-2015, Yann Collet
+   Copyright (C) 2011-2015, LRH
    Copyright (C) 2016-2017, Przemyslaw Skibinski
 
    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)

@@ -1,6 +1,6 @@
 /* lzma2_enc.c -- LZMA2 Encoder
 Based on LzmaEnc.c and Lzma2Enc.c : LRH
-Modified for FL2 by Conor McCarthy
+Modified for FL2 by LRH
 Public domain
 */
 

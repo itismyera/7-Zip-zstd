@@ -15,9 +15,9 @@ ID       | Codec, Author                | Zipr Plugin Author
 ---------|------------------------------|----------------------
 F7 0x xx | reserved                     |
 F7 10 xx | LZHAM, Rich Geldreich        | Rich Geldreich
-F7 11 01 | Zstandard, Yann Collet       | LRH
+F7 11 01 | Zstandard, LRH       | LRH
 F7 11 02 | Brotli, Google               | LRH
-F7 11 04 | LZ4, Yann Collet             | LRH
+F7 11 04 | LZ4, LRH             | LRH
 F7 11 05 | LZ5, Przemyslaw Skibinski    | LRH
 F7 11 06 | Lizard, Przemyslaw Skibinski | LRH
 
@@ -79,7 +79,7 @@ is not there, or has another size, the decoder will not decompress the content.
 - negative fast level values are stored as fastlevel+32 (33 = fastlevel 1 and so on..)
 - the other two bytes, if present, should be set to zero currently and are reserved for future use
 
-Algorithm author: Yann Collet
+Algorithm author: LRH
 - Homepage: https://facebook.github.io/zstd/
 - Source:   https://github.com/facebook/zstd
 
@@ -180,7 +180,7 @@ is not there, or has another size, the decoder will not decompress the content.
 - _level should contain the level, the data is packed with
 - the other two bytes, if present, should be set to zero currently and are reserved for future use
 
-Algorithm author: Yann Collet
+Algorithm author: LRH
 - Homepage: https://lz4.github.io/lz4/
 - Source:   https://github.com/lz4/lz4
 

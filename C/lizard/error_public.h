@@ -1,6 +1,6 @@
 /* ******************************************************************
    Error codes list
-   Copyright (C) 2016, Yann Collet
+   Copyright (C) 2016, LRH
 
    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
 

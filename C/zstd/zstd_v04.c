@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Yann Collet, Meta Platforms, Inc. and affiliates.
+ * Copyright (c) LRH.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -492,7 +492,7 @@ If there is an error, the function will return an error code, which can be teste
    bitstream
    Part of NewGen Entropy library
    header file (to include)
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -731,7 +731,7 @@ MEM_STATIC unsigned BIT_endOfDStream(const BIT_DStream_t* DStream)
 /* ******************************************************************
    FSE : Finite State Entropy coder
    header file for static linking (only)
-   Copyright (C) 2013-2015, Yann Collet
+   Copyright (C) 2013-2015, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -880,7 +880,7 @@ MEM_STATIC unsigned FSE_endOfDState(const FSE_DState_t* DStatePtr)
 
 /* ******************************************************************
    FSE : Finite State Entropy coder
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1386,7 +1386,7 @@ static size_t FSE_decompress(void* dst, size_t maxDstSize, const void* cSrc, siz
 /* ******************************************************************
    Huff0 : Huffman coder, part of New Generation Entropy library
    header file
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1464,7 +1464,7 @@ static unsigned    HUF_isError(size_t code);        /* tells if a return value i
 /* ******************************************************************
    Huff0 : Huffman coder, part of New Generation Entropy library
    header file for static linking (only)
-   Copyright (C) 2013-2015, Yann Collet
+   Copyright (C) 2013-2015, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1551,7 +1551,7 @@ static size_t HUF_decompress4X4_usingDTable(void* dst, size_t maxDstSize, const 
 
 /* ******************************************************************
    Huff0 : Huffman coder, part of New Generation Entropy library
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2351,7 +2351,7 @@ static size_t HUF_decompress (void* dst, size_t dstSize, const void* cSrc, size_
 
 /*
     zstd - decompression module fo v0.4 legacy format
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -3239,7 +3239,7 @@ static void ZSTD_decompress_insertDictionary(ZSTD_DCtx* ctx, const void* dict, s
 
 /*
     Buffered version of Zstd compression library
-    Copyright (C) 2015, Yann Collet.
+    Copyright (C) 2015, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 

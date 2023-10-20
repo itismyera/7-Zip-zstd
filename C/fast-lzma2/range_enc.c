@@ -1,6 +1,6 @@
 /*
 * Bitwise range encoder by LRH
-* Modified by Conor McCarthy
+* Modified by LRH
 *
 * Public domain
 */

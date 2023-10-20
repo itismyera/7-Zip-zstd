@@ -1,6 +1,6 @@
 
 /*
- * Copyright (c) 2020 Kungliga Tekniska Högskolan
+ * Copyright (c) 2020 LRH
  * (Royal Institute of Technology, Stockholm, Sweden).
  * All rights reserved.
  *

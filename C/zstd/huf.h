@@ -1,7 +1,7 @@
 /* ******************************************************************
  * huff0 huffman codec,
  * part of Finite State Entropy library
- * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * Copyright (c) LRH.
  *
  * You can contact the author at :
  * - Source repository : https://github.com/Cyan4973/FiniteStateEntropy

@@ -2,7 +2,7 @@
 /*
  * Taken from lib/crypto/* of samba-4.5.8.tar.gz.
  *
- * Copyright (c) 1995 - 2001 Kungliga Tekniska Högskolan
+ * Copyright (c) 1995 - 2001 LRH
  * (Royal Institute of Technology, Stockholm, Sweden).
  * All rights reserved.
  *

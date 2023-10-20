@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Yann Collet, Meta Platforms, Inc. and affiliates.
+ * Copyright (c) LRH.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -182,7 +182,7 @@ ZSTDLIBv07_API size_t ZSTDv07_insertBlock(ZSTDv07_DCtx* dctx, const void* blockS
 /* ******************************************************************
    mem.h
    low-level memory access routines
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -390,7 +390,7 @@ MEM_STATIC size_t MEM_readLEST(const void* memPtr)
    bitstream
    Part of FSE library
    header file (to include)
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -621,7 +621,7 @@ MEM_STATIC unsigned BITv07_endOfDStream(const BITv07_DStream_t* DStream)
 /* ******************************************************************
    FSE : Finite State Entropy codec
    Public Prototypes declaration
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -929,7 +929,7 @@ MEM_STATIC BYTE FSEv07_decodeSymbolFast(FSEv07_DState_t* DStatePtr, BITv07_DStre
 /* ******************************************************************
    Huffman coder, part of New Generation Entropy library
    header file
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1102,7 +1102,7 @@ size_t HUFv07_decompress1X4_usingDTable(void* dst, size_t maxDstSize, const void
 #endif   /* HUFv07_H_298734234 */
 /*
    Common functions of New Generation Entropy library
-   Copyright (C) 2016, Yann Collet.
+   Copyright (C) 2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1326,7 +1326,7 @@ size_t HUFv07_readStats(BYTE* huffWeight, size_t hwSize, U32* rankStats,
 }
 /* ******************************************************************
    FSE : Finite State Entropy decoder
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1650,7 +1650,7 @@ size_t FSEv07_decompress(void* dst, size_t maxDstSize, const void* cSrc, size_t 
 
 /* ******************************************************************
    Huffman decoder, part of New Generation Entropy library
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2528,7 +2528,7 @@ size_t HUFv07_decompress1X_DCtx (HUFv07_DTable* dctx, void* dst, size_t dstSize,
 }
 /*
     Common functions of Zstd compression library
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2598,7 +2598,7 @@ static void ZSTDv07_defaultFreeFunction(void* opaque, void* address)
 /*
     zstd_internal - common functions to include
     Header File for include
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2805,7 +2805,7 @@ static const ZSTDv07_customMem defaultCustomMem = { ZSTDv07_defaultAllocFunction
 #endif   /* ZSTDv07_CCOMMON_H_MODULE */
 /*
     zstd - standard compression library
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -4207,7 +4207,7 @@ ZSTDLIBv07_API size_t ZSTDv07_decompress_usingDDict(ZSTDv07_DCtx* dctx,
 }
 /*
     Buffered version of Zstd compression library
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 

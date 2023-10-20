@@ -1,6 +1,6 @@
 /*
 *  xxHash - Fast Hash algorithm
-*  Copyright (C) 2012-2016, Yann Collet
+*  Copyright (C) 2012-2016, LRH
 *
 *  BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
 *

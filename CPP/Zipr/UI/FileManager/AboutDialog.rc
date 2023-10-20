@@ -17,11 +17,11 @@ IDD_ABOUT DIALOG 0, 0, xs, ys  MY_MODAL_DIALOG_STYLE  MY_FONT
 CAPTION "About Zipr"
 {
   DEFPUSHBUTTON  "OK", IDOK, bx3-10, by, bxs, bys
-  PUSHBUTTON  "www.Zipr.org", IDB_ABOUT_HOMEPAGE, bx2-10, by, bxs, bys
-  PUSHBUTTON  "Zipr ZS Homepage", IDB_ABOUT_HOMEPAGE2, bx1-10, by, bxs+10, bys
+  PUSHBUTTON  "www.Zipr.cn", IDB_ABOUT_HOMEPAGE, bx2-10, by, bxs, bys
+  PUSHBUTTON  "Zipr Homepage", IDB_ABOUT_HOMEPAGE2, bx1-10, by, bxs+10, bys
   ICON   IDI_LOGO, -1, m, m, 32, 32, SS_REALSIZEIMAGE
   LTEXT  "", IDT_ABOUT_VERSION, m, 54, xc, 8
   LTEXT  "", IDT_ABOUT_DATE, m, 67, xc, 8
   LTEXT  MY_COPYRIGHT_CR, -1, m, 80, xc, 8
-  LTEXT  "Zipr is free software", IDT_ABOUT_INFO, m, y, xc, (by - y - 1)
+  LTEXT  "", IDT_ABOUT_INFO, m, y, xc, (by - y - 1)
 }

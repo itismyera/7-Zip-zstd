@@ -1,6 +1,6 @@
 /* ******************************************************************
    Huffman encoder, part of New Generation Entropy library
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (http://www.opensource.org/licenses/bsd-license.php)
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) Yann Collet, Meta Platforms, Inc. and affiliates.
+ * Copyright (c) LRH.
  * All rights reserved.
  *
  * This source code is licensed under both the BSD-style license (found in the
@@ -17,7 +17,7 @@
 /* ******************************************************************
    mem.h
    low-level memory access routines
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -208,7 +208,7 @@ MEM_STATIC size_t MEM_readLEST(const void* memPtr)
 /*
     zstd - standard compression library
     Header File for static linking only
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -344,7 +344,7 @@ size_t ZSTDv05_decompressBlock(ZSTDv05_DCtx* dctx, void* dst, size_t dstCapacity
 /*
     zstd_internal - common functions to include
     Header File for include
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -499,7 +499,7 @@ typedef struct {
 /* ******************************************************************
    FSEv05 : Finite State Entropy coder
    header file
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -618,7 +618,7 @@ size_t FSEv05_decompress_usingDTable(void* dst, size_t dstCapacity, const void* 
    bitstream
    Part of FSEv05 library
    header file (to include)
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -847,7 +847,7 @@ MEM_STATIC unsigned BITv05_endOfDStream(const BITv05_DStream_t* DStream)
 /* ******************************************************************
    FSEv05 : Finite State Entropy coder
    header file for static linking (only)
-   Copyright (C) 2013-2015, Yann Collet
+   Copyright (C) 2013-2015, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -997,7 +997,7 @@ MEM_STATIC unsigned FSEv05_endOfDState(const FSEv05_DState_t* DStatePtr)
 #endif  /* FSEv05_STATIC_H */
 /* ******************************************************************
    FSEv05 : Finite State Entropy coder
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1483,7 +1483,7 @@ size_t FSEv05_decompress(void* dst, size_t maxDstSize, const void* cSrc, size_t 
 /* ******************************************************************
    Huff0 : Huffman coder, part of New Generation Entropy library
    header file
-   Copyright (C) 2013-2016, Yann Collet.
+   Copyright (C) 2013-2016, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1556,7 +1556,7 @@ const char* HUFv05_getErrorName(size_t code);   /* provides error code string (u
 /* ******************************************************************
    Huff0 : Huffman codec, part of New Generation Entropy library
    header file, for static linking only
-   Copyright (C) 2013-2016, Yann Collet
+   Copyright (C) 2013-2016, LRH
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -1648,7 +1648,7 @@ size_t HUFv05_decompress1X4_usingDTable(void* dst, size_t maxDstSize, const void
 #endif /* HUF0_STATIC_H */
 /* ******************************************************************
    Huff0 : Huffman coder, part of New Generation Entropy library
-   Copyright (C) 2013-2015, Yann Collet.
+   Copyright (C) 2013-2015, LRH.
 
    BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -2493,7 +2493,7 @@ size_t HUFv05_decompress (void* dst, size_t dstSize, const void* cSrc, size_t cS
 }
 /*
     zstd - standard compression library
-    Copyright (C) 2014-2016, Yann Collet.
+    Copyright (C) 2014-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
@@ -3698,7 +3698,7 @@ size_t ZSTDv05_decompressBegin_usingDict(ZSTDv05_DCtx* dctx, const void* dict, s
 
 /*
     Buffered version of Zstd compression library
-    Copyright (C) 2015-2016, Yann Collet.
+    Copyright (C) 2015-2016, LRH.
 
     BSD 2-Clause License (https://opensource.org/licenses/bsd-license.php)
 
