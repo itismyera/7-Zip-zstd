@@ -53,7 +53,7 @@ static LPCWSTR const k_Reg_Software_7zip = L"Software\\Zipr-Zstandard";
   #define _64BIT_INSTALLER 1
 #endif
 
-#define k_7zip_with_Ver_base L"Zipr ZS " LLL(MY_VERSION)
+#define k_7zip_with_Ver_base L"Zipr " LLL(MY_VERSION)
 
 #ifdef _64BIT_INSTALLER
 
@@ -803,7 +803,7 @@ static void SetShellProgramsGroup(HWND hwndOwner)
       for (k = 0; k < 2; k++)
       {
         CpyAscii(link + baseLen, k == 0 ?
-            "Zipr ZS File Manager.lnk" :
+            "Zipr File Manager.lnk" :
             "Zipr Help.lnk"
            );
         wcscpy(destPath, path);

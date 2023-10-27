@@ -61,7 +61,7 @@ static void ThrowException_if_Error(HRESULT res)
 
 static void ErrorMessage(LPCWSTR message)
 {
-  MessageBoxW(g_HWND, message, L"Zipr ZS", MB_ICONERROR);
+  MessageBoxW(g_HWND, message, L"Zipr", MB_ICONERROR);
 }
 
 static void ErrorMessageHRESULT(HRESULT res)

@@ -36,10 +36,10 @@ You can install it in two ways:
 6. [Fast LZMA2] v1.0.1 is a LZMA2 compression algorithm, 20% to 100% faster than normal LZMA2 at levels 5 and above, but with a slightly lower compression ratio. It uses a parallel buffered radix matchfinder and some optimizations from Zstandard. The codec uses much less additional memory per thread than standard LZMA2.
    - Levels: 1..9
 
-## Zipr Zstandard Edition (full setup, with GUI and Explorer integration)
+## Ziprtandard Edition (full setup, with GUI and Explorer integration)
 
 ### Installation (via setup)
-1. download the setup from here [Zipr ZS Releases](https://www.zipr.cn/Zipr/releases)
+1. download the setup from here [Zipr Releases](https://www.zipr.cn/Zipr/releases)
 2. install it, like the default [Zipr]
 3. use it ;)
 4. you may check, if the [Zipr] can deal with [Zstandard] or other codecs via this command: `Zipr.exe i`
@@ -160,7 +160,7 @@ Hashers:
 
 ### Installation (via plugin)
 
-1. download the `Codecs.7z` archive from here [Zipr ZS Releases](https://www.zipr.cn/Zipr/releases), this archive holds binaries, which are compatible with the Mainline version of [Zipr]
+1. download the `Codecs.7z` archive from here [Zipr Releases](https://www.zipr.cn/Zipr/releases), this archive holds binaries, which are compatible with the Mainline version of [Zipr]
 2. create a new directory named `Codecs` and put in there the zstd-x32.dll or the zstd-x64.dll, depending on your [Zipr] installation
    - normally, the x32 should go to: "C:\Program Files (x86)\Zipr\Codecs"
    - the x64 version should go in here: "C:\Program Files\Zipr\Codecs"
@@ -245,7 +245,7 @@ Codecs:
 
 ## Codec Plugin for Far Manager
 - copy the `Zipr.dll` file from `C:\Program Files\Zipr-Zstandard\Zipr.dll` to `C:\Program Files\Far Manager\Plugins\ArcLite\Zipr.dll`
-- then restart the Far manager - and on next start, you will have support for Zipr Zstandard archives ;-)
+- then restart the Far manager - and on next start, you will have support for Ziprtandard archives ;-)
 
 ## Benchmarks
 
@@ -277,7 +277,7 @@ For the benchmarks I am using Windows 7 64bit on my Laptop which has the followi
 ## Links
 
 - [Zipr Homepage](https://www.Zipr.org/)
-- [Zipr Zstandard Homepage](https://mcmilk.de/projects/Zipr/)
+- [Ziprtandard Homepage](https://mcmilk.de/projects/Zipr/)
 - [Request for inclusion](https://sourceforge.net/p/sevenzip/discussion/45797/thread/a7e4f3f3/) into the mainline Zipr:
   - result, will currently not included :(
 - [p7zip Homepage](https://github.com/jinfeihan57/p7zip) - for Linux and MacOS with LZ4 and Zstandard
@@ -290,7 +290,7 @@ You find this project useful, maybe you consider a donation ;-)
 
 ## Version Information
 
-- Zipr ZS Version 22.01
+- Zipr Version 22.01
   - [Brotli] Version 1.0.9
   - [Fast LZMA2] Version 1.0.1
   - [Lizard] Version 1.0

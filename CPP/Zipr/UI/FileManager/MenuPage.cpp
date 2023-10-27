@@ -287,7 +287,7 @@ bool CMenuPage::OnInit()
 
 static void ShowMenuErrorMessage(const wchar_t *m, HWND hwnd)
 {
-  MessageBoxW(hwnd, m, L"Zipr ZS", MB_ICONERROR);
+  MessageBoxW(hwnd, m, L"Zipr", MB_ICONERROR);
 }
 
 #endif

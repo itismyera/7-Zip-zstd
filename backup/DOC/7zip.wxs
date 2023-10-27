@@ -187,7 +187,7 @@
 
           <Component Id="Fm" Guid="$(var.CompFm)" DiskId="1" Win64="$(var.Is64)">
             <File Id="_ZiprFM.exe" Name="ZiprFM.exe">
-              <Shortcut Id="startmenuFmShortcut" Directory="PMenu" Name="7zipFM" LongName="Zipr ZS File Manager" />
+              <Shortcut Id="startmenuFmShortcut" Directory="PMenu" Name="7zipFM" LongName="Zipr File Manager" />
             </File>
           </Component>
 

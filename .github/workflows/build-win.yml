@@ -181,7 +181,7 @@ jobs:
 
     - uses: actions/upload-artifact@v3
       with:
-        name: Zipr ZS Release binaries
+        name: Zipr Release binaries
         path: |
           artifact\*.exe
           artifact\*.7z

@@ -72,7 +72,7 @@ typedef struct {
  * reading and writing functions
  * - you can use stdio functions or plain read/write
  * - just write some wrapper on your own
- * - a sample is given in Zipr ZS or lz5mt.c
+ * - a sample is given in Zipr or lz5mt.c
  * - the function should return -1 on error and zero on success
  * - the read or written bytes will go to in->size or out->size
  */

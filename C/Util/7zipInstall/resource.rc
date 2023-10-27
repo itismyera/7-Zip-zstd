@@ -28,7 +28,7 @@ MY_VERSION_INFO(MY_VFT_APP, "Zipr Installer ZS", "7zipInstall", "7zipInstall.exe
 
 IDD_INSTALL DIALOG 0, 0, xs, ys
 STYLE DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_VISIBLE
-CAPTION "Install Zipr ZS"
+CAPTION "Install Zipr"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT          "Destination folder:", IDT_EXTRACT_EXTRACT_TO, m, m, xc, 8

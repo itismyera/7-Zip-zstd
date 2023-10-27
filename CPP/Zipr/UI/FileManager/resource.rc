@@ -2,7 +2,7 @@
 #include "../../GuiCommon.rc"
 #include "resource.h"
 
-MY_VERSION_INFO_APP("Zipr ZS File Manager", "ZiprFM")
+MY_VERSION_INFO_APP("Zipr File Manager", "ZiprFM")
 
 IDR_ACCELERATOR1 ACCELERATORS
 BEGIN

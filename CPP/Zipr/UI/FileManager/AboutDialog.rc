@@ -3,9 +3,9 @@
 #include "../../MyVersion.h"
 
 #define xc 216
-#define yc 144
+#define yc 179
 
-#define y 93
+#define y 128
 
 IDI_LOGO ICON "../../UI/FileManager/ZiprLogo.ico"
 
@@ -20,8 +20,8 @@ CAPTION "About Zipr"
   PUSHBUTTON  "www.Zipr.cn", IDB_ABOUT_HOMEPAGE, bx2-10, by, bxs, bys
   PUSHBUTTON  "Zipr Homepage", IDB_ABOUT_HOMEPAGE2, bx1-10, by, bxs+10, bys
   ICON   IDI_LOGO, -1, m, m, 32, 32, SS_REALSIZEIMAGE
-  LTEXT  "", IDT_ABOUT_VERSION, m, 54, xc, 8
-  LTEXT  "", IDT_ABOUT_DATE, m, 67, xc, 8
-  LTEXT  MY_COPYRIGHT_CR, -1, m, 80, xc, 8
+  LTEXT  "", IDT_ABOUT_VERSION, m, 89, xc, 8
+  LTEXT  "", IDT_ABOUT_DATE, m, 102, xc, 8
+  LTEXT  MY_COPYRIGHT_CR, -1, m, 115, xc, 8
   LTEXT  "", IDT_ABOUT_INFO, m, y, xc, (by - y - 1)
 }

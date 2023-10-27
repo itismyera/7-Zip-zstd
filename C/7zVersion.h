@@ -1,6 +1,6 @@
-#define MY_VER_MAJOR 22
-#define MY_VER_MINOR 01
-#define MY_VER_BUILD 06
+#define MY_VER_MAJOR 1
+#define MY_VER_MINOR 0
+#define MY_VER_BUILD 0
 #define MY_VERSION_NUMBERS "1.0.0"
 #define MY_VERSION MY_VERSION_NUMBERS
 
@@ -15,7 +15,7 @@
 #undef MY_VERSION_COPYRIGHT_DATE
 #define MY_AUTHOR_NAME "LRH"
 #define MY_COPYRIGHT_PD "LRH : Public domain"
-#define MY_COPYRIGHT_CR "Copyright (c) 2023 BeiJingYiPinChuangXinKeJi"
+#define MY_COPYRIGHT_CR "Copyright (c) 2023 Beijing Yipin Innovation Technology Co., Ltd"
 
 #ifdef USE_COPYRIGHT_CR
   #define MY_COPYRIGHT MY_COPYRIGHT_CR
