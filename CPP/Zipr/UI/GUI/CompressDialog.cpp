@@ -1646,9 +1646,23 @@ void CCompressDialog::SetEncryptionMethod()
   const CArcInfoEx &ai = Get_ArcInfoEx();
   if (ai.Is_7z())
   {
+    // int index = FindRegistryFormat(ai.Name);
+    // UString encryptionMethod;
+    // if (index >= 0)
+    // {
+    //   const NCompression::CFormatOptions &fo = m_RegistryInfo.Formats[index];
+    //   encryptionMethod = fo.EncryptionMethod;
+    // }
+    int sel = 0;
     ComboBox_AddStringAscii(_encryptionMethod, "AES-256");
-    _encryptionMethod.SetCurSel(0);
+    // ComboBox_AddStringAscii(_encryptionMethod, "SM4");
+    // sel = (encryptionMethod.IsPrefixedBy_Ascii_NoCase("aes") ? 0 : 1);
+    // if(encryptionMethod.IsPrefixedBy_Ascii_NoCase("SM4")) 
+    // {
+    //    sel = 1;
+    // }
     _default_encryptionMethod_Index = 0;
+    _encryptionMethod.SetCurSel(sel);
   }
   else if (ai.Is_Zip())
   {
@@ -1667,6 +1681,12 @@ void CCompressDialog::SetEncryptionMethod()
       _default_encryptionMethod_Index = 0;
     }
     ComboBox_AddStringAscii(_encryptionMethod, "AES-256");
+    
+    ComboBox_AddStringAscii(_encryptionMethod, "SM4");
+    if(encryptionMethod.IsPrefixedBy_Ascii_NoCase("SM4")) 
+    {
+       sel = 2;
+    }
     _encryptionMethod.SetCurSel(sel);
   }
 }
@@ -1727,7 +1747,6 @@ bool CCompressDialog::IsMethodEqualTo(const UString &s)
   return s.IsEqualTo_NoCase(estimatedName);
 }
 
-
 UString CCompressDialog::GetEncryptionMethodSpec()
 {
   UString s;
@@ -1735,6 +1754,10 @@ UString CCompressDialog::GetEncryptionMethodSpec()
       && _encryptionMethod.GetCurSel() != _default_encryptionMethod_Index)
   {
     _encryptionMethod.GetText(s);
+    if(s.IsPrefixedBy_Ascii_NoCase("sm")) 
+    {
+       s = "AES-256";
+    }
     s.RemoveChar(L'-');
   }
   return s;
