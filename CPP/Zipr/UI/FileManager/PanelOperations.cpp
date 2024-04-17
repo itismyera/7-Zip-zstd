@@ -472,6 +472,58 @@ void CPanel::CreateFile()
   RefreshListCtrl(state);
 }
 
+void CPanel::ActivateSoftware()
+{
+  if (IsHashFolder())
+    return;
+
+  if (!CheckBeforeUpdate(IDS_CREATE_FILE_ERROR))
+    return;
+
+  CDisableTimerProcessing disableTimerProcessing2(*this);
+  CSelectedState state;
+  SaveSelectedState(state);
+  CComboDialog dlg;
+  LangString(IDS_CREATE_FILE, dlg.Title);
+  LangString(IDS_CREATE_FILE_NAME, dlg.Static);
+  LangString(IDS_CREATE_FILE_DEFAULT_NAME, dlg.Value);
+
+  if (dlg.Create(GetParent()) != IDOK)
+    return;
+
+  CDisableNotify disableNotify(*this);
+  
+  UString newName = dlg.Value;
+
+  if (IsFSFolder())
+  {
+    UString correctName;
+    if (!CorrectFsPath(newName, correctName))
+    {
+      MessageBox_Error_HRESULT(E_INVALIDARG);
+      return;
+    }
+    newName = correctName;
+  }
+
+  HRESULT result = _folderOperations->CreateFile(newName, 0);
+  if (result != S_OK)
+  {
+    MessageBox_Error_HRESULT_Caption(result, LangString(IDS_CREATE_FILE_ERROR));
+    // MessageBoxErrorForUpdate(result, IDS_CREATE_FILE_ERROR);
+    return;
+  }
+  int pos = newName.Find(WCHAR_PATH_SEPARATOR);
+  if (pos >= 0)
+    newName.DeleteFrom((unsigned)pos);
+  if (!_mySelectMode)
+    state.SelectedNames.Clear();
+  state.FocusedName = newName;
+  state.FocusedName_Defined = true;
+  state.SelectFocused = true;
+  RefreshListCtrl(state);
+}
+
 void CPanel::RenameFile()
 {
   if (!CheckBeforeUpdate(IDS_ERROR_RENAMING))

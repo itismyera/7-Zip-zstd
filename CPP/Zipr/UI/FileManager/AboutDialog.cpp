@@ -60,7 +60,11 @@ bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
   switch (buttonID)
   {
     case IDB_ABOUT_HOMEPAGE: url = kHomePageURL; break;
-    case IDB_ABOUT_HOMEPAGE2: url = kHomePageURL2; break;
+    case IDB_ABOUT_ACTIVATION: 
+        {
+          g_App.ActivateSoftware();
+          break;
+        }
     default:
       return CModalDialog::OnButtonClicked(buttonID, buttonHWND);
   }
