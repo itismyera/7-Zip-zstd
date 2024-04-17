@@ -84,6 +84,7 @@ EXPLORER_OBJS = \
 FM_OBJS = \
   $O\BrowseDialog.obj \
   $O\ComboDialog.obj \
+  $O\ComboDialog2.obj \
   $O\ExtractCallback.obj \
   $O\FormatUtils.obj \
   $O\OverwriteDialog.obj \

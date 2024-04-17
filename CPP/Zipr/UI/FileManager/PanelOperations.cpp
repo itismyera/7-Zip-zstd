@@ -11,6 +11,7 @@
 #include "../../../Windows/PropVariant.h"
 
 #include "ComboDialog.h"
+#include "ComboDialog2.h"
 
 #include "FSFolder.h"
 #include "FormatUtils.h"

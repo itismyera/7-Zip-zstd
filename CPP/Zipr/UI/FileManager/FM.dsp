@@ -483,6 +483,14 @@ SOURCE=.\ComboDialog.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\ComboDialog2.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\ComboDialog2.h
+# End Source File
+# Begin Source File
+
 SOURCE=CopyDialog.cpp
 # End Source File
 # Begin Source File

@@ -262,6 +262,7 @@ END
 #include "AboutDialog.rc"
 #include "BrowseDialog.rc"
 #include "ComboDialog.rc"
+#include "ComboDialog2.rc"
 #include "CopyDialog.rc"
 #include "EditDialog.rc"
 #include "EditPage.rc"

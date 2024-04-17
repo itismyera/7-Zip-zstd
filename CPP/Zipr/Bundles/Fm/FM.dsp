@@ -669,6 +669,14 @@ SOURCE=..\..\UI\FileManager\ComboDialog.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\..\UI\FileManager\ComboDialog2.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\UI\FileManager\ComboDialog2.h
+# End Source File
+# Begin Source File
+
 SOURCE=..\..\UI\FileManager\CopyDialog.cpp
 # End Source File
 # Begin Source File

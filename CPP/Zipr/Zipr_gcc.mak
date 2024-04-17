@@ -924,6 +924,8 @@ $O/ClassDefs.o: ../../UI/FileManager/ClassDefs.cpp
 	$(CXX) $(CXXFLAGS) $<
 $O/ComboDialog.o: ../../UI/FileManager/ComboDialog.cpp
 	$(CXX) $(CXXFLAGS) $<
+$O/ComboDialog2.o: ../../UI/FileManager/ComboDialog2.cpp
+	$(CXX) $(CXXFLAGS) $<
 $O/CopyDialog.o: ../../UI/FileManager/CopyDialog.cpp
 	$(CXX) $(CXXFLAGS) $<
 $O/EditDialog.o: ../../UI/FileManager/EditDialog.cpp

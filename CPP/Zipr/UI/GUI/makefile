@@ -126,6 +126,7 @@ FM_OBJS = \
 FM_OBJS = $(FM_OBJS) \
   $O\BrowseDialog.obj \
   $O\ComboDialog.obj \
+  $O\ComboDialog2.obj \
   $O\SysIconUtils.obj \
 
 EXPLORER_OBJS = \

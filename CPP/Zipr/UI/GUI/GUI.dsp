@@ -417,6 +417,14 @@ SOURCE=..\FileManager\ComboDialog.h
 # End Source File
 # Begin Source File
 
+SOURCE=..\FileManager\ComboDialog2.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\FileManager\ComboDialog2.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\CompressDialog.cpp
 # End Source File
 # Begin Source File

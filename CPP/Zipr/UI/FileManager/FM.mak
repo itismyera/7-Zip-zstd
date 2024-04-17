@@ -58,6 +58,7 @@ FM_OBJS = \
   $O\ViewSettings.obj \
   $O\AboutDialog.obj \
   $O\ComboDialog.obj \
+  $O\ComboDialog2.obj \
   $O\CopyDialog.obj \
   $O\EditDialog.obj \
   $O\EditPage.obj \
