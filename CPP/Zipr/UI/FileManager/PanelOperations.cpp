@@ -496,32 +496,43 @@ void CPanel::ActivateSoftware()
 
   CDisableNotify disableNotify(*this);
   
-  UString newName = dlg.Value1;
+  UString userName = dlg.Value1;
+  UString activateCode = dlg.Value2;
+  UString fileName = fs2us(NWindows::NDLL::GetModuleDirPrefix());
+  fileName += "reg.txt";
 
-  if (IsFSFolder())
+  if(userName.IsEmpty() || activateCode.IsEmpty()) 
   {
-    UString correctName;
-    if (!CorrectFsPath(newName, correctName))
-    {
-      MessageBox_Error_HRESULT(E_INVALIDARG);
-      return;
-    }
-    newName = correctName;
-  }
-
-  HRESULT result = _folderOperations->CreateFile(newName, 0);
-  if (result != S_OK)
-  {
-    MessageBox_Error_HRESULT_Caption(result, LangString(IDS_CREATE_FILE_ERROR));
-    // MessageBoxErrorForUpdate(result, IDS_CREATE_FILE_ERROR);
+    MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));
     return;
   }
-  int pos = newName.Find(WCHAR_PATH_SEPARATOR);
+
+  HANDLE hFile = CreateFileW(fileName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+  if (hFile == INVALID_HANDLE_VALUE)
+  {
+    MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));
+    return;
+  }
+
+  DWORD dwWritten;
+  BOOL bResult = WriteFile(hFile, activateCode, wcslen(activateCode) * sizeof(WCHAR), &dwWritten, NULL);
+  CloseHandle(hFile);
+  if (bResult)
+  {
+    MessageBoxW(0, LangString(IDS_ACTIVATE_SOFTWAR_ERROR2), L"Zipr", 0);
+  } 
+  else
+  {
+    MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));
+    return;
+  }
+
+  int pos = userName.Find(WCHAR_PATH_SEPARATOR);
   if (pos >= 0)
-    newName.DeleteFrom((unsigned)pos);
+      userName.DeleteFrom((unsigned)pos);
   if (!_mySelectMode)
     state.SelectedNames.Clear();
-  state.FocusedName = newName;
+  state.FocusedName = userName;
   state.FocusedName_Defined = true;
   state.SelectFocused = true;
   RefreshListCtrl(state);

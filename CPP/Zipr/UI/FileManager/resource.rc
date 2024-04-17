@@ -221,7 +221,7 @@ BEGIN
   IDS_ACTIVATE_SOFTWARE_NAME2    "Activation Code:"
   IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME    ""
   IDS_ACTIVATE_SOFTWAR_ERROR1   "Error Activate software"
-  IDS_ACTIVATE_SOFTWAR_ERROR2   "Error Activate software"
+  IDS_ACTIVATE_SOFTWAR_ERROR2   "Activate software Success"
 
   IDS_COMMENT      "Comment"
   IDS_COMMENT2     "&Comment:"

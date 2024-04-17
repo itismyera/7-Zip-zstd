@@ -17,8 +17,8 @@ IDD_ABOUT DIALOG 0, 0, xs, ys  MY_MODAL_DIALOG_STYLE  MY_FONT
 CAPTION "About Zipr"
 {
   DEFPUSHBUTTON  "OK", IDOK, bx3-10, by, bxs, bys
-  PUSHBUTTON  "www.Zipr.cn", IDB_ABOUT_HOMEPAGE, bx2-10, by, bxs, bys
-  PUSHBUTTON  "Activation", IDB_ABOUT_ACTIVATION, bx1-10, by, bxs+10, bys
+  PUSHBUTTON  "Activation", IDB_ABOUT_ACTIVATION, bx2-10, by, bxs, bys
+  PUSHBUTTON  "www.Zipr.cn", IDB_ABOUT_HOMEPAGE, bx1-10, by, bxs+10, bys
   ICON   IDI_LOGO, -1, m, m, 32, 32, SS_REALSIZEIMAGE
   LTEXT  "", IDT_ABOUT_VERSION, m, 89, xc, 8
   LTEXT  "", IDT_ABOUT_DATE, m, 102, xc, 8
