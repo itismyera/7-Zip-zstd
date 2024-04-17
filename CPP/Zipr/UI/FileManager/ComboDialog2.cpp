@@ -49,7 +49,7 @@ bool CComboDialog2::OnInit()
   return CModalDialog::OnInit();
 }
 
-bool CComboDialog::OnSize(WPARAM /* wParam */, int xSize, int ySize)
+bool CComboDialog2::OnSize(WPARAM /* wParam */, int xSize, int ySize)
 {
   int mx, my;
   GetMargins(8, mx, my);
@@ -68,7 +68,7 @@ bool CComboDialog::OnSize(WPARAM /* wParam */, int xSize, int ySize)
   return false;
 }
 
-void CComboDialog::OnOK()
+void CComboDialog2::OnOK()
 {
   _comboBox1.GetText(Value1);
   _comboBox2.GetText(Value2);

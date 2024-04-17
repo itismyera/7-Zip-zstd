@@ -1,4 +1,4 @@
-#define IDD_COMBO2   98
+#define IDD_COMBO2   111098
 
 #define IDT_COMBO2_1  100
 #define IDC_COMBO2_1  101
