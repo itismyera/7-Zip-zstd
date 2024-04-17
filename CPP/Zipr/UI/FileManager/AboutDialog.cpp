@@ -13,6 +13,7 @@
 
 #include "HelpUtils.h"
 #include "LangUtils.h"
+#include "App.h"
 
 static const UInt32 kLangIDs[] =
 {
@@ -56,14 +57,15 @@ void CAboutDialog::OnHelp()
 
 bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
 {
-  LPCTSTR url;
+  LPCTSTR url = kHomePageURL;
   switch (buttonID)
   {
     case IDB_ABOUT_HOMEPAGE: url = kHomePageURL; break;
     case IDB_ABOUT_ACTIVATION: 
         {
-          g_App.ActivateSoftware();
-          break;
+          CModalDialog::OnButtonClicked(IDCLOSE, buttonHWND);
+          g_App.GetFocusedPanel().ActivateSoftware();
+          return true;
         }
     default:
       return CModalDialog::OnButtonClicked(buttonID, buttonHWND);

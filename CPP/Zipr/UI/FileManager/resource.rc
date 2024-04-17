@@ -216,6 +216,13 @@ BEGIN
   IDS_CREATE_FOLDER_ERROR "Error Creating Folder"
   IDS_CREATE_FILE_ERROR   "Error Creating File"
 
+  IDS_ACTIVATE_SOFTWARE         "Activate Software"
+  IDS_ACTIVATE_SOFTWARE_NAME1    "User Name:"
+  IDS_ACTIVATE_SOFTWARE_NAME2    "Activation Code:"
+  IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME    ""
+  IDS_ACTIVATE_SOFTWAR_ERROR1   "Error Activate software"
+  IDS_ACTIVATE_SOFTWAR_ERROR2   "Error Activate software"
+
   IDS_COMMENT      "Comment"
   IDS_COMMENT2     "&Comment:"
   IDS_SELECT       "Select"

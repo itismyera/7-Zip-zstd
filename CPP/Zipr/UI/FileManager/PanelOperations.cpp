@@ -477,16 +477,16 @@ void CPanel::ActivateSoftware()
   if (IsHashFolder())
     return;
 
-  if (!CheckBeforeUpdate(IDS_CREATE_FILE_ERROR))
+  if (!CheckBeforeUpdate(IDS_ACTIVATE_SOFTWAR_ERROR1))
     return;
 
   CDisableTimerProcessing disableTimerProcessing2(*this);
   CSelectedState state;
   SaveSelectedState(state);
   CComboDialog dlg;
-  LangString(IDS_CREATE_FILE, dlg.Title);
-  LangString(IDS_CREATE_FILE_NAME, dlg.Static);
-  LangString(IDS_CREATE_FILE_DEFAULT_NAME, dlg.Value);
+  LangString(IDS_ACTIVATE_SOFTWARE, dlg.Title);
+  LangString(IDS_ACTIVATE_SOFTWARE_NAME1, dlg.Static);
+  LangString(IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME, dlg.Value);
 
   if (dlg.Create(GetParent()) != IDOK)
     return;
