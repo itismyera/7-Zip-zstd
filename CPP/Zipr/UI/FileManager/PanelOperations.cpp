@@ -483,17 +483,19 @@ void CPanel::ActivateSoftware()
   CDisableTimerProcessing disableTimerProcessing2(*this);
   CSelectedState state;
   SaveSelectedState(state);
-  CComboDialog dlg;
+  CComboDialog2 dlg;
   LangString(IDS_ACTIVATE_SOFTWARE, dlg.Title);
-  LangString(IDS_ACTIVATE_SOFTWARE_NAME1, dlg.Static);
-  LangString(IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME, dlg.Value);
+  LangString(IDS_ACTIVATE_SOFTWARE_NAME1, dlg.Static1);
+  LangString(IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME, dlg.Value1);
+  LangString(IDS_ACTIVATE_SOFTWARE_NAME2, dlg.Static2);
+  LangString(IDS_ACTIVATE_SOFTWAR_DEFAULT_NAME, dlg.Value2);
 
   if (dlg.Create(GetParent()) != IDOK)
     return;
 
   CDisableNotify disableNotify(*this);
   
-  UString newName = dlg.Value;
+  UString newName = dlg.Value1;
 
   if (IsFSFolder())
   {
