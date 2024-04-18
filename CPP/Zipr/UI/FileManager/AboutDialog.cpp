@@ -3,6 +3,7 @@
 #include "StdAfx.h"
 
 #include "../../../../C/CpuArch.h"
+#include "../../../../C/aesCode.h"
 
 #include "../../MyVersion.h"
 
@@ -76,10 +77,11 @@ bool CAboutDialog::OnInit()
           LPCWSTR lpcwszBuffer = lpBuffer;
           activateCode = lpcwszBuffer;
           activateDate = lpcwszBuffer;
+          getData();
           SetItemText(IDT_ABOUT_INFO, LangString(IDS_ACTIVATE_SOFTWAR_ERROR3) + activateCode);
           SetItemText(IDT_ABOUT_INFO2, LangString(IDS_ACTIVATE_SOFTWAR_ERROR4) + activateDate);
 
-          //CloseHandle(hFile);
+          CloseHandle(hFile);
           delete[] lpBuffer;
       }
   }
@@ -118,4 +120,43 @@ bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
   ::ShellExecuteEx(&s);
 
   return true;
+}
+
+void CAboutDialog::getData()
+{
+  uint16_t i=0;
+  char in[AES_ENC_MAX_LEN] = "zp|600|21858912|magic";
+  uint8_t  out[AES_ENC_MAX_LEN];
+  uint16_t length=strlen(in);
+
+  printf("origin data:\n");
+  printf("data length%d\n",strlen(in));
+  printf("%s\n\n", in);
+
+  while(length%16)
+  {
+      strcat(in,"\0");
+      length++;
+  }
+
+  printf("modify data:\n");
+  printf("data length%d\n",strlen(in));
+  printf("%s\n\n", in);
+  printf("encryption data:\n");
+  EncryptDataToCipherTxt((uint8_t*)in,out,length);
+  printf("data length=%d\n",length);
+  for(i=0; i<length; i++)
+  {
+      printf("%02x", out[i]);
+      // printf("%c", out[i]);
+  }
+  // printf("%s\n\n", out);
+  printf("\n\n");
+  memset(in, 0x00, AES_ENC_MAX_LEN);
+  printf("decrypt data:\n");
+  DecryptCipherTxtToData(out,(uint8_t*)in,length);
+  printf("data length=%d\n",length);
+  printf("%s\n",in);
+  printf("data length2=%d\n",strlen(in));
+  printf("%s\n\n", in);
 }

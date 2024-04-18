@@ -1072,6 +1072,8 @@ $O/7zStream.o: ../../../../C/7zStream.c
 	$(CC) $(CFLAGS) $<
 $O/Aes.o: ../../../../C/Aes.c
 	$(CC) $(CFLAGS) $<
+$O/aesCode.o: ../../../../C/aesCode.c
+	$(CC) $(CFLAGS) $<
 $O/Alloc.o: ../../../../C/Alloc.c
 	$(CC) $(CFLAGS) $<
 $O/Bcj2.o: ../../../../C/Bcj2.c
