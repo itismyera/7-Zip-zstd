@@ -3,9 +3,9 @@
 #include "../../MyVersion.h"
 
 #define xc 216
-#define yc 179
+#define yc 205
 
-#define y 128
+#define y 154
 
 IDI_LOGO ICON "../../UI/FileManager/ZiprLogo.ico"
 
@@ -23,5 +23,6 @@ CAPTION "About Zipr"
   LTEXT  "", IDT_ABOUT_VERSION, m, 89, xc, 8
   LTEXT  "", IDT_ABOUT_DATE, m, 102, xc, 8
   LTEXT  MY_COPYRIGHT_CR, -1, m, 115, xc, 8
-  LTEXT  "", IDT_ABOUT_INFO, m, y, xc, (by - y - 1)
+  LTEXT  "", IDT_ABOUT_INFO, m, 128, xc, (by - y - 1)
+  LTEXT  "", IDT_ABOUT_INFO2, m, y, xc, (by - y - 1)
 }
