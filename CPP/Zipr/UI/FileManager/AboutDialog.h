@@ -7,13 +7,16 @@
 
 #include "AboutDialogRes.h"
 
+
 class CAboutDialog: public NWindows::NControl::CModalDialog
 {
 public:
   virtual bool OnInit();
   virtual void OnHelp();
   virtual bool OnButtonClicked(int buttonID, HWND buttonHWND);
-  void getData();
+  LPCWSTR ConvertToLPCWSTR(char* outShowStr);
+  char* getNewActiveCode(char* activeCode);
+  int getEndDate(char* activeCode, char* outDate);
   INT_PTR Create(HWND wndParent = 0) { return CModalDialog::Create(IDD_ABOUT, wndParent); }
 };
 

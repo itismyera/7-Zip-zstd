@@ -3,7 +3,9 @@
 #include "StdAfx.h"
 
 #include "../../../../C/CpuArch.h"
-#include "../../../../C/aesCode.h"
+extern "C"{
+  #include "../../../../C/aesCode.h"
+}
 
 #include "../../MyVersion.h"
 
@@ -16,6 +18,9 @@
 #include "LangUtils.h"
 #include "App.h"
 #include "resource.h"
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
 static const UInt32 kLangIDs[] =
 {
@@ -28,6 +33,7 @@ static const UInt32 kLangIDs[] =
 
 #define LLL_(quote) L##quote
 #define LLL(quote) LLL_(quote)
+#define  AES_ENC_MAX_LEN    (512)
 
 extern CCodecs *g_CodecsObj;
 
@@ -64,25 +70,33 @@ bool CAboutDialog::OnInit()
       DWORD dwSize = GetFileSize(hFile, NULL);
       LPWSTR lpBuffer = new WCHAR[dwSize / sizeof(WCHAR) + 1];
       DWORD dwRead;
-      UString activateCode;
-      UString activateDate;
-
-      if (!ReadFile(hFile, lpBuffer, dwSize, &dwRead, NULL)) {
+      BOOL bResult = ReadFile(hFile, lpBuffer, dwSize, &dwRead, NULL);
+      if (!bResult || dwRead == 0) {
          
-          CloseHandle(hFile);
+          //CloseHandle(hFile);
           delete[] lpBuffer;
       }
       else {
           lpBuffer[dwSize / sizeof(WCHAR)] = L'\0';
-          LPCWSTR lpcwszBuffer = lpBuffer;
-          activateCode = lpcwszBuffer;
-          activateDate = lpcwszBuffer;
-          getData();
-          SetItemText(IDT_ABOUT_INFO, LangString(IDS_ACTIVATE_SOFTWAR_ERROR3) + activateCode);
-          SetItemText(IDT_ABOUT_INFO2, LangString(IDS_ACTIVATE_SOFTWAR_ERROR4) + activateDate);
+          char* bufferRead = new char[dwSize + 1];
+          WideCharToMultiByte(CP_ACP, 0, lpBuffer, -1, bufferRead, dwSize+1, NULL, NULL);
+          char outDate[80];
+          int success = getEndDate(bufferRead, outDate);
+          if(success == 1){
+              printf("end date is: %s\n", outDate);
+              char* newActiveCode = getNewActiveCode(bufferRead);
+              LPCWSTR outCodeStr = ConvertToLPCWSTR(newActiveCode);
+              free(newActiveCode); 
+              
+              LPCWSTR outDateStr = ConvertToLPCWSTR(outDate);
+              SetItemText(IDT_ABOUT_INFO, LangString(IDS_ACTIVATE_SOFTWAR_ERROR3) + outCodeStr);
+              SetItemText(IDT_ABOUT_INFO2, LangString(IDS_ACTIVATE_SOFTWAR_ERROR4) + outDateStr);
+          } else {
+              printf("invalidCode");
+          }
 
-          CloseHandle(hFile);
-          delete[] lpBuffer;
+          //CloseHandle(hFile);
+          delete[] bufferRead;
       }
   }
  
@@ -122,41 +136,87 @@ bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
   return true;
 }
 
-void CAboutDialog::getData()
-{
-  uint16_t i=0;
-  char in[AES_ENC_MAX_LEN] = "zp|600|21858912|magic";
-  uint8_t  out[AES_ENC_MAX_LEN];
-  uint16_t length=strlen(in);
+LPCWSTR CAboutDialog::ConvertToLPCWSTR(char* outShowStr) {
+    // Step 1: Convert uint8_t* to char*
+    // char* charString = reinterpret_cast<char*>(input);
+    char* charString = outShowStr;
+    OutputDebugStringA(charString);
+    // Step 2: Convert char* to LPCWSTR using MultiByteToWideChar
+    int len = MultiByteToWideChar(CP_ACP, 0, charString, -1, NULL, 0);
+    wchar_t* wideString = new wchar_t[len];
+    MultiByteToWideChar(CP_ACP, 0, charString, -1, wideString, len);
 
-  printf("origin data:\n");
-  printf("data length%d\n",strlen(in));
-  printf("%s\n\n", in);
-
-  while(length%16)
-  {
-      strcat(in,"\0");
-      length++;
-  }
-
-  printf("modify data:\n");
-  printf("data length%d\n",strlen(in));
-  printf("%s\n\n", in);
-  printf("encryption data:\n");
-  EncryptDataToCipherTxt((uint8_t*)in,out,length);
-  printf("data length=%d\n",length);
-  for(i=0; i<length; i++)
-  {
-      printf("%02x", out[i]);
-      // printf("%c", out[i]);
-  }
-  // printf("%s\n\n", out);
-  printf("\n\n");
-  memset(in, 0x00, AES_ENC_MAX_LEN);
-  printf("decrypt data:\n");
-  DecryptCipherTxtToData(out,(uint8_t*)in,length);
-  printf("data length=%d\n",length);
-  printf("%s\n",in);
-  printf("data length2=%d\n",strlen(in));
-  printf("%s\n\n", in);
+    return wideString;
 }
+
+char* CAboutDialog::getNewActiveCode(char* activeCode)
+{
+    int originalLength = strlen(activeCode);
+    char *newStr = (char*)malloc(originalLength + 2); 
+    int positionToInsert = 32;
+    strncpy(newStr, activeCode, positionToInsert);
+    newStr[positionToInsert] = '\n';
+    strcpy(newStr + positionToInsert + 1, activeCode + positionToInsert);
+    return newStr;
+}
+
+int CAboutDialog::getEndDate(char* activeCode, char* outDate)
+{
+    int sucess = 1;
+    uint16_t i=0;
+    char in[AES_ENC_MAX_LEN];
+    memset(in, 0x00, AES_ENC_MAX_LEN);
+    uint16_t length1 = strlen(activeCode);
+    uint16_t length2 = length1/2;
+    uint8_t activeU8[AES_ENC_MAX_LEN];
+
+    for (i = 0; i < length2; i++) {
+        sscanf(&activeCode[i * 2], "%2hhx", &activeU8[i]);
+    }
+
+    for (i = 0; i < length2; i++) {
+        printf("%02x", activeU8[i]);
+    }
+    // printf("\n");
+    // printf("origin info = %s \n", activeU8);
+    memset(in, 0x00, AES_ENC_MAX_LEN);
+    bool isSucess = DecryptCipherTxtToData(activeU8,(uint8_t*)in,length2);
+    if (!isSucess) {
+        sucess = 0;
+        return sucess;
+    }
+    // printf("\n");
+    // printf("input info = %s \n", in);
+    
+    // split char*
+    const char delimiter[2] = "|";
+    char* token[10];
+    int index = 0;
+    token[index] = strtok(in, delimiter);
+    
+    while (token[index] != NULL) {
+        // printf("spilt char* = %s, %d\n", token[index], index);
+        index ++ ;
+        token[index] = strtok(NULL, delimiter);
+    }
+    // printf("%d\n", index);
+    if (index != 4) {
+        sucess = 0;
+        return sucess;
+    }
+    double endDate = strtod(token[2], NULL)*100;
+    // printf("%f\n", endDate);
+    if (endDate <= 0) {
+        sucess = 0;
+        return sucess;
+    }
+    // timestamp to date
+    time_t timestamp = endDate;
+    struct tm* timeinfo;
+    
+    timeinfo = localtime(&timestamp);
+    strftime(outDate, 80, "%Y-%m-%d", timeinfo);
+    // printf("end date: %s\n", outDate);
+    return sucess;
+}
+

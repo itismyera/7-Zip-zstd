@@ -150,7 +150,7 @@ static uint8_t inv_s_box[256] =
  */
 uint8_t R[] = {0x02, 0x00, 0x00, 0x00};
 
-uint8_t * Rcon(uint8_t i)
+uint8_t * Rcon(int i)
 {
 
     if (i == 1)
@@ -177,7 +177,7 @@ uint8_t * Rcon(uint8_t i)
  * Round Key equals the size of the State (i.e., for Nb = 4, the Round
  * Key length equals 128 bits/16 bytes).
  */
-void add_round_key(uint8_t *state, uint8_t *w, uint8_t r)
+void add_round_key(uint8_t *state, uint8_t *w, int r)
 {
 
     uint8_t c;
@@ -279,8 +279,8 @@ void shift_rows(uint8_t *state)
  */
 void inv_shift_rows(uint8_t *state)
 {
-
-    uint8_t i, k, s, tmp;
+    uint8_t tmp;
+    int i, k, s;
 
     for (i = 1; i < 4; i++)
     {
@@ -382,19 +382,19 @@ void rot_word(uint8_t *w)
 /*
  * Key Expansion
  */
-void key_expansion(uint8_t *key, uint8_t *w)
+void key_expansion(uint8_t *keyE, uint8_t *w)
 {
 
     uint8_t tmp[4];
-    uint8_t i;
-    uint8_t len = Nb*(Nr+1);
+    int i;
+    int len = Nb*(Nr+1);
 
     for (i = 0; i < Nk; i++)
     {
-        w[4*i+0] = key[4*i+0];
-        w[4*i+1] = key[4*i+1];
-        w[4*i+2] = key[4*i+2];
-        w[4*i+3] = key[4*i+3];
+        w[4*i+0] = keyE[4*i+0];
+        w[4*i+1] = keyE[4*i+1];
+        w[4*i+2] = keyE[4*i+2];
+        w[4*i+3] = keyE[4*i+3];
     }
 
     for (i = Nk; i < len; i++)
@@ -429,8 +429,9 @@ void key_expansion(uint8_t *key, uint8_t *w)
 void cipher(uint8_t *in, uint8_t *out, uint8_t *w)
 {
 
-    uint8_t state[4*Nb];
-    uint8_t r, i, j;
+    // uint8_t state[4*Nb];
+    uint8_t state[16];
+    int r, i, j;
 
     for (i = 0; i < 4; i++)
     {
@@ -466,8 +467,9 @@ void cipher(uint8_t *in, uint8_t *out, uint8_t *w)
 void inv_cipher(uint8_t *in, uint8_t *out, uint8_t *w)
 {
 
-    uint8_t state[4*Nb];
-    uint8_t r, i, j;
+    //uint8_t state[4*Nb];
+    uint8_t state[16];
+    int r, i, j;
 
     for (i = 0; i < 4; i++)
     {
@@ -500,7 +502,7 @@ void inv_cipher(uint8_t *in, uint8_t *out, uint8_t *w)
     }
 }
 
-bool EncryptDataToCipherTxt(uint8_t *orign, uint8_t *result, uint16_t length)
+bool EncryptDataToCipherTxt(uint8_t *orign, uint8_t *result, int length)
 {
     uint8_t w[240];     
 
@@ -526,7 +528,7 @@ bool EncryptDataToCipherTxt(uint8_t *orign, uint8_t *result, uint16_t length)
     if( length % 16 == 0 )
     {
         uint16_t i;
-        uint16_t counter=length / 16;
+        int counter=length / 16;
         uint8_t *p,*q;
 
         for(i=0; i<counter; i++)
@@ -543,7 +545,7 @@ bool EncryptDataToCipherTxt(uint8_t *orign, uint8_t *result, uint16_t length)
     return true;
 }
 
-bool DecryptCipherTxtToData(uint8_t *orign, uint8_t *result, uint16_t length)
+bool DecryptCipherTxtToData(uint8_t *orign, uint8_t *result, int length)
 {
     uint8_t w[240];     
 
@@ -569,7 +571,7 @@ bool DecryptCipherTxtToData(uint8_t *orign, uint8_t *result, uint16_t length)
     if( length % 16 == 0 )
     {
         uint16_t i;
-        uint16_t counter=length / 16;
+        int counter=length / 16;
         uint8_t *p,*q;
 
         for(i=0; i<counter; i++)

@@ -99,6 +99,7 @@ AR_COMMON_OBJS = \
 
 
 C_OBJS = $(C_OBJS) \
+  $O\aesCode.obj \
   $O\Alloc.obj \
   $O\CpuArch.obj \
   $O\Sort.obj \
