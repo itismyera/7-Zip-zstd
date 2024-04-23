@@ -588,3 +588,52 @@ bool DecryptCipherTxtToData(uint8_t *orign, uint8_t *result, int length)
     return true;
 }
 
+bool IsActiveCodeValid(char* activeCode, char* userName)
+{
+    bool isValid = true;
+    uint16_t i=0;
+    char in[512];
+    memset(in, 0x00, 512);
+    uint16_t length1 = strlen(activeCode);
+    uint16_t length2 = length1/2;
+    uint8_t activeU8[512];
+
+    for (i = 0; i < length2; i++) {
+        sscanf(&activeCode[i * 2], "%2hhx", &activeU8[i]);
+    }
+
+    for (i = 0; i < length2; i++) {
+        printf("%02x", activeU8[i]);
+    }
+    // printf("\n");
+    // printf("origin info = %s \n", activeU8);
+    memset(in, 0x00, 512);
+    bool isSucess = DecryptCipherTxtToData(activeU8,(uint8_t*)in,length2);
+    if (!isSucess) {
+        isValid = false;
+        return isValid;
+    }
+    // printf("\n");
+    // printf("input info = %s \n", in);
+    
+    // split char*
+    const char delimiter[2] = "|";
+    char* token[10];
+    int index = 0;
+    token[index] = strtok(in, delimiter);
+    
+    while (token[index] != NULL) {
+        // printf("spilt char* = %s, %d\n", token[index], index);
+        index ++ ;
+        token[index] = strtok(NULL, delimiter);
+    }
+    // printf("%d\n", index);
+    if (index != 4) {
+        isValid = false;
+        return isValid;
+    }
+    int result = strcmp(token[3], userName);
+    isValid = result == 0 ? true : false;
+    return isValid;
+}
+

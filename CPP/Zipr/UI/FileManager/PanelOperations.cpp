@@ -20,6 +20,9 @@
 #include "UpdateCallback100.h"
 
 #include "resource.h"
+extern "C"{
+  #include "../../../../C/aesCode.h"
+}
 
 using namespace NWindows;
 using namespace NFile;
@@ -502,6 +505,22 @@ void CPanel::ActivateSoftware()
   fileName += "reg.txt";
 
   if(userName.IsEmpty() || activateCode.IsEmpty()) 
+  {
+    MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));
+    return;
+  }
+
+  DWORD dwSize = 128
+  char* bufferCode = new char[dwSize + 1];
+  WideCharToMultiByte(CP_ACP, 0, activateCode, -1, bufferCode, dwSize+1, NULL, NULL);
+
+  char* bufferUserName = new char[dwSize + 1];
+  WideCharToMultiByte(CP_ACP, 0, userName, -1, bufferUserName, dwSize+1, NULL, NULL);
+  
+  bool isActiveCodeValid = IsActiveCodeValid(bufferCode, bufferUserName);
+  delete[] bufferCode;
+  delete[] bufferUserName;
+  if (!isActiveCodeValid) 
   {
     MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));
     return;
