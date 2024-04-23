@@ -117,7 +117,7 @@ bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
   switch (buttonID)
   {
     case IDB_ABOUT_HOMEPAGE: url = kHomePageURL; break;
-    case IDB_ABOUT_ACTIVATION: 
+    case IDS_ACTIVATE_SOFTWARE: 
         {
           CModalDialog::OnButtonClicked(IDCLOSE, buttonHWND);
           g_App.GetFocusedPanel().ActivateSoftware();
