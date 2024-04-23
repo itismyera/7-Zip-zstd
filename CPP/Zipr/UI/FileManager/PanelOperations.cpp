@@ -510,7 +510,7 @@ void CPanel::ActivateSoftware()
     return;
   }
 
-  DWORD dwSize = 128
+  DWORD dwSize = 128;
   char* bufferCode = new char[dwSize + 1];
   WideCharToMultiByte(CP_ACP, 0, activateCode, -1, bufferCode, dwSize+1, NULL, NULL);
 
