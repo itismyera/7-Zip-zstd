@@ -526,7 +526,7 @@ void CPanel::ActivateSoftware()
     return;
   }
 
-  HANDLE hFile = CreateFileW(fileName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+  HANDLE hFile = ::CreateFileW(fileName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
   if (hFile == INVALID_HANDLE_VALUE)
   {
     MessageBox_Error(LangString(IDS_ACTIVATE_SOFTWAR_ERROR1));

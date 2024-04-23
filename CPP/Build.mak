@@ -52,7 +52,7 @@ COMPL_ASM = $(MY_ML) $** $O/$(*B).obj
 COMPL_ASM = $(MY_ML) -c -Fo$O/ $**
 !ENDIF
 
-CFLAGS = $(CFLAGS) -nologo -c -Fo$O/ -W4 -WX -EHsc -Gy -MT -MP -GR- -GL -Gw
+CFLAGS = $(CFLAGS) -nologo -c -Fo$O/ -W4 /WX- -EHsc -Gy -MT -MP -GR- -GL -Gw
 
 !IF "$(CC)" == "clang-cl"
 
