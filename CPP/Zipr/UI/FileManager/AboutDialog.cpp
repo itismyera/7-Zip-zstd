@@ -24,7 +24,8 @@ extern "C"{
 
 static const UInt32 kLangIDs[] =
 {
-  IDT_ABOUT_INFO
+  IDT_ABOUT_INFO,
+  IDB_ABOUT_ACTIVATION
 };
 
 #define kHomePageURL  TEXT("https://www.zipr.cn")
@@ -117,7 +118,7 @@ bool CAboutDialog::OnButtonClicked(int buttonID, HWND buttonHWND)
   switch (buttonID)
   {
     case IDB_ABOUT_HOMEPAGE: url = kHomePageURL; break;
-    case IDS_ACTIVATE_SOFTWARE: 
+    case IDB_ABOUT_ACTIVATION: 
         {
           CModalDialog::OnButtonClicked(IDCLOSE, buttonHWND);
           g_App.GetFocusedPanel().ActivateSoftware();
