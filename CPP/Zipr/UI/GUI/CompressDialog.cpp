@@ -574,6 +574,10 @@ bool CCompressDialog::OnInit()
     {
       unsigned arcIndex = ArcIndices[i];
       const CArcInfoEx &ai = (*ArcFormats)[arcIndex];
+      if(ai.Name.IsEqualTo_NoCase(L"7z"))
+      {
+        continue;
+      }
       int index = (int)m_Format.AddString(ai.Name);
       m_Format.SetItemData(index, arcIndex);
       if (!needSetMain)

@@ -95,8 +95,6 @@ BEGIN
   LTEXT     "Parameters:", IDT_COMPRESS_PARAMETERS, m, 256, gSize, 8
   EDITTEXT  IDE_COMPRESS_PARAMETERS, m, 268, gSize, 14, ES_AUTOHSCROLL
 
-  PUSHBUTTON  "Options", IDB_COMPRESS_OPTIONS, m, 292, bxs, bys
-  LTEXT     "", IDT_COMPRESS_OPTIONS, m + bxs + m, 294, gSize - bxs - m, 16, SS_NOPREFIX
            
 
   LTEXT     "&Update mode:", IDT_COMPRESS_UPDATE_MODE, g4x, 41, 80, 8
